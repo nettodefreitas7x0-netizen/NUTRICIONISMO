@@ -257,7 +257,7 @@ button {
 }
 
 .nav-link {
-    color: var(--cor-texto);
+    color: var(--cor-texto-claro);
     font-weight: 500;
     font-size: 0.9375rem;
     transition: var(--transicao);
@@ -1167,11 +1167,11 @@ width: 100px;
 
     .nav {
         position: fixed;
-        top: 130px;
+        top: 85px;
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background: var(--cor-branco);
+        background: rgb(255, 255, 255);
         transition: left 0.3s ease;
         box-shadow: var(--box-shadow);
     }
