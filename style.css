@@ -209,6 +209,7 @@ button {
     box-shadow: var(--box-shadow);
     z-index: 1000;
     transition: var(--transicao);
+    padding: 10px;
 }
 
 .header-content {
