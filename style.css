@@ -1230,12 +1230,11 @@ button {
 
     /* Galeria Mobile */
     .galeria {
-        grid-template-columns: repeat(2, 1fr);
+       
     }
 
     .galeria-item-large {
-        grid-column: span 2;
-        grid-row: span 1;
+       
     }
 
     /* Seções gerais */
@@ -1259,7 +1258,7 @@ button {
 
     /* Galeria Mobile */
     .galeria {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .galeria-item-large {
