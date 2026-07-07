@@ -917,7 +917,8 @@ button {
 }
 
 #pergunta-cliente{
-    flex: 1; padding: 0.8rem 1rem; border: 1px solid #ccc; border-radius: 4px; min-width: 250px; font-family: 'Poppins', sans-serif;
+width: 100px;
+    flex: 1; padding: 0.8rem 1rem; border: 1px solid #ccc; border-radius: 4px;  font-family: 'Poppins', sans-serif;
 }
 
 .btn btn-primary {
@@ -938,6 +939,7 @@ button {
 }
 
 .contato-info {
+   
     background: var(--cor-primaria-clara);
     padding: var(--espacamento-md);
     border-radius: var(--border-radius);
@@ -1252,7 +1254,7 @@ button {
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     }
 
 
@@ -1264,6 +1266,22 @@ button {
     .galeria-item-large {
         grid-column: span 1;
         grid-row: span 1;
+    }
+
+    .faq-envio{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form-faq{
+        display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+
+        input {
+           width: 300px;
+        }
     }
 }
 
@@ -1295,5 +1313,29 @@ button {
     .sobre-emoji,
     .beneficios-emoji {
         font-size: 4rem;
+    }
+
+     #form-faq{
+        display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+
+        input {
+           width: 200px;
+        }
+    }
+}
+
+@media (max-width:298px) {
+
+    #form-faq{
+       input{
+        width: 150px;
+       }
+    }
+
+    .info-text{
+       font-size: 0.1rem;
     }
 }
