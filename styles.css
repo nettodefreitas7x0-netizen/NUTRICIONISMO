@@ -3,26 +3,26 @@
    ========================================== */
 
    :root {
-    /* ========== CORES PRINCIPAIS (ATUALIZADO COM OS VERDES DA LOGO) ========== */
-    --cor-primaria: #1b806d;          /* Verde-azulado/Teal profundo e institucional */
-    --cor-primaria-escura: #135c4f;   /* Tom mais escuro para hover de botões e links */
-    --cor-primaria-clara: #e6f7f2;    /* Verde ultra suave para fundos de blocos */
+    /* ========== CORES PRINCIPAIS (ATUALIZADO COM OS TONS DE ROXO E ROSA DA LOGO) ========== */
+    --cor-primaria: #4c2c5c;          /* Roxo/Ameixa profundo (extraído do nome e folhas da logo) */
+    --cor-primaria-escura: #331d3d;   /* Tom mais escuro de roxo para hovers e títulos fortes */
+    --cor-primaria-clara: #f4ecf7;    /* Rosa/Lilás ultra suave para fundos de blocos */
 
-    --cor-secundaria: #34b574;        /* Verde mais vivo e aberto das folhas superiores */
-    --cor-secundaria-escura: #2a915e; /* Verde médio escuro para variações de hover */
-    --cor-secundaria-clara: #f1fbf7;  /* Tom sutil esverdeado para fundos alternativos */
+    --cor-secundaria: #c15b94;        /* Rosa médio/antigo vibrante da lateral direita do coração */
+    --cor-secundaria-escura: #994372; /* Rosa escuro para variações de hover e links */
+    --cor-secundaria-clara: #faf2f6;  /* Tom sutil rosado para fundos alternativos */
 
-    --cor-acento: #3ec18a;            /* Verde vibrante para ícones e detalhes discretos */
-    --cor-acento-escura: #33a171;     /* Verde fechado */
+    --cor-acento: #a24b7d;            /* Rosa transição para ícones e detalhes discretos */
+    --cor-acento-escura: #823862;     /* Rosa fechado */
     --cor-acento-clara: #ffffff;      /* Branco puro para manter o contraste limpo */
 
     /* ========== CORES NEUTRAS (ATUALIZADO) ========== */
-    --cor-texto: #1a2c26;             /* Grafite escuro com um toque sutil de verde folha */
-    --cor-texto-claro: #4c665d;       /* Cinza esverdeado para descrições secundárias */
+    --cor-texto: #2a1f2d;             /* Grafite escuro com um fundo quente de berinjela */
+    --cor-texto-claro: #5a4b5e;       /* Cinza purpurado para descrições secundárias */
     --cor-branco: #FFFFFF;            /* Branco puro */
-    --cor-cinza-claro: #f6f8f7;       /* Fundo extremamente limpo e sutil */
-    --cor-cinza: #dce7e3;             /* Bordas e divisores bem suaves */
-    --cor-cinza-medio: #b7cdc5;       /* Bordas um pouco mais visíveis */
+    --cor-cinza-claro: #faf8fa;       /* Fundo extremamente limpo e sutil */
+    --cor-cinza: #ebddeb;             /* Bordas e divisores bem suaves */
+    --cor-cinza-medio: #cfbad0;       /* Bordas um pouco mais visíveis */
 
     /* ========== TIPOGRAFIA (MANTIDO) ========== */
     --fonte-principal: 'Poppins', sans-serif;
@@ -38,8 +38,8 @@
     /* ========== TAMANHOS (MANTIDO) ========== */
     --border-radius: 12px;
     --border-radius-lg: 20px;
-    --box-shadow: 0 4px 20px rgba(27, 128, 109, 0.06); /* Sombra adaptada com base verde-escura discreta */
-    --box-shadow-lg: 0 10px 40px rgba(27, 128, 109, 0.1);
+    --box-shadow: 0 4px 20px rgba(76, 44, 92, 0.06); /* Sombra adaptada com base roxo-escura discreta */
+    --box-shadow-lg: 0 10px 40px rgba(76, 44, 92, 0.1);
 
     /* ========== TRANSIÇÕES (MANTIDO) ========== */
     --transicao: all 0.3s ease;
@@ -148,7 +148,7 @@ button {
 
 
 .btn-primary {
-    background: #156658cc; /* Verde-azulado sutil ajustado */
+    background: #4c2c5ccc; /* Roxo sutil ajustado */
     color: var(--cor-secundaria-clara);
     border:#ffffff 2px solid;
 }
@@ -159,7 +159,7 @@ button {
 }
 
 .btn-primary:hover {
-    background: #104c41; /* Tom mais profundo de verde escuro */
+    background: #331d3d; /* Tom mais profundo de roxo escuro */
     transform: translateY(-2px);
     box-shadow: var(--box-shadow);
 }
@@ -317,7 +317,7 @@ left: 0;
 
 .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
-    background-color: #d13030; /* Vermelho ajustado para fechar com mais harmonia */
+    background-color: #d13030; /* Mantido para manter o feedback do botão de fechar */
 }
 
 .menu-toggle.active span:nth-child(2) {
@@ -360,7 +360,7 @@ left: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(8, 26, 22, 0.93) 0%, rgba(23, 105, 89, 0.95) 100%); /* Degradê natural esverdeado baseado na logo */
+    background: linear-gradient(135deg, rgba(29, 14, 38, 0.93) 0%, rgba(76, 44, 92, 0.95) 100%); /* Degradê baseado nos tons de roxo da logo */
     z-index: 2;
 }
 
@@ -386,7 +386,7 @@ left: 0;
 }
 
 .hero-title .highlight {
-    color: #4df2a3; /* Destaque retirado da tonalidade mais vibrante e clara do coração da logo */
+    color: #f7a1cf; /* Destaque retirado da tonalidade rosa claro da logo */
     position: relative;
 }
 
@@ -992,7 +992,7 @@ width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(26, 44, 38, 0.3); /* Base escura esverdeada suavizada */
+    background: rgba(42, 31, 45, 0.3); /* Base escura berinjela suavizada */
     border-radius: 50%;
     font-size: 1.5rem;
     transition: var(--transicao);
@@ -1009,7 +1009,7 @@ width: 100px;
 .social-link:hover {
     transform: translateY(-3px);
     box-shadow: var(--box-shadow);
-    background-color: #2cb572ba; /* Verde folha secundário para as mídias sociais */
+    background-color: #c15b94ba; /* Rosa médio secundário para as mídias sociais */
    
 }
 
@@ -1018,7 +1018,7 @@ width: 100px;
    FOOTER
    ========================================== */
 .footer {
-    background: #0d2621; /* Verde extremamente escuro e sóbrio para o encerramento da página */
+    background: #1c0e21; /* Roxo purpurado extremamente escuro para o encerramento da página */
     color: var(--cor-branco);
     padding: var(--espacamento-lg) 0 var(--espacamento-md);
 }

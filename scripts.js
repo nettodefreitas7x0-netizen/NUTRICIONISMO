@@ -8,6 +8,7 @@ const WHATSAPP_NUMBER = '5511987654321';
 
 // ========== MENSAGEM PADRÃO WHATSAPP (EDITÁVEL) ==========
 const WHATSAPP_MESSAGE = 'Olá! Gostaria de agendar um serviço para meu pet.';
+console.log("agora")
 
 // ==========================================
 // MENU MOBILE - TOGGLE
@@ -256,7 +257,7 @@ if ('IntersectionObserver' in window) {
 // ==========================================
 // CONSOLE LOG - INFORMAÇÕES DO SITE
 // ==========================================
-console.log('%c🐾 Patinhas Pet Shop & Vet ', 'background: #4A90E2; color: white; font-size: 20px; padding: 10px;');
+console.log('%c🐾 Patinhas Pet Shop & Vetsdfgdrgdfgfd ', 'background: #470000; color: white; font-size: 20px; padding: 10px;');
 console.log('%cSite desenvolvido com amor para pets e tutores!', 'color: #FF8C42; font-size: 14px;');
 console.log('%c💙 Cuidando do seu melhor amigo 💙', 'color: #66BB6A; font-size: 12px;');
 
