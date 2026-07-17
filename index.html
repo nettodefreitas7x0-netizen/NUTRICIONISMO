@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link class="link-css" rel="stylesheet" href="stylebb.css">
     <title>Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
@@ -20,6 +20,156 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Estilos específicos para os carrosséis e setas no mobile -->
+    <!-- Estilos específicos para os carrosséis e setas no mobile -->
+    <style>
+        /* ==================== EFEITO DE BRILHO NOS BOTÕES ==================== */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            border: none;
+          
+        }
+
+       .btn:hover{
+
+        box-shadow: 0 0 30px 8px rgb(21, 2, 43);
+        border: none;
+       }
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            animation: shineEffect 4s infinite ease-in-out;
+        }
+
+        #btn-agendar-agora{
+            background-color: white;
+            color: black;
+           
+
+        }
+
+          #btn-agendar-agora:hover{
+              box-shadow: 0 0 20px 8px rgb(252, 252, 252);
+          }
+
+        @keyframes shineEffect {
+            0% {
+                left: -150%;
+            }
+            30% {
+                left: 150%;
+            }
+            100% {
+                left: 150%;
+            }
+        }
+        /* ===================================================================== */
+
+        /* Estilos padrão ocultam as setas no desktop */
+        .carousel-btn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .servicos-container-relative {
+                position: relative;
+            }
+
+            /* Habilita posicionamento relativo na seção de destaques para conter as setas absolutas */
+            .destaques .container {
+                position: relative;
+            }
+
+            /* Carrossel de Serviços */
+            #servicos .servicos-grid {
+                display: flex !important;
+                overflow-x: hidden !important; /* Desativa a rolagem manual e por toque lateral */
+                scroll-behavior: smooth !important;
+         
+        
+            }
+
+            #servicos .servico-card {
+                flex: 0 0 100% !important; /* O card ocupa 85% da tela */
+                margin-bottom: 0 !important;
+            }
+
+            /* Carrossel de Diferenciais (Destaques) */
+            .destaques .destaques-grid {
+                display: flex !important;
+                overflow-x: hidden !important; /* Desativa a rolagem manual e por toque lateral */
+                scroll-behavior: smooth !important;
+           overflow-y: hidden !important;
+             
+            }
+
+            .destaques .destaque-card {
+                flex: 0 0 100% !important; /* O card ocupa 85% da tela */
+             overflow-x: hidden !important;
+             overflow-y: hidden !important;
+            }
+
+            #carousel-grid{
+                   flex: 0 0 100% !important; /* O card ocupa 85% da tela */
+             overflow-x: hidden !important;
+             overflow-y: hidden !important;
+            }
+
+           
+
+            /* Estilos das setas flutuantes no mobile */
+            .carousel-btn {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(255, 255, 255, 0.9);
+                border: 1px solid #ddd;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                cursor: pointer;
+                z-index: 10;
+                user-select: none;
+            }
+
+            .carousel-btn img {
+                width: 16px;
+                height: 16px;
+                object-fit: contain;
+            }
+
+            .carousel-btn.prev {
+                left: 5px;
+            }
+
+            .carousel-btn.next {
+                right: 5px;
+            }
+
+            /* Configuração específica para as setas criadas dinamicamente na seção destaques */
+            .destaques .carousel-btn {
+                top: 60%; /* Ajuste fino de altura para alinhar com os cards dos diferenciais */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -31,7 +181,7 @@
                 <a href="#home" class="logo">
                     <span class="logo-icon"> <img src="assets/logo-transparente-pequena.png" alt=""></span>
                     <span class="logo-text">
-                        <span class="logo-name">Dra. Juliana Cardoso</span>
+                        <span class="logo-name">Juliana Cardoso</span>
                         <span class="logo-tagline">Nutricionista</span>
                     </span>
                 </a>
@@ -47,8 +197,7 @@
                     </ul>
                 </nav>
 
-                <a href="https://wa.me/5591987416244?text=Olá,
-                %20gostaria de%20agendar%20uma%20consulta." 
+                <a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
                 target="_blank" 
                 class="btn btn-primary btn-header" 
                 style="margin-left: 10px;">Agendar Consulta</a>
@@ -82,8 +231,9 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#servicos" class="btn btn-primary btn-large">Ver Serviços</a>
-                        <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." target="_blank" class="btn btn-secondary btn-large">Agendar Agora</a>
+                        <a href="#servicos" style="border: solid 2px white;" class="btn btn-primary btn-large">Ver Serviços</a>
+                        <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." 
+                        target="_blank" id="btn-agendar-agora" class="btn btn-secondary btn-large">Agendar Agora</a>
                     </div>
 
                     <div class="hero-badges">
@@ -113,7 +263,7 @@
             <div class="sobre-content">
 
                 <div class="sobre-image">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80"
+                    <img src="assets/sobre-mim.jpeg"
                         alt="Atendimento Nutricional">
                 </div>
 
@@ -164,76 +314,82 @@
                 </p>
             </div>
 
-            <div class="servicos-grid">
+            <div class="servicos-container-relative">
+                <!-- Botões das setas adicionados aqui -->
+                <button style="border: none; background-color: #b3aaaa00;" id="btn-left" class="carousel-btn prev" onclick="scrollCarousel(-1)" aria-label="Voltar"><img style="width: 200px;" src="assets/seta-esquerda.png" alt=""></button>
+                <button style="border: none; background-color: #b3aaaa00;" id="btn-right" class="carousel-btn next" onclick="scrollCarousel(1)" aria-label="Avançar"><img  style="width: 200px;" src="assets/seta-direita.png" alt=""></button>
 
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80"
-                            alt="Consulta Online">
-                    </div>
-                    <div class="servico-icon">💻</div>
-                    <h3 class="servico-title">Consulta Online</h3>
-                    <p class="servico-description">
-                        Atendimento por videochamada com a mesma atenção e entrega do presencial, de onde você estiver.
-                    </p>
-                </div>
+                <div class="servicos-grid" id="carousel-grid">
 
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1675270882554-ab6817fb44f3?q=80&w=424&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Consulta Presencial">
+                    <div class="servico-card">
+                        <div class="servico-image">
+                            <img src="assets/online.jpeg"
+                                alt="Consulta Online">
+                        </div>
+                        <div class="servico-icon">💻</div>
+                        <h3 class="servico-title">Consulta Online</h3>
+                        <p class="servico-description">
+                            Atendimento por videochamada com a mesma atenção e entrega do presencial, de onde você estiver.
+                        </p>
                     </div>
-                    <div class="servico-icon">🏢</div>
-                    <h3 class="servico-title">Consulta Presencial</h3>
-                    <p class="servico-description">
-                        Atendimento em consultório com hora marcada, incluindo bioimpedância e avaliação física completa.
-                    </p>
-                </div>
 
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=400&q=80"
-                            alt="Emagrecimento Saudável">
+                    <div class="servico-card">
+                        <div class="servico-image">
+                            <img src="assets/presencial.jpeg"
+                                alt="Consulta Presencial">
+                        </div>
+                        <div class="servico-icon">🏢</div>
+                        <h3 class="servico-title">Consulta Presencial</h3>
+                        <p class="servico-description">
+                            Atendimento em consultório com hora marcada, incluindo bioimpedância e avaliação física completa.
+                        </p>
                     </div>
-                    <div class="servico-icon">⚖️</div>
-                    <h3 class="servico-title">Emagrecimento Definitivo</h3>
-                    <p class="servico-description">
-                        Estratégias nutricionais eficientes para perder peso com saúde, sem passar fome ou fazer restrições absurdas.
-                    </p>
-                </div>
 
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80" alt="Nutrição Esportiva">
+                    <div class="servico-card">
+                        <div class="servico-image">
+                            <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=400&q=80"
+                                alt="Emagrecimento Saudável">
                     </div>
-                    <div class="servico-icon">🏃‍♀️</div>
-                    <h3 class="servico-title">Nutrição Esportiva</h3>
-                    <p class="servico-description">
-                        Foco em performance, ganho de massa muscular (hipertrofia) e melhora do rendimento nos treinos.
-                    </p>
-                </div>
+                        <div class="servico-icon">⚖️</div>
+                        <h3 class="servico-title">Emagrecimento Definitivo</h3>
+                        <p class="servico-description">
+                            Estratégias nutricionais eficientes para perder peso com saúde, sem passar fome ou fazer restrições absurdas.
+                        </p>
+                    </div>
 
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Reeducação Alimentar">
+                    <div class="servico-card">
+                        <div class="servico-image">
+                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80" alt="Nutrição Esportiva">
+                        </div>
+                        <div class="servico-icon">🏃‍♀️</div>
+                        <h3 class="servico-title">Nutrição Esportiva</h3>
+                        <p class="servico-description">
+                            Foco em performance, ganho de massa muscular (hipertrofia) e melhora do rendimento nos treinos.
+                        </p>
                     </div>
-                    <div class="servico-icon">🥗</div>
-                    <h3 class="servico-title">Reeducação Alimentar</h3>
-                    <p class="servico-description">
-                        Aprenda a fazer escolhas certas no dia a dia e construa uma relação saudável e leve com a comida.
-                    </p>
-                </div>
 
-                <div class="servico-card">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&q=80"
-                            alt="Nutrição Clínica e Longevidade">
+                    <div class="servico-card">
+                        <div class="servico-image">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Reeducação Alimentar">
+                        </div>
+                        <div class="servico-icon">🥗</div>
+                        <h3 class="servico-title">Reeducação Alimentar</h3>
+                        <p class="servico-description">
+                            Aprenda a fazer escolhas certas no dia a dia e construa uma relação saudável e leve com a comida.
+                        </p>
                     </div>
-                    <div class="servico-icon">🧬</div>
-                    <h3 class="servico-title">Nutrição Clínica</h3>
-                    <p class="servico-description">
-                        Controle e prevenção de doenças como diabetes, hipertensão, colesterol alto e melhora da saúde intestinal.
-                    </p>
+
+                    <div class="servico-card">
+                        <div class="servico-image">
+                            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&q=80"
+                                alt="Nutrição Clínica e Longevidade">
+                        </div>
+                        <div class="servico-icon">🧬</div>
+                        <h3 class="servico-title">Nutrição Clinical</h3>
+                        <p class="servico-description">
+                            Controle e prevenção de doenças como diabetes, hipertensão, colesterol alto e melhora da saúde intestinal.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -596,6 +752,63 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scripts de controle dos Carrosséis -->
+    <script>
+        // Função original de Serviços
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('carousel-grid');
+            const cardWidth = carousel.querySelector('.servico-card').offsetWidth + 24; 
+            carousel.scrollBy({
+                left: direction * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Função para controlar a rolagem dos Diferenciais (Destaques)
+        function scrollDestaques(direction) {
+            const carousel = document.querySelector('.destaques .destaques-grid');
+            const cardWidth = carousel.querySelector('.destaque-card').offsetWidth + 24; 
+            carousel.scrollBy({
+                left: direction * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Injeta as setas de controle dos Diferenciais dinamicamente para não precisar mexer na estrutura do HTML
+        document.addEventListener("DOMContentLoaded", function() {
+            const containerDestaques = document.querySelector('.destaques .container');
+            const gridDestaques = document.querySelector('.destaques-grid');
+            
+            if (containerDestaques && gridDestaques) {
+                // Criação do botão esquerdo
+                const btnLeft = document.createElement('button');
+                btnLeft.className = 'carousel-btn prev';
+                btnLeft.setAttribute('aria-label', 'Voltar');
+                btnLeft.onclick = function() { scrollDestaques(-1); };
+                
+                const imgLeft = document.createElement('img');
+                imgLeft.src = 'assets/seta-esquerda.png';
+                imgLeft.alt = '';
+                btnLeft.appendChild(imgLeft);
+
+                // Criação do botão direito
+                const btnRight = document.createElement('button');
+                btnRight.className = 'carousel-btn next';
+                btnRight.setAttribute('aria-label', 'Avançar');
+                btnRight.onclick = function() { scrollDestaques(1); };
+                
+                const imgRight = document.createElement('img');
+                imgRight.src = 'assets/seta-direita.png';
+                imgRight.alt = '';
+                btnRight.appendChild(imgRight);
+
+                // Insere os botões antes do grid de destaques
+                containerDestaques.insertBefore(btnLeft, gridDestaques);
+                containerDestaques.insertBefore(btnRight, gridDestaques);
+            }
+        });
+    </script>
 
     <script src="script.js"></script>
 

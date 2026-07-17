@@ -4,9 +4,9 @@
 
    :root {
     /* ========== CORES PRINCIPAIS (ATUALIZADO COM OS TONS DE ROXO E ROSA DA LOGO) ========== */
-    --cor-primaria: #4c2c5c;          /* Roxo/Ameixa profundo (extraído do nome e folhas da logo) */
-    --cor-primaria-escura: #331d3d;   /* Tom mais escuro de roxo para hovers e títulos fortes */
-    --cor-primaria-clara: #f4ecf7;    /* Rosa/Lilás ultra suave para fundos de blocos */
+    --cor-primaria: #6d288c;          /* Roxo vibrante e mais saturado */
+    --cor-primaria-escura: #491461;   /* Roxo profundo saturado para hovers e títulos fortes */
+    --cor-primaria-clara: #f7f0fa;    /* Rosa/Lilás ultra suave para fundos de blocos */
 
     --cor-secundaria: #c15b94;        /* Rosa médio/antigo vibrante da lateral direita do coração */
     --cor-secundaria-escura: #994372; /* Rosa escuro para variações de hover e links */
@@ -38,8 +38,8 @@
     /* ========== TAMANHOS (MANTIDO) ========== */
     --border-radius: 12px;
     --border-radius-lg: 20px;
-    --box-shadow: 0 4px 20px rgba(76, 44, 92, 0.06); /* Sombra adaptada com base roxo-escura discreta */
-    --box-shadow-lg: 0 10px 40px rgba(76, 44, 92, 0.1);
+    --box-shadow: 0 4px 20px rgba(109, 40, 140, 0.06); /* Sombra adaptada com base roxo-escura discreta */
+    --box-shadow-lg: 0 10px 40px rgba(109, 40, 140, 0.1);
 
     /* ========== TRANSIÇÕES (MANTIDO) ========== */
     --transicao: all 0.3s ease;
@@ -148,7 +148,7 @@ button {
 
 
 .btn-primary {
-    background: #4c2c5ccc; /* Roxo sutil ajustado */
+    background: #6d288ccc; /* Novo roxo com opacidade */
     color: var(--cor-secundaria-clara);
     border:#ffffff 2px solid;
 }
@@ -159,7 +159,7 @@ button {
 }
 
 .btn-primary:hover {
-    background: #331d3d; /* Tom mais profundo de roxo escuro */
+    background: #491461; /* Tom mais profundo de roxo escuro novo */
     transform: translateY(-2px);
     box-shadow: var(--box-shadow);
 }
@@ -196,6 +196,8 @@ button {
     display: block;
     width: 100%;
 }
+
+
 
 /* ==========================================
    HEADER / NAVEGAÇÃO
@@ -329,6 +331,7 @@ left: 0;
     background-color: #d13030;
 }
 
+
 /* ==========================================
    SEÇÃO HERO (EDITÁVEL)
    ========================================== */
@@ -360,7 +363,7 @@ left: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(29, 14, 38, 0.93) 0%, rgba(76, 44, 92, 0.95) 100%); /* Degradê baseado nos tons de roxo da logo */
+    background: linear-gradient(135deg, rgba(20, 5, 28, 0.93) 0%, rgba(109, 40, 140, 0.95) 100%); /* Degradê baseado nos tons de roxo saturados */
     z-index: 2;
 }
 
@@ -1018,7 +1021,7 @@ width: 100px;
    FOOTER
    ========================================== */
 .footer {
-    background: #1c0e21; /* Roxo purpurado extremamente escuro para o encerramento da página */
+    background: #100614; /* Roxo extremamente escuro e saturado para o fechamento */
     color: var(--cor-branco);
     padding: var(--espacamento-lg) 0 var(--espacamento-md);
 }
@@ -1286,6 +1289,10 @@ width: 100px;
         input {
            width: 300px;
         }
+    }
+
+    #btn-left{
+       
     }
 }
 
