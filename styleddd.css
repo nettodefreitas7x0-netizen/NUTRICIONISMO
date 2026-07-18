@@ -941,6 +941,7 @@ width: 100px;
 .contato-content {
     display: grid;
     justify-content: center;
+  
     gap: var(--espacamento-lg);
     margin-top: var(--espacamento-lg);
 }
