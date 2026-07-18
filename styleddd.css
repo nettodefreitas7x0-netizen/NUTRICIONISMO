@@ -708,7 +708,7 @@ left: 0;
 
 .beneficios-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 600px;
     gap: var(--espacamento-lg);
     align-items: center;
 }
@@ -940,7 +940,7 @@ width: 100px;
 
 .contato-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    justify-content: center;
     gap: var(--espacamento-lg);
     margin-top: var(--espacamento-lg);
 }
@@ -1023,7 +1023,7 @@ width: 100px;
 }
 
 #insta{
-    padding: 5px;
+padding: 5px;
     background-color: #d4d4d4;
     border-radius: 30px;
 }
