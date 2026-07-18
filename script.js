@@ -202,7 +202,7 @@ servicoCards.forEach(card => {
 // ==========================================
 // CONTADOR DE ESTATÍSTICAS (ANIMAÇÃO NUMÉRICA)
 // ==========================================
-function animateCounter(element, target, duration = 2000) {
+function animateCounter(element, target, duration = 9000) {
     let start = 0;
     const increment = target / (duration / 16); // 60 FPS
 
