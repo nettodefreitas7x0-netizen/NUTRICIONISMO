@@ -22,8 +22,22 @@
         rel="stylesheet">
 
     <!-- Estilos específicos para os carrosséis e setas no mobile -->
-    <!-- Estilos específicos para os carrosséis e setas no mobile -->
     <style>
+        /* ==================== EFEITO DE OCULTAR O HEADER ==================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .header-hidden {
+            transform: translateY(-100%);
+        }
+        /* ===================================================================== */
+
         /* ==================== EFEITO DE BRILHO NOS BOTÕES ==================== */
         .btn {
             position: relative;
@@ -35,7 +49,7 @@
        .btn:hover{
 
         box-shadow: 0 0 30px 8px rgb(21, 2, 43);
-        border: none;
+       
        }
         .btn::after {
             content: '';
@@ -74,6 +88,64 @@
             }
             100% {
                 left: 150%;
+            }
+        }
+        /* ===================================================================== */
+
+        /* ==================== CONFIGURAÇÃO DO BOTÃO FLUTUANTE DO WHATSAPP ==================== */
+        .social-links {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            
+        }
+
+ 
+
+       
+
+      
+
+        /* Balão de convite flutuante */
+        .whatsapp-balloon {
+            position: relative;
+            background: #ffffff;
+            color: #333333;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+           top: 10px;
+            white-space: nowrap;
+            border: 1px solid #e2e8f0;
+            animation: floatAnimation 2s infinite ease-in-out;
+        }
+
+        /* Setinha do balão apontando para o botão */
+        .whatsapp-balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 22px;
+            border-width: 8px 8px 0;
+            border-style: solid;
+            border-color: #ffffff transparent;
+            display: block;
+            width: 0;
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-6px);
             }
         }
         /* ===================================================================== */
@@ -527,7 +599,7 @@
                     <div class="blog-meta" style="padding: 1rem 1.5rem 0; font-size: 0.85rem; color: var(--cor-texto-claro);">
                         <span class="blog-category" style="background: rgba(0,0,0,0.05); padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 500;">Saúde Mental</span>
                     </div>
-                    <h3 class="servico-title" style="margin-top: 0.5rem;">Como a alimentação influencia na ansiedade?</h3>
+                    <h3 class="servico-title" style="margin-top: 0.5rem;">Como a alimentação influenza na ansiedade?</h3>
                     <p class="servico-description">
                         Descubra quais alimentos podem ajudar a acalmar a mente e quais devem ser evitados para reduzir crises.
                     </p>
@@ -623,7 +695,7 @@
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>A maior parte do plano é estruturada junto com você durante a consulta. O arquivo final formatado é entregue em até 48 horas úteis após o atendimento.</p>
+                        <p>A maior parte do plano é estruturada junto com você durante a consulta. O arquivo final formatado é entregue em até 48 hours úteis após o atendimento.</p>
                     </div>
                 </div>
             </div>
@@ -714,11 +786,21 @@
                             
                         </div>
                     </div>
-                <div class="social-links">
-                        <a href="https://wa.me/5591987416244?text=Olá,
-                %20gostaria de%20agendar%20uma%20consulta." target="_blank" class="social-link" 
-                        aria-label="WhatsApp Direct" src=""><img 
-                        src="./assets/whatsapp.png" alt=""></a>
+                    
+                    <!-- BALÃO FLUTUANTE ADICIONADO AQUI -->
+           <div class="social-links">
+            <button class="balloon-close" onclick="fecharBalao(event)" aria-label="Fechar">✕</button>
+                        <a target="_blank" href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta."  
+                        class="whatsapp-balloon" id="whatsapp-balloon">
+                            
+                            Agende sua consulta!
+                        </a>
+                        <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." 
+                           target="_blank" 
+                           class="social-link" 
+                           aria-label="WhatsApp Direct">
+                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                        </a>
                     </div>
 
                    
@@ -769,7 +851,7 @@
                 </div>
 
                 <div class="footer-col">
-                    <h3 class="footer-title">Contato Direct</h3>
+                    <h3 class="footer-title">Contatos</h3>
                     <ul class="footer-contact">
                         <li>📞 (91) 98741-6244</li>
                         <li>🗓️ Hora Marcada</li>
@@ -840,6 +922,33 @@
                 containerDestaques.insertBefore(btnRight, gridDestaques);
             }
         });
+
+        // LÓGICA DO SCROLL PARA MOSTRAR/OCULTAR O HEADER
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Rolar para baixo - Oculta o header
+                header.classList.add('header-hidden');
+            } else {
+                // Rolar para cima - Mostra o header
+                header.classList.remove('header-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+
+        function fecharBalao(event) {
+            event.stopPropagation();
+            const balaoClose = document.querySelector(".balloon-close")
+            const balão = document.getElementById('whatsapp-balloon');
+            if (balão) {
+                balão.style.display = 'none';
+                balaoClose.style.display = 'none'
+            }
+        }
     </script>
 
     <script src="script.js"></script>
