@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="styleddd.css">
+    <link class="link-css" rel="stylesheet" href="styleqqq.css">
     <title>Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
@@ -33,9 +33,7 @@
             z-index: 1000;
         }
 
-        .header-hidden {
-            transform: translateY(-100%);
-        }
+     
         /* ===================================================================== */
 
         /* ==================== EFEITO DE BRILHO NOS BOTÕES ==================== */
@@ -175,7 +173,7 @@
             }
 
             #servicos .servico-card {
-                flex: 0 0 100% !important; /* O card ocupa 85% da tela */
+                flex: 0 0 70% !important; /* O card ocupa 85% da tela */
                 margin-bottom: 0 !important;
             }
 
@@ -189,7 +187,7 @@
             }
 
             .destaques .destaque-card {
-                flex: 0 0 100% !important; /* O card ocupa 85% da tela */
+                flex: 0 0 70% !important; /* O card ocupa 85% da tela */
            
              overflow-y: hidden !important;
             }
@@ -248,7 +246,7 @@
 
     <header class="header" id="header">
         <div class="container">
-            <div class="header-content">
+<div class="header-content">
 
                 <a href="#home" class="logo">
                     <span class="logo-icon"> <img src="assets/logo-transparente-pequena.png" alt=""></span>
@@ -264,7 +262,7 @@
                         <li><a href="#sobre" class="nav-link">Sobre</a></li>
                         <li><a href="#servicos" class="nav-link">Serviços</a></li>
                         <li><a href="#blog" class="nav-link">Blog</a></li>
-                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
                         <li><a href="#contato" class="nav-link">Contato</a></li>
                     </ul>
                 </nav>
@@ -343,10 +341,15 @@
                     <span class="section-label">Sobre Mim</span>
                     <h2 class="section-title">Dra. Juliana Cardoso</h2>
                     <p class="sobre-description">
-                        Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista dedicada a ajudar pessoas a resgatarem o prazer em comer de forma saudável, conquistando mais energia, foco e qualidade de vida.
+                        Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista dedicada a ajudar pessoas a resgatarem o prazer em 
+                        comer de forma saudável, conquistando mais energia, foco e 
+                        qualidade de vida.
                     </p>
                     <p class="sobre-description">
-                        Meu foco é uma nutrição humanizada, sem restrições severas, onde cada plano alimentar é elaborado de forma única, respeitando sua rotina, preferences e objetivos pessoais.
+                        Meu foco é uma nutrição humanizada, sem restrições severas,
+                         onde cada plano alimentar é elaborado de forma única, 
+                         respeitando sua rotina, preferences e objetivos 
+                         pessoais.
                     </p>
 
                     <ul class="sobre-list">
@@ -368,6 +371,7 @@
                         </li>
                     </ul>
 
+                
                     <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary">Fale Comigo no WhatsApp</a>
                 </div>
             </div>
@@ -388,8 +392,11 @@
 
             <div class="servicos-container-relative">
                 <!-- Botões das setas adicionados aqui -->
-                <button style="border: none; background-color: #b3aaaa00;" id="btn-left" class="carousel-btn prev" onclick="scrollCarousel(-1)" aria-label="Voltar"><img style="width: 200px;" src="assets/seta-esquerda-roxa.png" alt=""></button>
-                <button style="border: none; background-color: #b3aaaa00;" id="btn-right" class="carousel-btn next" onclick="scrollCarousel(1)" aria-label="Avançar"><img  style="width: 200px;" src="assets/seta-direita-roxa.png" alt=""></button>
+                <button style="border: none; background-color: transparent;" id="btn-left" class="carousel-btn prev" 
+                onclick="scrollCarousel(-1)" aria-label="Voltar"><</button>
+                <button style="border: none; background-color:transparent;" id="btn-right" 
+                class="carousel-btn next" 
+                onclick="scrollCarousel(1)" aria-label="Avançar">></button>
 
                 <div class="servicos-grid" id="carousel-grid">
 
@@ -474,7 +481,15 @@
                 <span class="section-label">Por Que Agendar Uma Consulta?</span>
                 <h2 class="section-title">Meus Diferenciais</h2>
             </div>
+   <div class="servicos-container-relative">
+                <!-- Botões das setas adicionados aqui -->
+                <button style="border: none; background-color: transparent;" id="btn-left" class="carousel-btn prev" 
+                onclick="scrollDestaques(-1)" aria-label="Voltar"><</button>
+                <button style="border: none; background-color:transparent;" id="btn-right" 
+                class="carousel-btn next" 
+                onclick="scrollDestaques(1)" aria-label="Avançar">></button>
 
+                <div class="servicos-grid" id="carousel-grid">
             <div class="destaques-grid">
 
                 <div class="destaque-card">
@@ -789,7 +804,7 @@
                     
                     <!-- BALÃO FLUTUANTE ADICIONADO AQUI -->
            <div class="social-links">
-            <button class="balloon-close" onclick="fecharBalao(event)" aria-label="Fechar">✕</button>
+            <button class="balloon-close"  aria-label="Fechar">✕</button>
                         <a target="_blank" href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta."  
                         class="whatsapp-balloon" id="whatsapp-balloon">
                             
@@ -810,16 +825,16 @@
         </div>
     </section>
 
-    <footer class="footer">
+  <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
 
                 <div class="footer-col">
-                    <div class="footer-logo">
-                        <span class="logo-icon"><img src="assets/logo-transparente-pequena.png" alt=""></span>
+                    <div style="border-radius: 20px;" class="footer-logo">
+                        <span class="logo-icon"><img style="border-radius: 20px;" src="assets/logo-transparente-pequena.png" alt=""></span>
                         <span class="logo-text">
-                            <span class="logo-name">Dra. Juliana Cardoso</span>
-                            <span class="logo-tagline">Nutricionista</span>
+                            <span class="logo-name">Juliana Cardoso</span>
+                            <span class="logo-tagline" style="color: black;">Nutricionista</span>
                         </span>
                     </div>
                     <p class="footer-description">
@@ -834,8 +849,9 @@
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#servicos">Serviços</a></li>
                         <li><a href="#blog">Blog</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#contato">Contato</a></li> 
+                        <li><a href="#faq">Dúvidas Frequentes</a></li>
+                     
                     </ul>
                 </div>
 
@@ -850,108 +866,33 @@
                     </ul>
                 </div>
 
-                <div class="footer-col">
-                    <h3 class="footer-title">Contatos</h3>
-                    <ul class="footer-contact">
-                        <li>📞 (91) 98741-6244</li>
-                        <li>🗓️ Hora Marcada</li>
-                        <li>💻 Presencial / Online</li>
+                   <div class="footer-col">
+                    <h3 class="footer-title">Links Legais</h3>
+                    <ul class="footer-links">
+                           <a class="termos"  href="termos-de-uso.html" 
+                    ">Termos de Uso
+                </a> <br>
+                    <a class="politica" href="politica-de-privacidade.html" 
+                     ">Política de Privacidade
+                </a>
                     </ul>
                 </div>
+
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Nutricionista. Todos os direitos reservados.</p>
-                <div class="credits"> &lt; Desenvolvido por Webnext &gt; </div>
+                <p>&copy; 2026 Dra. Juliana Cardoso. Todos os direitos reservados. | 
+              
+                </p>
+                <div style="color: rgba(255, 255, 255, 0.7);" class="credits">  Desenvolvido por Webnext  </div>
             </div>
         </div>
     </footer>
 
     <!-- Scripts de controle dos Carrosséis -->
-    <script>
-        // Função original de Serviços
-        function scrollCarousel(direction) {
-            const carousel = document.getElementById('carousel-grid');
-            const cardWidth = carousel.querySelector('.servico-card').offsetWidth + 24; 
-            carousel.scrollBy({
-                left: direction * cardWidth,
-                behavior: 'smooth'
-            });
-        }
+   
 
-        // Função para controlar a rolagem dos Diferenciais (Destaques)
-        function scrollDestaques(direction) {
-            const carousel = document.querySelector('.destaques .destaques-grid');
-            const cardWidth = carousel.querySelector('.destaque-card').offsetWidth + 24; 
-            carousel.scrollBy({
-                left: direction * cardWidth,
-                behavior: 'smooth'
-            });
-        }
-
-        // Injeta as setas de controle dos Diferenciais dinamicamente para não precisar mexer na estrutura do HTML
-        document.addEventListener("DOMContentLoaded", function() {
-            const containerDestaques = document.querySelector('.destaques .container');
-            const gridDestaques = document.querySelector('.destaques-grid');
-            
-            if (containerDestaques && gridDestaques) {
-                // Criação do botão esquerdo
-                const btnLeft = document.createElement('button');
-                btnLeft.className = 'carousel-btn prev';
-                btnLeft.setAttribute('aria-label', 'Voltar');
-                btnLeft.onclick = function() { scrollDestaques(-1); };
-                
-                const imgLeft = document.createElement('img');
-                imgLeft.src = 'assets/seta-esquerda-roxa.png';
-                imgLeft.alt = '';
-                btnLeft.appendChild(imgLeft);
-
-                // Criação do botão direito
-                const btnRight = document.createElement('button');
-                btnRight.className = 'carousel-btn next';
-                btnRight.setAttribute('aria-label', 'Avançar');
-                btnRight.onclick = function() { scrollDestaques(1); };
-                
-                const imgRight = document.createElement('img');
-                imgRight.src = 'assets/seta-direita-roxa.png';
-                imgRight.alt = '';
-                btnRight.appendChild(imgRight);
-
-                // Insere os botões antes do grid de destaques
-                containerDestaques.insertBefore(btnLeft, gridDestaques);
-                containerDestaques.insertBefore(btnRight, gridDestaques);
-            }
-        });
-
-        // LÓGICA DO SCROLL PARA MOSTRAR/OCULTAR O HEADER
-        let lastScrollTop = 0;
-        const header = document.getElementById('header');
-
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Rolar para baixo - Oculta o header
-                header.classList.add('header-hidden');
-            } else {
-                // Rolar para cima - Mostra o header
-                header.classList.remove('header-hidden');
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        });
-
-        function fecharBalao(event) {
-            event.stopPropagation();
-            const balaoClose = document.querySelector(".balloon-close")
-            const balão = document.getElementById('whatsapp-balloon');
-            if (balão) {
-                balão.style.display = 'none';
-                balaoClose.style.display = 'none'
-            }
-        }
-    </script>
-
-    <script src="script.js"></script>
+    <script src="scripteee.js"></script>
 
 </body>
 

@@ -253,12 +253,6 @@ if ('IntersectionObserver' in window) {
     });
 }
 
-// ==========================================
-// CONSOLE LOG - INFORMAÇÕES DO SITE
-// ==========================================
-console.log('%c🐾 Patinhas Pet Shop & Vet ', 'background: #4A90E2; color: white; font-size: 20px; padding: 10px;');
-console.log('%cSite desenvolvido com amor para pets e tutores!', 'color: #FF8C42; font-size: 14px;');
-console.log('%c💙 Cuidando do seu melhor amigo 💙', 'color: #66BB6A; font-size: 12px;');
 
 // ==========================================
 // PERFORMANCE - MARCA QUANDO A PÁGINA TERMINA DE CARREGAR
@@ -315,3 +309,88 @@ function enviarPerguntaFaq(event) {
     // Limpa o input após o envio
     document.getElementById("form-faq").reset();
 }
+
+   // Função original de Serviços
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('carousel-grid');
+            const cardWidth = carousel.querySelector('.servico-card').offsetWidth + 24; 
+            carousel.scrollBy({
+                left: direction * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Função para controlar a rolagem dos Diferenciais (Destaques)
+        function scrollDestaques(direction) {
+            const carousel = document.querySelector('.destaques .destaques-grid');
+            const cardWidth = carousel.querySelector('.destaque-card').offsetWidth + 24; 
+            carousel.scrollBy({
+                left: direction * cardWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        // Injeta as setas de controle dos Diferenciais dinamicamente para não precisar mexer na estrutura do HTML
+        document.addEventListener("DOMContentLoaded", function() {
+            const containerDestaques = document.querySelector('.destaques .container');
+            const gridDestaques = document.querySelector('.destaques-grid');
+            
+            if (containerDestaques && gridDestaques) {
+                // Criação do botão esquerdo
+                const btnLeft = document.createElement('button');
+                btnLeft.className = 'carousel-btn prev';
+                btnLeft.setAttribute('aria-label', 'Voltar');
+                btnLeft.onclick = function() { scrollDestaques(-1); };
+                
+                const imgLeft = document.createElement('img');
+                imgLeft.src = 'assets/seta-esquerda-roxa.png';
+                imgLeft.alt = '';
+                btnLeft.appendChild(imgLeft);
+
+                // Criação do botão direito
+                const btnRight = document.createElement('button');
+                btnRight.className = 'carousel-btn next';
+                btnRight.setAttribute('aria-label', 'Avançar');
+                btnRight.onclick = function() { scrollDestaques(1); };
+                
+                const imgRight = document.createElement('img');
+                imgRight.src = 'assets/seta-direita-roxa.png';
+                imgRight.alt = '';
+                btnRight.appendChild(imgRight);
+
+                // Insere os botões antes do grid de destaques
+                containerDestaques.insertBefore(btnLeft, gridDestaques);
+                containerDestaques.insertBefore(btnRight, gridDestaques);
+            }
+        });
+
+        // LÓGICA DO SCROLL PARA MOSTRAR/OCULTAR O HEADER
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Rolar para baixo - Oculta o header
+                header.classList.add('header-hidden');
+            } else {
+                // Rolar para cima - Mostra o header
+                header.classList.remove('header-hidden');
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+ const balaoClose = document.querySelector(".balloon-close")
+        function fecharBalao(event) {
+            event.stopPropagation();
+            const balaoClose = document.querySelector(".balloon-close")
+            const balão = document.getElementById('whatsapp-balloon');
+            if (balão) {
+                balão.style.display = 'none';
+                balaoClose.style.display = 'none'
+            }
+
+            console.log("fechou?")
+        }
+
+        balaoClose.addEventListener("click", fecharBalao);
