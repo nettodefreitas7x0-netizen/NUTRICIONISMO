@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="styleqqq.css">
+    <link class="link-css" rel="stylesheet" href="style1.1.css">
     <title>Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
@@ -153,7 +153,7 @@
             display: none;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 873px) {
             .servicos-container-relative {
                 position: relative;
             }
@@ -173,7 +173,7 @@
             }
 
             #servicos .servico-card {
-                flex: 0 0 70% !important; /* O card ocupa 85% da tela */
+                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
                 margin-bottom: 0 !important;
             }
 
@@ -193,7 +193,7 @@
             }
 
             #carousel-grid{
-                   flex: 0 0 100% !important; /* O card ocupa 85% da tela */
+                   flex: 0 0 90% !important; /* O card ocupa 85% da tela */
             
              overflow-y: hidden !important;
             }
@@ -378,19 +378,18 @@
 
             
     </section>
+<section class="servicos" id="servicos">
+    <div class="container">
 
-    <section class="servicos" id="servicos">
-        <div class="container">
+        <div class="section-header">
+            <span class="section-label">Meus Serviços</span>
+            <h2 class="section-title">O cuidado que sua saúde precisa</h2>
+            <p class="section-description">
+                Soluções nutricionais focadas no seu bem-estar, com total flexibilidade de atendimento.
+            </p>
+        </div>
 
-            <div class="section-header">
-                <span class="section-label">Meus Serviços</span>
-                <h2 class="section-title">O cuidado que sua saúde precisa</h2>
-                <p class="section-description">
-                    Soluções nutricionais focadas no seu bem-estar, com total flexibilidade de atendimento.
-                </p>
-            </div>
-
-            <div class="servicos-container-relative">
+        <div class="servicos-container-relative">
                 <!-- Botões das setas adicionados aqui -->
                 <button style="border: none; background-color: transparent;" id="btn-left" class="carousel-btn prev" 
                 onclick="scrollCarousel(-1)" aria-label="Voltar"><</button>
@@ -398,104 +397,100 @@
                 class="carousel-btn next" 
                 onclick="scrollCarousel(1)" aria-label="Avançar">></button>
 
-                <div class="servicos-grid" id="carousel-grid">
+            <div class="servicos-grid" id="carousel-grid">
 
                     <div class="servico-card">
-                        <div class="servico-image">
-                            <img src="assets/online.jpeg"
-                                alt="Consulta Online">
-                        </div>
-                        <div class="servico-icon">💻</div>
-                        <h3 class="servico-title">Consulta Online</h3>
-                        <p class="servico-description">
-                            Atendimento por videochamada com a mesma atenção e entrega do presencial, de onde você estiver.
-                        </p>
+                    <div class="servico-image">
+                        <img src="assets/online.jpeg" alt="Consulta Online">
                     </div>
-
-                    <div class="servico-card">
-                        <div class="servico-image">
-                            <img src="assets/presencial.jpeg"
-                                alt="Consulta Presencial">
-                        </div>
-                        <div class="servico-icon">🏢</div>
-                        <h3 class="servico-title">Consulta Presencial</h3>
-                        <p class="servico-description">
-                            Atendimento em consultório com hora marcada, incluindo bioimpedância e avaliação física completa.
-                        </p>
-                    </div>
-
-                    <div class="servico-card">
-                        <div class="servico-image">
-                            <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=400&q=80"
-                                alt="Emagrecimento Saudável">
-                    </div>
-                        <div class="servico-icon">⚖️</div>
-                        <h3 class="servico-title">Emagrecimento Definitivo</h3>
-                        <p class="servico-description">
-                            Estratégias nutricionais eficientes para perder peso com saúde, sem passar fome ou fazer restrições absurdas.
-                        </p>
-                    </div>
-
-                    <div class="servico-card">
-                        <div class="servico-image">
-                            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80" alt="Nutrição Esportiva">
-                        </div>
-                        <div class="servico-icon">🏃‍♀️</div>
-                        <h3 class="servico-title">Nutrição Esportiva</h3>
-                        <p class="servico-description">
-                            Foco em performance, ganho de massa muscular (hipertrofia) e melhora do rendimento nos treinos.
-                        </p>
-                    </div>
-
-                    <div class="servico-card">
-                        <div class="servico-image">
-                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Reeducação Alimentar">
-                        </div>
-                        <div class="servico-icon">🥗</div>
-                        <h3 class="servico-title">Reeducação Alimentar</h3>
-                        <p class="servico-description">
-                            Aprenda a fazer escolhas certas no dia a dia e construa uma relação saudável e leve com a comida.
-                        </p>
-                    </div>
-
-                    <div class="servico-card">
-                        <div class="servico-image">
-                            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&q=80"
-                                alt="Nutrição Clínica e Longevidade">
-                        </div>
-                        <div class="servico-icon">🧬</div>
-                        <h3 class="servico-title">Nutrição Clinical</h3>
-                        <p class="servico-description">
-                            Controle e prevenção de doenças como diabetes, hipertensão, colesterol alto e melhora da saúde intestinal.
-                        </p>
-                    </div>
+                    <div class="servico-icon">💻</div>
+                    <h3 class="servico-title">Consulta Online</h3>
+                    <p class="servico-description">
+                        Atendimento por videochamada com a mesma atenção e entrega do presencial, de onde você estiver.
+                    </p>
                 </div>
+
+                    <div class="servico-card">
+                    <div class="servico-image">
+                        <img src="assets/presencial.jpeg" alt="Consulta Presencial">
+                    </div>
+                    <div class="servico-icon">🏢</div>
+                    <h3 class="servico-title">Consulta Presencial</h3>
+                    <p class="servico-description">
+                        Atendimento em consultório com hora marcada, incluindo bioimpedância e avaliação física completa.
+                    </p>
+                </div>
+
+                    <div class="servico-card">
+                    <div class="servico-image">
+                        <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=400&q=80" alt="Emagrecimento Saudável">
+                    </div>
+                    <div class="servico-icon">⚖️</div>
+                    <h3 class="servico-title">Emagrecimento Definitivo</h3>
+                    <p class="servico-description">
+                        Estratégias nutricionais eficientes para perder peso com saúde, sem passar fome ou fazer restrições absurdas.
+                    </p>
+                </div>
+
+                    <div class="servico-card">
+                    <div class="servico-image">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80" alt="Nutrição Esportiva">
+                    </div>
+                    <div class="servico-icon">🏃‍♀️</div>
+                    <h3 class="servico-title">Nutrição Esportiva</h3>
+                    <p class="servico-description">
+                        Foco em performance, ganho de massa muscular (hipertrofia) e melhora do rendimento nos treinos.
+                    </p>
+                </div>
+
+                    <div class="servico-card">
+                    <div class="servico-image">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Reeducação Alimentar">
+                    </div>
+                    <div class="servico-icon">🥗</div>
+                    <h3 class="servico-title">Reeducação Alimentar</h3>
+                    <p class="servico-description">
+                        Aprenda a fazer escolhas certas no dia a dia e construa uma relação saudável e leve com a comida.
+                    </p>
+                </div>
+
+                    <div class="servico-card">
+                    <div class="servico-image">
+                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&q=80" alt="Nutrição Clínica e Longevidade">
+                    </div>
+                    <div class="servico-icon">🧬</div>
+                        <h3 class="servico-title">Nutrição Clinical</h3>
+                    <p class="servico-description">
+                        Controle e prevenção de doenças como diabetes, hipertensão, colesterol alto e melhora da saúde intestinal.
+                    </p>
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="destaques">
-        <div class="container">
+<section class="destaques">
+    <div class="container">
 
-            <div class="section-header">
-                <span class="section-label">Por Que Agendar Uma Consulta?</span>
-                <h2 class="section-title">Meus Diferenciais</h2>
-            </div>
-   <div class="servicos-container-relative">
-                <!-- Botões das setas adicionados aqui -->
+        <div class="section-header">
+            <span class="section-label">Por Que Agendar Uma Consulta?</span>
+            <h2 class="section-title">Meus Diferenciais</h2>
+        </div>
+
+        <div class="destaques-container-relative">
+            <!-- Botões das setas adicionados aqui -->
                 <button style="border: none; background-color: transparent;" id="btn-left" class="carousel-btn prev" 
                 onclick="scrollDestaques(-1)" aria-label="Voltar"><</button>
-                <button style="border: none; background-color:transparent;" id="btn-right" 
-                class="carousel-btn next" 
-                onclick="scrollDestaques(1)" aria-label="Avançar">></button>
+            <button style="border: none; background-color:transparent;" id="btn-right" 
+class="carousel-btn next" 
+onclick="scrollDestaques(1)" aria-label="Avançar">></button>
 
-                <div class="servicos-grid" id="carousel-grid">
-            <div class="destaques-grid">
+            <div class="destaques-grid" id="destaques-grid">
 
-                <div class="destaque-card">
+                <div class="destaque-card" onclick="proximoCardDestaque(this)">
                     <div class="destaque-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=80"
-                            alt="Metodologia Única">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=80" alt="Metodologia Única">
                     </div>
                     <div class="destaque-number">01</div>
                     <h3 class="destaque-title">Método Humanizado</h3>
@@ -504,10 +499,9 @@
                     </p>
                 </div>
 
-                <div class="destaque-card">
+                <div class="destaque-card" onclick="proximoCardDestaque(this)">
                     <div class="destaque-image">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80"
-                            alt="Suporte Digital">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80" alt="Suporte Digital">
                     </div>
                     <div class="destaque-number">02</div>
                     <h3 class="destaque-title">Suporte via WhatsApp</h3>
@@ -516,10 +510,9 @@
                     </p>
                 </div>
 
-                <div class="destaque-card">
+                <div class="destaque-card" onclick="proximoCardDestaque(this)">
                     <div class="destaque-image">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80"
-                            alt="Foco em Resultados">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&q=80" alt="Foco em Resultados">
                     </div>
                     <div class="destaque-number">03</div>
                     <h3 class="destaque-title">Foco na Constância</h3>
@@ -528,10 +521,9 @@
                     </p>
                 </div>
 
-                <div class="destaque-card">
+                <div class="destaque-card" onclick="proximoCardDestaque(this)">
                     <div class="destaque-image">
-                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80"
-                            alt="Ambiente calmo">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80" alt="Ambiente calmo">
                     </div>
                     <div class="destaque-number">04</div>
                     <h3 class="destaque-title">Praticidade Máxima</h3>
@@ -539,9 +531,11 @@
                         Acesso fácil a receitas práticas, lista de substituições e orientações direto na palma da sua mão.
                     </p>
                 </div>
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="beneficios" style="display:flex; justify-content: center; align-items: center;">
         <div class="container">
@@ -892,7 +886,7 @@
     <!-- Scripts de controle dos Carrosséis -->
    
 
-    <script src="scripteee.js"></script>
+    <script src="script1.1.js"></script>
 
 </body>
 
