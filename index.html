@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="style1.4.css">
-    <title>Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
+    <link class="link-css" rel="stylesheet" href="style1.5.css">
+    <title>Dra. Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
         nutrição clínica e esportiva. Atendimentos com hora marcada de forma presencial ou online.">
@@ -192,8 +192,18 @@
              overflow-y: hidden !important;
             }
 
+                    #servicos .servico-card {
+                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
+                margin-bottom: 0 !important;
+            }
+                 .destaques .destaque-card {
+                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
+           
+             overflow-y: hidden !important;
+            }
+
             #carousel-grid{
-                   flex: 0 0 90% !important; /* O card ocupa 85% da tela */
+                   flex: 0 0 100% !important; /* O card ocupa 85% da tela */
             
              overflow-y: hidden !important;
             }
@@ -341,37 +351,59 @@
 
                 <div class="sobre-text">
                     <span class="section-label" >Sobre Mim</span>
-                    <h2 class="section-title" id="sobre">Dra. Juliana Cardoso</h2>
+                    <h2 class="section-title">Dra. Juliana Cardoso</h2>
                     <p class="sobre-description">
-                        Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista dedicada a ajudar pessoas a resgatarem o prazer em 
-                        comer de forma saudável, conquistando mais energia, foco e 
-                        qualidade de vida.
+                        Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista e formada 
+                        em <strong>Nutrição</strong> e <strong>Gastronomia</strong>, apaixonada por ajudar pessoas 
+                        a transformarem 
+                        sua saúde através de uma alimentação equilibrada, prazerosa e sustentável. <br><br>
+
+Meu trabalho é voltado para o <strong>emagrecimento feminino</strong>, <strong>hipertrofia</strong> e <strong>
+reeducação alimentar</strong>, sempre
+ com uma abordagem acolhedora, individualizada e baseada na realidade de cada paciente. Acredito que a nutrição 
+ deve se adaptar à sua vida, e não o contrário. <br> <br>
+
+Minha filosofia é simples: <strong>"Resultados reais para pessoas reais." </strong>Por isso, não trabalho com 
+dietas radicais, restrições excessivas ou soluções temporárias. Cada <strong>plano alimentar</strong> é construído
+ <strong>respeitando sua rotina</strong>, preferências, objetivos e sua realidade financeira, tornando a alimentação 
+ saudável mais 
+ acessível e possível de ser mantida a longo prazo. <br> <br>
+
+Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa, sem extremismos e sem abrir mão do
+ prazer de se alimentar. Meu objetivo é ajudar você a desenvolver hábitos que promovam mais saúde, 
+ disposição, autoestima e qualidade de vida, conquistando resultados duradouros de forma leve e 
+ equilibrada. <br> 
                     </p>
-                    <p class="sobre-description">
-                        Meu foco é uma nutrição humanizada, sem restrições severas,
-                         onde cada plano alimentar é elaborado de forma única, 
-                         respeitando sua rotina, preferences e objetivos 
-                         pessoais.
+                    <p  class="sobre-description">
+                    
                     </p>
 
-                    <ul class="sobre-list">
-                        <li>
+                    <ul  class="sobre-list">
+                        <li  >
                             <span class="list-icon">✓</span>
-                            <span>Acompanhamento personalizado focado na sua rotina</span>
+                            <span>Acompanhamento nutricional personalizado</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" id="sobre">✓</span>
+                            <span>Emagrecimento feminino sem dietas radicais</span>
                         </li>
                         <li>
                             <span class="list-icon">✓</span>
-                            <span>Consultas online no conforto da sua casa</span>
+                            <span>Reeducação alimentar respeitando sua individualidade</span>
                         </li>
                         <li>
                             <span class="list-icon">✓</span>
-                            <span>Consultório presencial acolhedor e equipado</span>
+                            <span>Planos adaptados à sua rotina e ao seu orçamento</span>
                         </li>
-                        <li>
+                         <li>
                             <span class="list-icon">✓</span>
-                            <span>Suporte para tirar dúvidas entre as consultas</span>
+                            <span>Mais saúde, bem-estar e qualidade de vida</span>
                         </li>
                     </ul>
+
+                    <p>💜 Resultados reais para pessoas reais.</p>
+<p>✨ Comer bem é comer com saúde.</p> <br>
+
 
                 
                     <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary">Fale Comigo no WhatsApp</a>
@@ -391,7 +423,7 @@
             </p>
         </div>
 
-        <div class="servicos-container-relative">
+        <div  class="servicos-container-relative">
                 <!-- Botões das setas adicionados aqui -->
                 <button style="border: none; background-color: transparent;" id="btn-left" class="carousel-btn prev" 
                 onclick="scrollCarousel(-1)" aria-label="Voltar"><</button>
@@ -406,9 +438,10 @@
                         <img src="assets/online.jpeg" alt="Consulta Online">
                     </div>
                     <div class="servico-icon">💻</div>
-                    <h3 class="servico-title">Consulta Online</h3>
+                    <h3 class="servico-title" id="atendimento">Atendimento Online</h3>
                     <p class="servico-description">
-                        Atendimento por videochamada com a mesma atenção e entrega do presencial, de onde você estiver.
+                        Atendimento por videochamada com a mesma atenção e entrega do presencial, 
+                        de onde você estiver.
                     </p>
                 </div>
 
@@ -417,9 +450,12 @@
                         <img src="assets/presencial.jpeg" alt="Consulta Presencial">
                     </div>
                     <div class="servico-icon">🏢</div>
-                    <h3 class="servico-title">Consulta Presencial</h3>
+                    <h3 class="servico-title" id="atendimento-presencial">Atendimento Presencial</h3>
                     <p class="servico-description">
-                        Atendimento em consultório com hora marcada, incluindo bioimpedância e avaliação física completa.
+                        Atendimentos realizados na minha residência ou no conforto da
+                         sua casa, com hora marcada,
+                         incluindo bioimpedância, avaliação física completa e 
+                         plano alimentar personalizado.
                     </p>
                 </div>
 
@@ -428,9 +464,10 @@
                         <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=400&q=80" alt="Emagrecimento Saudável">
                     </div>
                     <div class="servico-icon">⚖️</div>
-                    <h3 class="servico-title">Emagrecimento Definitivo</h3>
+                    <h3 class="servico-title" id="emagrecimento-feminino">Emagrecimento Feminino</h3>
                     <p class="servico-description">
-                        Estratégias nutricionais eficientes para perder peso com saúde, sem passar fome ou fazer restrições absurdas.
+                        Estratégias nutricionais eficientes para perder peso com saúde, 
+                        sem passar fome ou fazer restrições absurdas.
                     </p>
                 </div>
 
@@ -439,7 +476,7 @@
                         <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80" alt="Nutrição Esportiva">
                     </div>
                     <div class="servico-icon">🏃‍♀️</div>
-                    <h3 class="servico-title">Nutrição Esportiva</h3>
+                    <h3 class="servico-title" id="hipertrofia>Hipertrofia</h3>
                     <p class="servico-description">
                         Foco em performance, ganho de massa muscular (hipertrofia) e melhora do rendimento nos treinos.
                     </p>
@@ -450,9 +487,10 @@
                         <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80" alt="Reeducação Alimentar">
                     </div>
                     <div class="servico-icon">🥗</div>
-                    <h3 class="servico-title">Reeducação Alimentar</h3>
+                    <h3 class="servico-title" id="reeducacao-alimentar">Reeducação Alimentar</h3>
                     <p class="servico-description">
-                        Aprenda a fazer escolhas certas no dia a dia e construa uma relação saudável e leve com a comida.
+                        Aprenda a fazer escolhas certas no dia a dia e 
+                        construa uma relação saudável e leve com a comida.
                     </p>
                 </div>
 
@@ -461,9 +499,10 @@
                         <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&q=80" alt="Nutrição Clínica e Longevidade">
                     </div>
                     <div class="servico-icon">🧬</div>
-                        <h3 class="servico-title">Nutrição Clinical</h3>
+                        <h3 class="servico-title" id="nutricao-clinica">Nutrição Clínica</h3>
                     <p class="servico-description">
-                        Controle e prevenção de doenças como diabetes, hipertensão, colesterol alto e melhora da saúde intestinal.
+                        Controle e prevenção de doenças como diabetes, 
+                        hipertensão, colesterol alto e melhora da saúde intestinal.
                     </p>
                 </div>
 
@@ -503,12 +542,13 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
 
                 <div class="destaque-card" onclick="proximoCardDestaque(this)">
                     <div class="destaque-image">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80" alt="Suporte Digital">
+                        <img src="assets/suporte-whats.jpeg" alt="Suporte Digital">
                     </div>
                     <div class="destaque-number">02</div>
                     <h3 class="destaque-title">Suporte via WhatsApp</h3>
                     <p class="destaque-description">
-                        Você não estará só. Estarei disponível para responder suas principais dúvidas no período entre as consultas.
+                        Você não estará só. Estarei disponível para responder 
+                        suas principais dúvidas no período entre as consultas.
                     </p>
                 </div>
 
@@ -519,7 +559,8 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                     <div class="destaque-number">03</div>
                     <h3 class="destaque-title">Foco na Constância</h3>
                     <p class="destaque-description">
-                        Adapto a alimentação à sua realidade financeira, profissional e social para gerar resultados duradouros.
+                        Adapto a alimentação à sua realidade financeira, 
+                        profissional e social para gerar resultados duradouros.
                     </p>
                 </div>
 
@@ -530,7 +571,8 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                     <div class="destaque-number">04</div>
                     <h3 class="destaque-title">Praticidade Máxima</h3>
                     <p class="destaque-description">
-                        Acesso fácil a receitas práticas, lista de substituições e orientações direto na palma da sua mão.
+                        Acesso fácil a receitas práticas, 
+                        lista de substituições e orientações direto na palma da sua mão.
                     </p>
                 </div>
 
@@ -576,7 +618,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                             <div class="beneficio-icon">💳</div>
                             <div class="beneficio-text">
                                 <h3>Facilidade de Pagamento</h3>
-                                <p>Aceitamos dinheiro, cartões de crédito, débito e PIX para sua total comodidade.</p>
+                                <p>Formas de pagamento aceitas: dinheiro ou Pix.</p>
                             </div>
                         </div>
                     </div>
@@ -595,7 +637,8 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                 <span class="section-label">Dicas da Nutri</span>
                 <h2 class="section-title">Nosso Blog de Nutrição</h2>
                 <p class="section-description">
-                    Fique por dentro das últimas novidades, receitas e artigos para te guiar rumo a uma vida muito mais saudável.
+                    Fique por dentro das últimas novidades, receitas e artigos para 
+                    te guiar rumo a uma vida muito mais saudável.
                 </p>
             </div>
 
@@ -672,11 +715,13 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Como funciona a consulta online?</span>
+                        <span>Como funciona o atendimento online?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>A consulta online é realizada via chamada de vídeo (Google Meet ou WhatsApp). Conversamos sobre sua rotina, objetivos e histórico de saúde. O plano alimentar é enviado digitalmente e você conta com o mesmo acompanhamento da consulta presencial.</p>
+                        <p>O atendimento online é realizada via chamada de vídeo (App Webdiet ou WhatsApp). 
+                            Conversamos sobre sua rotina, objetivos e histórico de saúde. O plano alimentar
+                             é enviado digitalmente e você conta com o mesmo acompanhamento da consulta presencial.</p>
                     </div>
                 </div>
 
@@ -686,7 +731,9 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Sim, todos os atendimentos (tanto presenciais quanto online) são realizados exclusivamente com hora marcada para garantir dedicação total ao seu caso.</p>
+                        <p>Sim, todos os atendimentos (tanto presenciais quanto online) são 
+                            realizados exclusivamente com hora marcada para garantir 
+                            dedicação total ao seu caso.</p>
                     </div>
                 </div>
 
@@ -696,7 +743,9 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Não! Minha filosofia de trabalho é baseada em "comida de verdade". Suplementos só serão prescritos se houver real necessidade e de acordo com seu orçamento.</p>
+                        <p>Não! Minha filosofia de trabalho é baseada em "comida de verdade". 
+                            Suplementos só serão prescritos se houver real necessidade e de acordo
+                             com seu orçamento.</p>
                     </div>
                 </div>
 
@@ -706,7 +755,10 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>A maior parte do plano é estruturada junto com você durante a consulta. O arquivo final formatado é entregue em até 48 hours úteis após o atendimento.</p>
+                        <p>A maior parte do plano é estruturada 
+                            junto com você durante a consulta. 
+                            O arquivo final formatado é entregue em até 48 hours úteis após 
+                            o atendimento.</p>
                     </div>
                 </div>
             </div>
@@ -743,7 +795,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                         <div class="info-icon">📍</div>
                         <div class="info-text">
                             <h3>Tipo de Atendimento</h3>
-                            <p>Presencial (Consultório com Hora Marcada)<br>Online (De qualquer lugar via Vídeo)</p>
+                            <p>Presencial (com Hora Marcada)<br>Online (De qualquer lugar via Vídeo)</p>
                         </div>
                     </div>
 
@@ -852,18 +904,19 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
                 </div>
 
                 <div class="footer-col">
-                    <h3 class="footer-title">Atendimentos</h3>
+                    <h3 class="footer-title">Meus Serviços</h3>
                     <ul class="footer-links">
-                        <li><a href="#servicos">Consulta Presencial</a></li>
-                        <li><a href="#servicos">Consulta Online</a></li>
-                        <li><a href="#servicos">Emagrecimento</a></li>
-                        <li><a href="#servicos">Nutrição Esportiva</a></li>
+                        <li><a href="#servicos">Atendimento Presencial</a></li>
+                        <li><a href="#servicos">Atendimento Online</a></li>
+                        <li><a href="#servicos">Emagrecimento Feminino</a></li>
+                        <li><a href="#servicos">Hipertrofia</a></li>
+                          <li><a href="#servicos">Nutrição Clínica</a></li>
                         <li><a href="#servicos">Reeducação Alimentar</a></li>
                     </ul>
                 </div>
 
                    <div class="footer-col">
-                    <h3 class="footer-title">Links Legais</h3>
+                    <h3 class="footer-title">Políticas e Termos</h3>
                     <ul class="footer-links">
                            <a class="termos"  href="termos-de-uso.html" 
                     ">Termos de Uso
@@ -888,7 +941,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
     <!-- Scripts de controle dos Carrosséis -->
    
 
-    <script src="script1.4.js"></script>
+    <script src="script1.5.js"></script>
 
 </body>
 
