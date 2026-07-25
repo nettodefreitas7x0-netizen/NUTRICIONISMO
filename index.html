@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="style1.1.css">
+    <link class="link-css" rel="stylesheet" href="style1.4.css">
     <title>Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
@@ -27,7 +27,7 @@
         .header {
             position: fixed;
             top: 0;
-            left: 0;
+            left:0 ;
             width: 100%;
             transition: transform 0.3s ease-in-out;
             z-index: 1000;
@@ -258,19 +258,21 @@
 
                 <nav class="nav" id="nav-menu">
                     <ul class="nav-list">
-                        <li><a href="#home" class="nav-link">Início</a></li>
+                        <li><a  href="#home" class="nav-link">Início</a></li>
                         <li><a href="#sobre" class="nav-link">Sobre</a></li>
                         <li><a href="#servicos" class="nav-link">Serviços</a></li>
                         <li><a href="#blog" class="nav-link">Blog</a></li>
-                        <li><a href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
+                        <li><a id="duvida" href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
                         <li><a href="#contato" class="nav-link">Contato</a></li>
                     </ul>
                 </nav>
 
                 <a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
                 target="_blank" 
-                class="btn btn-primary btn-header" 
-                style="margin-left: 10px;">Agendar Consulta</a>
+                class="btn btn-primary btn-header"
+               
+                id="btn-agendar-header">Agendar Consulta
+            </a>
 
                 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -328,7 +330,7 @@
         </div>
     </section>
 
-    <section class="sobre" id="sobre">
+    <section class="sobre" >
         <div class="container">
             <div class="sobre-content">
 
@@ -338,8 +340,8 @@
                 </div>
 
                 <div class="sobre-text">
-                    <span class="section-label">Sobre Mim</span>
-                    <h2 class="section-title">Dra. Juliana Cardoso</h2>
+                    <span class="section-label" >Sobre Mim</span>
+                    <h2 class="section-title" id="sobre">Dra. Juliana Cardoso</h2>
                     <p class="sobre-description">
                         Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista dedicada a ajudar pessoas a resgatarem o prazer em 
                         comer de forma saudável, conquistando mais energia, foco e 
@@ -378,12 +380,12 @@
 
             
     </section>
-<section class="servicos" id="servicos">
-    <div class="container">
+<section class="servicos" >
+    <div class="container"id="servicos">
 
         <div class="section-header">
-            <span class="section-label">Meus Serviços</span>
-            <h2 class="section-title">O cuidado que sua saúde precisa</h2>
+            <span class="section-label" >Meus Serviços</span>
+            <h2 class="section-title" >O cuidado que sua saúde precisa</h2>
             <p class="section-description">
                 Soluções nutricionais focadas no seu bem-estar, com total flexibilidade de atendimento.
             </p>
@@ -658,15 +660,15 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
         </div>
     </section>
 
-   <section class="faq" id="faq">
+   <section class="faq" >
         <div class="container">
             <!--PERGUNTAS FREQUENTES -->
             <div class="section-header">
                 <span class="section-label">Perguntas Frequentes</span>
-                <h2 class="section-title">Tire suas dúvidas</h2>
+                <h2 class="section-title" id="faq">Tire suas dúvidas</h2>
             </div>
 
-            <div class="faq-list">
+            <div class="faq-list" >
 
                 <div class="faq-item">
                     <button class="faq-question">
@@ -722,12 +724,12 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
         </div>
     </section>
 
-   <section class="contato" id="contato">
+   <section class="contato" >
         <div class="container">
 
             <div class="section-header">
                 <span class="section-label">Contato</span>
-                <h2 class="section-title">Agende seu atendimento</h2>
+                <h2 class="section-title" id="contato">Agende seu atendimento</h2>
                 <p class="section-description">
                     Estou pronta para te ajudar a conquistar sua melhor versão. Fale comigo!
                 </p>
@@ -735,7 +737,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
 
             <div class="contato-content">
 
-                <div class="contato-info">
+                <div class="contato-info" >
 
                     <div class="info-item">
                         <div class="info-icon">📍</div>
@@ -886,7 +888,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
     <!-- Scripts de controle dos Carrosséis -->
    
 
-    <script src="script1.1.js"></script>
+    <script src="script1.4.js"></script>
 
 </body>
 

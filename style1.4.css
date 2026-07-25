@@ -213,19 +213,22 @@ button {
    ========================================== */
 .header {
     position: fixed;
+    padding: 20px;
     top: 0;
 left: 0;
     width: 100%;
-    background: #fff;
+    background: #ffffff;
     box-shadow: var(--box-shadow);
     z-index: 1000;
     transition: var(--transicao);
-    padding: 10px;
-}
 
-   .header-hidden {
+}
+  /*==========================================
+  OCULTAL O HEADER AO USAR O SCROOL PARA BAIXO
+ ========================================== */
+   /* .header-hidden {
             transform: translateY(-100%);
-        }
+        } */
 
 .header-content {
     display: flex;
@@ -273,7 +276,9 @@ left: 0;
     display: flex;
     gap: 2rem;
     align-items: center;
+  
 }
+
 
 .nav-link {
     color: var(--cor-texto-claro);
@@ -1273,6 +1278,53 @@ width: 100px;
 /* ==========================================
    RESPONSIVIDADE - TABLET
    ========================================== */
+@media (max-width: 1123px){
+    #duvida{
+        font-size: 0;
+    }
+    #duvida::before  { 
+   content: "Dúvidas"; 
+   font-size:  var(--espacamento-sm)
+   
+}
+
+.nav{
+    margin: 0 10px 0 10px;
+}
+
+#btn-agendar-header{
+font-size: 0;
+}
+
+#btn-agendar-header::before{
+content: "Agendar";
+font-size: 1rem;
+}
+
+}
+
+@media (max-width: 1017px){
+  #duvida{
+       font-size: 0;
+    }
+#duvida::before  { 
+   content: "Dúvidas"; 
+   font-size:  var(--espacamento-sm)
+   
+}
+
+.logo-text{
+ 
+}
+
+
+ 
+
+
+}
+
+
+
 @media (max-width: 992px) {
     .section-title {
         font-size: 2rem;
@@ -1312,11 +1364,28 @@ width: 100px;
     .contato-content {
         grid-template-columns: 1fr;
     }
+
+
 }
+
+@media (max-width: 871px){
+#btn-agendar-header{
+    display: none;
+}
+}
+
+@media (max-width: 836px){
+.nav{
+    margin-left: 20px;
+}
+}
+
 
 /* ==========================================
    RESPONSIVIDADE - MOBILE
    ========================================== */
+
+
 @media (max-width: 768px) {
     :root {
         --espacamento-md: 1.5rem;
@@ -1335,17 +1404,26 @@ width: 100px;
 
     .nav {
         position: fixed;
-        top: 85px;
+        top: 90px;
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
         background: rgb(255, 255, 255);
         transition: left 0.3s ease;
         box-shadow: var(--box-shadow);
+        margin: 0;
+    }
+
+    .nav-top{
+        top: 70px;
     }
 
     .nav.active {
         left: 0;
+        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .nav-list {

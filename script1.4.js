@@ -77,20 +77,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ==========================================
-// HEADER - MUDANÇA DE ESTILO NO SCROLL
-// ==========================================
-window.addEventListener('scroll', function() {
-    const header = document.getElementById('header');
 
-    if (window.scrollY > 100) {
-        header.style.padding = '0.5rem 0';
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
-    } else {
-        header.style.padding = '1rem 0';
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
-    }
-});
 
 // ==========================================
 // FAQ - ACORDEÃO (EXPANDIR/RECOLHER)
@@ -364,9 +351,10 @@ function enviarPerguntaFaq(event) {
             }
         });
 
-        // LÓGICA DO SCROLL PARA MOSTRAR/OCULTAR O HEADER
+ // OCULTAR O HEADER QUANDO UTILIZAR O SCROLL PARA BAIXO. PARA CIMA MOSTRAR DE NOVO
         let lastScrollTop = 0;
         const header = document.getElementById('header');
+      
 
         window.addEventListener('scroll', function() {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -374,9 +362,11 @@ function enviarPerguntaFaq(event) {
             if (scrollTop > lastScrollTop && scrollTop > 100) {
                 // Rolar para baixo - Oculta o header
                 header.classList.add('header-hidden');
+               
             } else {
                 // Rolar para cima - Mostra o header
                 header.classList.remove('header-hidden');
+              
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
@@ -394,3 +384,20 @@ function enviarPerguntaFaq(event) {
         }
 
         balaoClose.addEventListener("click", fecharBalao);
+
+        // ==========================================
+// HEADER - MUDANÇA DE ESTILO NO SCROLL
+// ==========================================
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+  const nav = document.getElementById('nav-menu');
+    if (window.scrollY > 100) {
+        header.style.padding = ' 0px 20px';
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
+         nav.classList.add('nav-top');
+    } else {
+        header.style.padding = ' 20px';
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+          nav.classList.remove('nav-top');
+    }
+});
