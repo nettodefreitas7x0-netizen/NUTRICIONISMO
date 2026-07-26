@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="style1.6.css">
+    <link class="link-css" rel="stylesheet" href="style1.8.css">
     <title>Dra. Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
@@ -21,9 +21,19 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Estilos específicos para os carrosséis e setas no mobile -->
+ 
     <style>
+/* Remove o efeito azul para botões e links especificamente */
+button, 
+a, 
+.carousel-btn, 
+input[type="submit"] {
+    -webkit-tap-highlight-color: transparent;
+}
+        
         /* ==================== EFEITO DE OCULTAR O HEADER ==================== */
+        
+        
         .header {
             position: fixed;
             top: 0;
@@ -88,6 +98,54 @@
                 left: 150%;
             }
         }
+
+        .seta{
+            color: #fff;
+           background-color: #490085;
+           width: 100%;
+           height: 100%;
+           border-radius: 30px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border: solid 2px  #490085;
+        }
+ .seta:hover{
+
+         background-color: #5c00ac;
+        }
+        .seta:active{
+
+         background-color: #3f0072;
+        }
+
+                .traco-left{
+position: relative;
+right: 8px;
+font-size: 30px;
+        }
+
+        .ponta-left{
+position: relative;
+left:5px;
+font-size: 30px;
+        }
+
+       
+
+        .traco-right{
+position: relative;
+right: 5px;
+font-size: 30px;
+        }
+
+        .ponta-right{
+position: relative;
+left: 8px;
+font-size: 30px;
+        }
+
+      
         /* ===================================================================== */
 
         /* ==================== CONFIGURAÇÃO DO BOTÃO FLUTUANTE DO WHATSAPP ==================== */
@@ -153,9 +211,14 @@
             display: none;
         }
 
+        .carousel-btn.hidden {
+    display: none !important;
+}
+
         @media (max-width: 873px) {
             .servicos-container-relative {
                 position: relative;
+              
             }
 
             /* Habilita posicionamento relativo na seção de destaques para conter as setas absolutas */
@@ -228,6 +291,7 @@
                 cursor: pointer;
                 z-index: 10;
                 user-select: none;
+                
             }
 
             .carousel-btn img {
@@ -241,6 +305,7 @@
             }
 
             .carousel-btn.next {
+               
                 right: 5px;
             }
 
@@ -248,6 +313,14 @@
             .destaques .carousel-btn {
                 top: 60%; /* Ajuste fino de altura para alinhar com os cards dos diferenciais */
             }
+
+            /* Esconde a seta quando o JS adiciona a classe .hidden */
+.carousel-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
         }
     </style>
 </head>
@@ -309,7 +382,7 @@
                     <p class="hero-description">
                         Atendimentos com hora marcada de forma presencial ou 
                         online. Planos alimentares individuais e personalizados para 
-                        o seu estilo de vida por Dra. Juliana Cardoso.
+                        o seu estilo de vida feito pela Dra. Juliana Cardoso.
                     </p>
 
                     <div class="hero-buttons">
@@ -353,12 +426,15 @@
                     <span class="section-label" >Sobre Mim</span>
                     <h2 class="section-title">Dra. Juliana Cardoso</h2>
                     <p class="sobre-description">
-                        Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista e formada 
-                        em <strong>Nutrição</strong> e <strong>Gastronomia</strong>, apaixonada por ajudar pessoas 
+                        Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista formada 
+                        em <strong>Nutrição</strong> e <strong>Gastronomia</strong>, apaixonada
+                         por ajudar pessoas 
                         a transformarem 
-                        sua saúde através de uma alimentação equilibrada, prazerosa e sustentável. <br><br>
+                        sua saúde através de uma alimentação equilibrada, prazerosa e 
+                        sustentável. <br><br>
 
-Meu trabalho é voltado para o <strong>emagrecimento feminino</strong>, <strong>hipertrofia</strong> e <strong>
+Meu trabalho é voltado para o <strong>emagrecimento feminino</strong>, <strong>hipertrofia</strong> 
+e <strong>
 reeducação alimentar</strong>, sempre
  com uma abordagem acolhedora, individualizada e baseada na realidade de cada paciente. Acredito que a nutrição 
  deve se adaptar à sua vida, e não o contrário. <br> <br>
@@ -406,7 +482,8 @@ Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa
 
 
                 
-                    <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." target="_blank" class="btn btn-primary">Fale Comigo no WhatsApp</a>
+                    <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." target="_blank" 
+                    class="btn btn-primary">Fale Comigo no WhatsApp</a>
                 </div>
             </div>
 
@@ -425,11 +502,10 @@ Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa
 
         <div  class="servicos-container-relative">
                 <!-- Botões das setas adicionados aqui -->
-                <button style="border: none; background-color: transparent;" id="btn-left" class="carousel-btn prev" 
-                onclick="scrollCarousel(-1)" aria-label="Voltar"><</button>
-                <button style="border: none; background-color:transparent;" id="btn-right" 
-                class="carousel-btn next" 
-                onclick="scrollCarousel(1)" aria-label="Avançar">></button>
+                 <button  id="btn-left" class="carousel-btn prev" 
+                onclick="scrollCarousel(-1)" aria-label="Voltar"><div class="seta"><div class="ponta-left"><</div><div class="traco-left">-</div></div></button>
+            <button  id="btn-right" class="carousel-btn next" 
+onclick="scrollCarousel(1)" aria-label="Avançar"><div class="seta"><div class="ponta-right">-</div><div class="traco-right">></div></div></button>
 
             <div class="servicos-grid" id="carousel-grid">
 
@@ -521,11 +597,10 @@ Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa
 
         <div class="destaques-container-relative">
             <!-- Botões das setas adicionados aqui -->
-                <button style="border: none; background-color: transparent;" id="btn-left" class="carousel-btn prev" 
-                onclick="scrollDestaques(-1)" aria-label="Voltar"><</button>
-            <button style="border: none; background-color:transparent;" id="btn-right" 
-class="carousel-btn next" 
-onclick="scrollDestaques(1)" aria-label="Avançar">></button>
+                <button  id="btn-left" class="carousel-btn prev" 
+                onclick="scrollDestaques(-1)" aria-label="Voltar"><div class="seta"><div class="ponta-left"><</div><div class="traco-left">-</div></div></button>
+            <button  id="btn-right" class="carousel-btn next" 
+onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class="ponta-right">-</div><div class="traco-right">></div></div></button>
 
             <div class="destaques-grid" id="destaques-grid">
 
@@ -941,7 +1016,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar">></button>
     <!-- Scripts de controle dos Carrosséis -->
    
 
-    <script src="script1.6.js"></script>
+    <script src="script1.8.js"></script>
 
 </body>
 
