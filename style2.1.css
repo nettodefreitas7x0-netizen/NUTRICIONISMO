@@ -56,7 +56,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 body {
@@ -213,13 +213,15 @@ button {
    ========================================== */
 .header {
     position: fixed;
-    padding: 20px;
+    padding: 10px;
     top: 0;
 left: 0;
     width: 100%;
+   
     background: #ffffff;
+
     box-shadow: var(--box-shadow);
-    z-index: 1000;
+    z-index: 99;
     transition: var(--transicao);
 
 }
@@ -1042,7 +1044,7 @@ width: 100px;
 .social-links {
     display: flex;
     position: fixed;
-    z-index: 4;
+    z-index: 100;
     bottom: 2%;
     right: 2%;
 
@@ -1076,6 +1078,7 @@ width: 100px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            z-index: 10;
         }
 
         .social-link {
@@ -1088,6 +1091,7 @@ width: 100px;
             transition: transform 0.3s ease;
              animation: floatAnimation 3s infinite ease-in-out;
              margin: 10px;
+                
         }
 
         .social-link:hover {
@@ -1104,9 +1108,10 @@ width: 100px;
         }
 
         /* Balão de convite flutuante */
-        .whatsapp-balloon {
+  .whatsapp-balloon {
             display: flex;
             position: relative;
+            top: 10px;
             justify-content: center;
             align-items: center;
             background: #ffffff;
@@ -1130,7 +1135,8 @@ width: 100px;
         /* Botão X para fechar o balão */
         .balloon-close {
             position: absolute;
-            top: -30px;
+            top: -40px;
+            margin: 0;
             right: 6px;
             background: transparent;
             border: none;
@@ -1165,9 +1171,8 @@ width: 100px;
             display: block;
             width: 0;
         }
-
-        /* Animação suave para mover o balão levemente */
-        @keyframes floatAnimation {
+        /* ===================================================================== */
+  @keyframes floatAnimation {
             0%, 100% {
                 transform: translateY(0) rotate(0deg);
             }
@@ -1175,8 +1180,6 @@ width: 100px;
                 transform: translateY(-8px) rotate(1deg);
             }
         }
-        /* ===================================================================== */
-
 
 
 
@@ -1358,6 +1361,17 @@ font-size: 1rem;
 
 
 @media (max-width: 992px) {
+    .sobre-image{
+        position: absolute;
+        z-index: -1;
+        opacity: 0.15;
+     
+    }
+    .sobre-content{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
     .section-title {
         font-size: 2rem;
     }
@@ -1400,15 +1414,102 @@ font-size: 1rem;
 
 }
 
-@media (max-width: 871px){
+@media (max-width: 873px){
+
+ /* Esconde o header movendo-o para fora da tela (para cima) */
+.header.hide-header {
+    transform: translateY(-100%);
+}
+
+    
 #btn-agendar-header{
     display: none;
 }
+
+        .whatsapp-balloon {
+             
+            display: none;
+            /* position: relative;
+            top: -40px;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            color: #333333;
+            padding: 10px 14px 10px 14px; 
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            
+            white-space: nowrap;
+            border: 1px solid #e2e8f0;
+            animation: floatAnimation 3s infinite ease-in-out; */
+        }
+
+          .whatsapp-balloon:hover{
+                 box-shadow: 0 0 10px 8px rgba(38, 187, 57, 0.575);
+          }
+
+        /* Botão X para fechar o balão */
+        .balloon-close {
+            display: none;
+            /* position: absolute;
+            top: -75px;
+            margin: 0;
+            right: -16px;
+            background: transparent;
+            border: none;
+            font-size: 12px;
+            font-weight: bold;
+            color: #0000008e;;
+            cursor: pointer;
+            padding: 5px 7px;
+            line-height: 1;
+            border: solid 1px #000000a8;
+            border-radius: 10px; */
+        }
+
+        /* .balloon-close:hover {
+            color: #000000;
+            background-color: rgba(255, 0, 0, 0.322);
+            border: solid 2px rgba(0, 0, 0, 0.644);
+            box-shadow: 0 0 10px 8px  rgba(255, 0, 0, 0.308);
+           
+     
+        } */
+
+        /* Setinha do balão apontando para o botão */
+        /* .whatsapp-balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 22px;
+            border-width: 8px 8px 0;
+            border-style: solid;
+            border-color: #ffffff transparent;
+            display: block;
+            width: 0;
+        } */
+
+        /* Animação suave para mover o balão levemente */
+        @keyframes floatAnimation {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-8px) rotate(1deg);
+            }
+        }
+
+        .nav{
+            margin: 0;
+        }
 }
 
 @media (max-width: 836px){
 .nav{
-    margin-left: 20px;
+   
 }
 }
 
@@ -1436,19 +1537,21 @@ font-size: 1rem;
 
     .nav {
         position: fixed;
-        top: 90px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
+       
+      
+    
         background: rgb(255, 255, 255);
         transition: left 0.3s ease;
         box-shadow: var(--box-shadow);
         margin: 0;
+    
     }
 
     .nav-top{
         top: 70px;
     }
+
+   
 
     .nav.active {
         left: 0;
@@ -1466,13 +1569,11 @@ font-size: 1rem;
 
     .nav-list li {
         width: 100%;
-        border-bottom: 1px solid var(--cor-cinza);
+       
+   
     }
 
-    .nav-link {
-        display: block;
-        padding: var(--espacamento-sm) var(--espacamento-md);
-    }
+
 
     .nav-link::after {
         display: none;
@@ -1606,6 +1707,10 @@ font-size: 1rem;
         input {
            width: 200px;
         }
+    }
+
+    .nav-link {
+        padding: 0px;
     }
  
 }

@@ -64,35 +64,39 @@ document.addEventListener('keydown', function(e) {
 // ==========================================
 // HEADER - COMPORTAMENTO NO SCROLL
 // ==========================================
-let lastScrollTop = 0;
+// let lastScrollTop = 0;
 
-window.addEventListener('scroll', function() {
-    const header = document.getElementById('header');
-    const nav = document.getElementById('nav-menu');
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+// window.addEventListener('scroll', function() {
+//     const header = document.getElementById('header');
+//     const nav = document.getElementById('nav-menu');
+//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (header) {
-        // Esconder ao rolar para baixo / Mostrar ao rolar para cima
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            header.classList.add('header-hidden');
-        } else {
-            header.classList.remove('header-hidden');
-        }
+//     if (header) {
+//         // Esconder ao rolar para baixo / Mostrar ao rolar para cima
+//         if (scrollTop > lastScrollTop && scrollTop > 100) {
+//             header.classList.add('header-hidden');
+//         } else {
+//             header.classList.remove('header-hidden');
+//         }
 
-        // Estilização/Sombra no scroll
-        if (scrollTop > 100) {
-            header.style.padding = '0px 20px';
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
-            if (nav) nav.classList.add('nav-top');
-        } else {
-            header.style.padding = '20px';
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
-            if (nav) nav.classList.remove('nav-top');
-        }
-    }
+//         // Estilização/Sombra no scroll
+//         if (scrollTop > 100) {  
+            
+//             header.style.padding = '0px 20px';
+            
+//             header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
+//             if (nav) nav.classList.add('nav-top');
+//         } else {
+        
+            
+//             header.style.padding = '20px';
+//             header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+//             if (nav) nav.classList.remove('nav-top');
+//         }
+//     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
+//     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+// });
 
 // ==========================================
 // SCROLL SUAVE PARA ÂNCORAS
@@ -149,30 +153,55 @@ function activateMenuLink() {
 
 window.addEventListener('scroll', activateMenuLink);
 // ==========================================
-// CARROSSEIS (SERVIÇOS E DESTAQUES)
+// CARROSSEIS (SERVIÇOS E DESTAQUES CENTRALIZADOS)
 // ==========================================
+
+// Função auxiliar para calcular o scroll centralizado do próximo/anterior card
+function scrollParaCardCentralizado(carousel, cardSelector, direction) {
+    if (!carousel) return;
+
+    const cards = carousel.querySelectorAll(cardSelector);
+    if (!cards.length) return;
+
+    // Descobre qual card está mais próximo do centro do carrossel no momento
+    const carouselCenter = carousel.scrollLeft + (carousel.clientWidth / 2);
+    let indexAtual = 0;
+    let menorDistancia = Infinity;
+
+    cards.forEach((card, index) => {
+        const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+        const distancia = Math.abs(carouselCenter - cardCenter);
+        if (distancia < menorDistancia) {
+            menorDistancia = distancia;
+            indexAtual = index;
+        }
+    });
+
+    // Define o índice do próximo card com base na direção (-1 ou 1)
+    let proximoIndex = indexAtual + direction;
+
+    // Garante que o índice não saia dos limites da lista de cards
+    proximoIndex = Math.max(0, Math.min(proximoIndex, cards.length - 1));
+
+    // Calcula a posição do scroll para centralizar o novo card
+    const targetCard = cards[proximoIndex];
+    const targetScroll = targetCard.offsetLeft - (carousel.clientWidth / 2) + (targetCard.offsetWidth / 2);
+
+    carousel.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+    });
+}
+
+// Atualização das funções chamadas pelos botões
 function scrollCarousel(direction) {
     const carousel = document.getElementById('carousel-grid');
-    if (carousel) {
-        const card = carousel.querySelector('.servico-card');
-        const cardWidth = card ? card.offsetWidth + 24 : 300; 
-        carousel.scrollBy({
-            left: direction * cardWidth,
-            behavior: 'smooth'
-        });
-    }
+    scrollParaCardCentralizado(carousel, '.servico-card', direction);
 }
 
 function scrollDestaques(direction) {
     const carousel = document.querySelector('.destaques .destaques-grid');
-    if (carousel) {
-        const card = carousel.querySelector('.destaque-card');
-        const cardWidth = card ? card.offsetWidth + 24 : 300; 
-        carousel.scrollBy({
-            left: direction * cardWidth,
-            behavior: 'smooth'
-        });
-    }
+    scrollParaCardCentralizado(carousel, '.destaque-card', direction);
 }
 
 // Função genérica para checar scroll e alternar a classe .hidden
@@ -301,8 +330,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 const animatedElements = document.querySelectorAll(`
-    .servico-card,
-    .destaque-card,
+   
     .beneficio-item,
     .faq-item,
     .info-item
@@ -311,4 +339,34 @@ const animatedElements = document.querySelectorAll(`
 animatedElements.forEach(element => {
     element.classList.add('fade-in');
     observer.observe(element);
+});
+
+let lastScrollY = window.scrollY;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+    // Aplica o comportamento apenas em telas mobile/tablet (largura <= 873px)
+    if (window.innerWidth <= 873) {
+        const currentScrollY = window.scrollY;
+
+        // Evita esconder o header quando a página está bem no topo (evita bugs visuais)
+        if (currentScrollY <= 50) {
+            header.classList.remove('hide-header');
+            lastScrollY = currentScrollY;
+            return;
+        }
+
+        if (currentScrollY > lastScrollY) {
+            // Rolando para BAIXO: esconde o header
+            header.classList.add('hide-header');
+        } else {
+            // Rolando para CIMA: mostra o header
+            header.classList.remove('hide-header');
+        }
+
+        lastScrollY = currentScrollY;
+    } else {
+        // Garante que o header fique visível se a tela for redimensionada para desktop
+        header.classList.remove('hide-header');
+    }
 });

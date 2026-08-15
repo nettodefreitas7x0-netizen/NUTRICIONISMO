@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="style1.8.css">
+    <link class="link-css" rel="stylesheet" href="style2.1.css">
     <title>Dra. Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
+    <!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
         nutrição clínica e esportiva. Atendimentos com hora marcada de forma presencial ou online.">
@@ -40,7 +46,7 @@ input[type="submit"] {
             left:0 ;
             width: 100%;
             transition: transform 0.3s ease-in-out;
-            z-index: 1000;
+         
         }
 
      
@@ -85,7 +91,10 @@ input[type="submit"] {
 
           #btn-agendar-agora:hover{
               box-shadow: 0 0 20px 8px rgb(252, 252, 252);
-          }
+        
+            }
+
+         
 
         @keyframes shineEffect {
             0% {
@@ -100,32 +109,62 @@ input[type="submit"] {
         }
 
         .seta{
-            color: #fff;
-           background-color: #490085;
+            color:#8400f0; 
+            background-color: #fff;
+            box-shadow: #8400f0 0px 0px 20px;
            width: 100%;
            height: 100%;
            border-radius: 30px;
            display: flex;
            justify-content: center;
            align-items: center;
-           border: solid 2px  #490085;
+          
+       
+           transition: 2s ease-in-out;
+           border: none;
+    
+          
+  /* Aplicação da Animação */
+  animation-name: oscilar;       /* Nome do keyframe abaixo */
+  animation-duration: 1.5s;     /* Tempo que leva um ciclo completo */
+  animation-iteration-count: infinite; /* Repete para sempre */
+  animation-timing-function: ease-in-out; /* Suaviza o movimento */
+
+           
         }
+
+        @keyframes oscilar {
+  0% {
+    transform: translateX(0); /* Estado inicial (centro) */
+  }
+  25% {
+    transform: translateX(-5px); /* Move 5px para a esquerda */
+  }
+  75% {
+    transform: translateX(5px); /* Move 5px para a direita */
+  }
+  100% {
+    transform: translateX(0); /* Volta ao estado inicial (centro) */
+  }  }
+
  .seta:hover{
 
-         background-color: #5c00ac;
+
         }
+
         .seta:active{
-        box-shadow: 0 0 5px 8px #4900858a;
-         background-color: #3f0072;
+       
+  
         }
 
-                .traco-left{
-position: relative;
-right: 8px;
-font-size: 30px;
+                .traco-left{    
+    border: none;
+    position: relative;
+    right: 8px;
+    font-size: 30px;
         }
 
-        .ponta-left{
+        .ponta-left{    border: none;
 position: relative;
 left:5px;
 font-size: 30px;
@@ -133,13 +172,13 @@ font-size: 30px;
 
        
 
-        .traco-right{
+        .traco-right{    border: none;
 position: relative;
 right: 5px;
 font-size: 30px;
         }
 
-        .ponta-right{
+        .ponta-right{    border: none;
 position: relative;
 left: 8px;
 font-size: 30px;
@@ -149,16 +188,7 @@ font-size: 30px;
         /* ===================================================================== */
 
         /* ==================== CONFIGURAÇÃO DO BOTÃO FLUTUANTE DO WHATSAPP ==================== */
-        .social-links {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            
-        }
+      
 
  
 
@@ -167,43 +197,12 @@ font-size: 30px;
       
 
         /* Balão de convite flutuante */
-        .whatsapp-balloon {
-            position: relative;
-            background: #ffffff;
-            color: #333333;
-            padding: 10px 14px;
-            border-radius: 12px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-           top: 10px;
-            white-space: nowrap;
-            border: 1px solid #e2e8f0;
-            animation: floatAnimation 2s infinite ease-in-out;
-        }
+     
 
         /* Setinha do balão apontando para o botão */
-        .whatsapp-balloon::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            right: 22px;
-            border-width: 8px 8px 0;
-            border-style: solid;
-            border-color: #ffffff transparent;
-            display: block;
-            width: 0;
-        }
+      
 
-        @keyframes floatAnimation {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-6px);
-            }
-        }
+       
         /* ===================================================================== */
 
         /* Estilos padrão ocultam as setas no desktop */
@@ -211,11 +210,23 @@ font-size: 30px;
             display: none;
         }
 
+    
+
         .carousel-btn.hidden {
     display: none !important;
 }
 
         @media (max-width: 873px) {
+               #btn-right{
+                z-index: 10;
+            }
+            .balloon-close{
+    top: -80px;
+    right: -15px;
+}
+
+
+
             .servicos-container-relative {
                 position: relative;
               
@@ -250,7 +261,7 @@ font-size: 30px;
             }
 
             .destaques .destaque-card {
-                flex: 0 0 70% !important; /* O card ocupa 85% da tela */
+                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
            
              overflow-y: hidden !important;
             }
@@ -259,11 +270,7 @@ font-size: 30px;
                 flex: 0 0 80% !important; /* O card ocupa 85% da tela */
                 margin-bottom: 0 !important;
             }
-                 .destaques .destaque-card {
-                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
-           
-             overflow-y: hidden !important;
-            }
+                
 
             #carousel-grid{
                    flex: 0 0 100% !important; /* O card ocupa 85% da tela */
@@ -279,9 +286,7 @@ font-size: 30px;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                background-color: rgba(255, 255, 255, 0.9);
-                border: 1px solid #ddd;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+       
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
@@ -291,21 +296,19 @@ font-size: 30px;
                 cursor: pointer;
                 z-index: 10;
                 user-select: none;
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
                 
             }
 
-            .carousel-btn img {
-                width: 16px;
-                height: 16px;
-                object-fit: contain;
-            }
-
+        
             .carousel-btn.prev {
                 left: 5px;
             }
 
             .carousel-btn.next {
-               
+          
                 right: 5px;
             }
 
@@ -321,7 +324,157 @@ font-size: 30px;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+.carousel-btn {
+  
+    
+}
+   
+  .social-links a {
+    margin: 0;
+    position: relative;
+    bottom: 50px;
+    right: -30px;
+    img{
+    width: 40px;
+    
+    } 
+  
+           
         }
+    
+
+        /* ==================== MENU FIXO NO RODAPÉ (MOBILE/TABLET) ==================== */
+
+    /* Oculta elementos que não precisam aparecer na barra inferior */
+    #duvida, 
+    #btn-agendar-header, 
+    #menu-toggle {
+        display: none !important;
+    }
+
+    /* Oculta a tag <li> inteira que contém a opção de Dúvidas Frequentes */
+    .nav-list li:has(#duvida) {
+        display: none !important;
+    }
+
+    /* Fixa o menu de navegação na parte inferior da tela */
+    .nav {
+        position: fixed !important;
+        bottom: 0 !important;
+        top: auto !important;
+        left: 0 !important;
+        width: 100% !important;
+        background-color: #fff !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15) !important;
+        z-index: 10000 !important;
+        padding: 1.5rem 0 !important;
+        display: block !important;
+        
+    }
+
+    /* Organiza as opções lado a lado */
+    .nav-list {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+   
+   
+    }
+
+    /* Configuração individual de cada link do menu */
+    .nav-link {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+   
+        color: #0a0a0a !important;
+        text-decoration: none !important;
+        gap: 2px !important;
+        z-index: 101;
+       
+
+      
+    }
+
+
+
+  
+
+    /* Criação e posicionamento dos ícones acima do texto */
+    .nav-link::before {
+        font-size: 1.1rem;
+        line-height: 1;
+    }
+
+    /* Ícone específico para cada opção */
+    .nav-link[href="#home"]::before {
+                 content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/icone-home.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .nav-link[href="#sobre"]::before {
+                   content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/icone-sobre.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .nav-link[href="#servicos"]::before {
+
+                content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/icone-servico.jpg'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+        
+    }
+
+    .nav-link[href="#blog"]::before {
+        content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/icone-blog.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .nav-link[href="#contato"]::before {
+       content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/icone-contato.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    /* Espaçamento extra no fundo da página para o menu não cobrir conteúdos/botões */
+    body {
+        padding-bottom: 60px !important;
+    }
+}
     </style>
 </head>
 
@@ -338,17 +491,11 @@ font-size: 30px;
                         <span class="logo-tagline">Nutricionista</span>
                     </span>
                 </a>
-
-                <nav class="nav" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a  href="#home" class="nav-link">Início</a></li>
-                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                        <li><a href="#servicos" class="nav-link">Serviços</a></li>
-                        <li><a href="#blog" class="nav-link">Blog</a></li>
-                        <li><a id="duvida" href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
-                        <li><a href="#contato" class="nav-link">Contato</a></li>
-                    </ul>
-                </nav>
+                <a href="">
+               <i class="bx bx-arrow-right bx-fade-left"></i>
+                
+</a>
+                
 
                 <a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
                 target="_blank" 
@@ -367,6 +514,20 @@ font-size: 30px;
     </header>
 
     <section class="hero" id="home">
+
+       <div class="div-nav">
+        <nav class="nav" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a  href="#home" class="nav-link">Início</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                        <li><a id="duvida" href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
         <div class="hero-background"
             style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&q=80');">
         </div>
@@ -417,15 +578,16 @@ font-size: 30px;
         <div class="container">
             <div class="sobre-content">
 
-                <div class="sobre-image">
+                <div   class="sobre-image">
                     <img src="assets/sobre-mim.jpeg"
                         alt="Atendimento Nutricional">
                 </div>
 
-                <div class="sobre-text">
+                <div  class="sobre-text">
                     <span class="section-label" >Sobre Mim</span>
                     <h2 class="section-title">Dra. Juliana Cardoso</h2>
-                    <p class="sobre-description">
+                    <div >
+                    <p  class="sobre-description">
                         Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista formada 
                         em <strong>Nutrição</strong> e <strong>Gastronomia</strong>, apaixonada
                          por ajudar pessoas 
@@ -445,22 +607,22 @@ dietas radicais, restrições excessivas ou soluções temporárias. Cada <stron
  saudável mais 
  acessível e possível de ser mantida a longo prazo. <br> <br>
 
-Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa, sem extremismos e sem abrir mão do
+Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem culpa, sem extremismos e sem abrir mão do
  prazer de se alimentar. Meu objetivo é ajudar você a desenvolver hábitos que promovam mais saúde, 
  disposição, autoestima e qualidade de vida, conquistando resultados duradouros de forma leve e 
- equilibrada. <br> 
+ equilibrada. <br> <div id="sobre"></div>
                     </p>
-                    <p  class="sobre-description">
+                    <p class="sobre-description">
                     
                     </p>
 
-                    <ul  class="sobre-list">
+                    <ul   class="sobre-list">
                         <li  >
                             <span class="list-icon">✓</span>
                             <span>Acompanhamento nutricional personalizado</span>
                         </li>
                         <li>
-                            <span class="list-icon" id="sobre">✓</span>
+                            <span class="list-icon" >✓</span>
                             <span>Emagrecimento feminino sem dietas radicais</span>
                         </li>
                         <li>
@@ -477,10 +639,10 @@ Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa
                         </li>
                     </ul>
 
-                    <p>💜 Resultados reais para pessoas reais.</p>
+                    <p >💜  Resultados reais para pessoas reais.</p>
 <p>✨ Comer bem é comer com saúde.</p> <br>
 
-
+</div>
                 
                     <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." target="_blank" 
                     class="btn btn-primary">Fale Comigo no WhatsApp</a>
@@ -490,21 +652,21 @@ Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa
             
     </section>
 <section class="servicos" >
-    <div class="container"id="servicos">
+    <div class="container">
 
-        <div class="section-header">
-            <span class="section-label" >Meus Serviços</span>
-            <h2 class="section-title" >O cuidado que sua saúde precisa</h2>
-            <p class="section-description">
+        <div  class="section-header" >
+            <span  class="section-label" >Meus Serviços</span>
+            <h2  class="section-title" >O cuidado que sua saúde precisa</h2>
+            <p  class="section-description">
                 Soluções nutricionais focadas no seu bem-estar, com total flexibilidade de atendimento.
             </p>
         </div>
 
-        <div  class="servicos-container-relative">
+        <div id="servicos"  class="servicos-container-relative">
                 <!-- Botões das setas adicionados aqui -->
-                 <button  id="btn-left" class="carousel-btn prev" 
-                onclick="scrollCarousel(-1)" aria-label="Voltar"><div class="seta"><div class="ponta-left"><</div><div class="traco-left">-</div></div></button>
-            <button  id="btn-right" class="carousel-btn next" 
+                 <button style="left:-8px;"  id="btn-left" class="carousel-btn" 
+                onclick="scrollCarousel(-1)" aria-label="Voltar"><div  class="seta"><div  class="ponta-left"><</div><div  class="traco-left">-</div></div></button>
+            <button style="right:-8px;" id="btn-right" class="carousel-btn next" 
 onclick="scrollCarousel(1)" aria-label="Avançar"><div class="seta"><div class="ponta-right">-</div><div class="traco-right">></div></div></button>
 
             <div class="servicos-grid" id="carousel-grid">
@@ -629,7 +791,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
 
                 <div class="destaque-card" onclick="proximoCardDestaque(this)">
                     <div class="destaque-image">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80" alt="Foco em Resultados">
+                        <img src="https://images.unsplash.com/photo-1675270360889-2c850358e364?q=80&w=600" alt="Foco em Resultados">
                     </div>
                     <div class="destaque-number">03</div>
                     <h3 class="destaque-title">Foco na Constância</h3>
@@ -705,12 +867,12 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
     </section>
 
     <!-- NOVA SEÇÃO: BLOG DE NUTRIÇÃO -->
-    <section class="blog" id="blog">
+    <section class="blog" >
         <div class="container">
 
-            <div class="section-header">
+            <div   class="section-header">
                 <span class="section-label">Dicas da Nutri</span>
-                <h2 class="section-title">Nosso Blog de Nutrição</h2>
+                <h2 id="blog" class="section-title">Nosso Blog de Nutrição</h2>
                 <p class="section-description">
                     Fique por dentro das últimas novidades, receitas e artigos para 
                     te guiar rumo a uma vida muito mais saudável.
@@ -835,6 +997,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                             O arquivo final formatado é entregue em até 48 hours úteis após 
                             o atendimento.</p>
                     </div>
+                    
                 </div>
             </div>
 
@@ -948,6 +1111,8 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
         </div>
     </section>
 
+    
+
   <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
@@ -1016,7 +1181,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
     <!-- Scripts de controle dos Carrosséis -->
    
 
-    <script src="script1.8.js"></script>
+    <script src="script2.1.js"></script>
 
 </body>
 
