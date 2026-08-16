@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="style2.2.css">
+    <link class="link-css" rel="stylesheet" href="style2.3.css">
     <title>Dra. Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <!-- Basic Icons -->
-<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
-<!-- Filled Icons -->
-<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
-<!-- Brand Icons -->
-<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, 
         nutrição clínica e esportiva. Atendimentos com hora marcada de forma presencial ou online.">
@@ -133,6 +129,8 @@ input[type="submit"] {
            
         }
 
+     
+
         @keyframes oscilar {
   0% {
     transform: translateX(0); /* Estado inicial (centro) */
@@ -147,15 +145,7 @@ input[type="submit"] {
     transform: translateX(0); /* Volta ao estado inicial (centro) */
   }  }
 
- .seta:hover{
 
-
-        }
-
-        .seta:active{
-       
-  
-        }
 
                 .traco-left{    
     border: none;
@@ -216,14 +206,17 @@ font-size: 30px;
     display: none !important;
 }
 
+
+
+
         @media (max-width: 873px) {
+            .nav-top{
+    display: none;
+}
                #btn-right{
                 z-index: 10;
             }
-            .balloon-close{
-    top: -80px;
-    right: -15px;
-}
+      
 
 
 
@@ -312,6 +305,8 @@ font-size: 30px;
                 right: 5px;
             }
 
+       
+
             /* Configuração específica para as setas criadas dinamicamente na seção destaques */
             .destaques .carousel-btn {
                 top: 60%; /* Ajuste fino de altura para alinhar com os cards dos diferenciais */
@@ -330,13 +325,17 @@ font-size: 30px;
     
 }
    
-  .social-links a {
+  .social-links a 
+  {
+    width: 4rem;
+    height: 4rem;
     margin: 0;
     position: relative;
-    bottom: 50px;
-    right: -30px;
+    bottom: 70px;
+    right: -3px;
     img{
-    width: 40px;
+    width: 4rem;
+    
     
     } 
   
@@ -359,17 +358,21 @@ font-size: 30px;
     }
 
     /* Fixa o menu de navegação na parte inferior da tela */
-    .nav {
-        position: fixed !important;
-        bottom: 0 !important;
-        top: auto !important;
-        left: 0 !important;
-        width: 100% !important;
-        background-color: #fff !important;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15) !important;
-        z-index: 10000 !important;
-        padding: 1.5rem 0 !important;
-        display: block !important;
+    .nav-bottom {
+        display: flex;
+        position: fixed ;
+        bottom: 0 ;
+        top: auto ;
+        left: 0 ;
+        width: 100% ;
+        background-color: #fff ;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+        z-index: 10000 ;
+        padding: 0.9rem 0 ;
+        display: block;
+        border: 3px solid  #6d288c; ;
+        border-radius: 30px;
+        margin-bottom: 2px;
         
     }
 
@@ -418,18 +421,24 @@ font-size: 30px;
     display: inline-block;
     width: 20px;  /* Largura do ícone */
     height: 20px; /* Altura do ícone */
-    background-image: url('assets/icone-home.png'); /* Caminho da sua imagem */
+    background-image: url('assets/home-white.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     }
+        .nav-link[href="#home"]:hover {
+
+    }
+    
+
+  
 
     .nav-link[href="#sobre"]::before {
                    content: ""; /* Deixe vazio para usar a imagem de fundo */
     display: inline-block;
     width: 20px;  /* Largura do ícone */
     height: 20px; /* Altura do ícone */
-    background-image: url('assets/icone-sobre.png'); /* Caminho da sua imagem */
+    background-image: url('assets/avatar.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -441,7 +450,7 @@ font-size: 30px;
     display: inline-block;
     width: 20px;  /* Largura do ícone */
     height: 20px; /* Altura do ícone */
-    background-image: url('assets/icone-servico.jpg'); /* Caminho da sua imagem */
+    background-image: url('assets/lista.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -453,7 +462,7 @@ font-size: 30px;
     display: inline-block;
     width: 20px;  /* Largura do ícone */
     height: 20px; /* Altura do ícone */
-    background-image: url('assets/icone-blog.png'); /* Caminho da sua imagem */
+    background-image: url('assets/jornal.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -464,7 +473,7 @@ font-size: 30px;
     display: inline-block;
     width: 20px;  /* Largura do ícone */
     height: 20px; /* Altura do ícone */
-    background-image: url('assets/icone-contato.png'); /* Caminho da sua imagem */
+    background-image: url('assets/chamada-telefonica.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -484,17 +493,67 @@ font-size: 30px;
         <div class="container">
 <div class="header-content">
 
-                <a href="#home" class="logo">
+                      <a href="#home" class="logo">
                     <span class="logo-icon"> <img src="assets/logo-transparente-pequena.png" alt=""></span>
                     <span class="logo-text">
                         <span class="logo-name">Juliana Cardoso</span>
                         <span class="logo-tagline">Nutricionista</span>
                     </span>
                 </a>
-                <a href="">
-               <i class="bx bx-arrow-right bx-fade-left"></i>
+           
+    <div class="info-item" style="margin: 0;" >
+                       
+                        <div  class="info-text" style="display: flex; flex-direction: row; margin: 0; justify-content: center; align-items: center;">
                 
-</a>
+                            <div   onclick="window.open('https://wa.me/5591987416244?text=Olá!', '_blank');" id="social"  style="display: flex; cursor: pointer; margin: 0; ">
+                                <a 
+                             href="https:"
+                             target="_blank" 
+                           
+                             class="btn-link" 
+                             style="color: #cf54ff; font-weight: 600;margin: 0;
+                              text-decoration: none; 
+                            
+                              border-radius: 30px"> 
+                              <img style="width: 30px; " 
+                              src="assets/whatsapp-black.png" 
+                              alt="whatsapp">
+                            </a>
+                              <a href="https://wa.me/5591987416244?text=Olá!"
+                              target="_blank"></a>
+                        </div> 
+                                <div id="insta" onclick="window.open('https://www.instagram.com/nutrijulianacardoso/', '_blank');"  style="display: flex; cursor: pointer; justify-content: center; 
+                            align-items: center;margin: 0;">
+                                <a  href="" 
+                                target="_blank" 
+                                class="btn-link" 
+                                style="color: #cf54ff; font-weight: 600;
+                                 text-decoration: none;"><img style="text-decoration: none;" src="" alt=""><img style="width: 30px;" 
+                                 src="assets/instagram.png"
+                                 alt=""></a>
+                                 <a target="_blank"  href="https://www.instagram.com/nutrijulianacardoso/"></a>
+                                 
+                                 </div>
+
+                                  
+                            
+                        </div>
+                    </div>
+                   
+
+                <nav class="nav-top" id="nav-menu">
+                    
+                    <ul class="nav-list">
+                        <li><a  href="#home" class="nav-link">Início</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                        <li><a id="duvida" href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+
+    
                 
 
                 <a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
@@ -504,19 +563,25 @@ font-size: 30px;
                 id="btn-agendar-header">Agendar Consulta
             </a>
 
+            
+
                 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+
+               
+
             </div>
         </div>
     </header>
+    
 
     <section class="hero" id="home">
 
        <div class="div-nav">
-        <nav class="nav" id="nav-menu">
+        <nav class="nav-bottom" id="nav-menu">
                     <ul class="nav-list">
                         <li><a  href="#home" class="nav-link">Início</a></li>
                         <li><a href="#sobre" class="nav-link">Sobre</a></li>
@@ -1030,7 +1095,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                 <div class="contato-info" >
 
                     <div class="info-item">
-                        <div class="info-icon">📍</div>
+                        <div class="info-icon"><img style="width: 20px;" src="assets/pin-do-mapa.png" alt=""></div>
                         <div class="info-text">
                             <h3>Tipo de Atendimento</h3>
                             <p>Presencial (com Hora Marcada)<br>Online (De qualquer lugar via Vídeo)</p>
@@ -1040,7 +1105,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                   
 
                     <div class="info-item">
-                        <div class="info-icon">📧</div>
+                        <div class="info-icon"><img style="width: 20px;" src="assets/envelope.png" alt=""></div>
                         <div class="info-text">
                             <h3>E-mail</h3>
                             <p>cardosojuliana342@gmail.com</p>
@@ -1050,7 +1115,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                     <!-- Área de Redes Sociais adicionada conforme solicitado -->
                    
                     <div class="info-item">
-                        <div class="info-icon">⭐​</div>
+                        <div class="info-icon"><img style="width: 20px;" src="assets/estrela.png" alt="">​</div>
                         <div class="info-text">
                       <h3>Redes Sociais</h3> 
                             <div  onclick="window.open('https://wa.me/5591987416244?text=Olá!', '_blank');" id="social"  style="display: flex; cursor: pointer;">
@@ -1100,7 +1165,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                            target="_blank" 
                            class="social-link" 
                            aria-label="WhatsApp Direct">
-                            <img src="./assets/whatsapp.png" alt="WhatsApp">
+                            <img src="./assets/whatsapp-black.png" alt="WhatsApp">
                         </a>
                     </div>
 
@@ -1181,7 +1246,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
     <!-- Scripts de controle dos Carrosséis -->
    
 
-    <script src="script2.2.js"></script>
+    <script src="script2.3.js"></script>
 
 </body>
 

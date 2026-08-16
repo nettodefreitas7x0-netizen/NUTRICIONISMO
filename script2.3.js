@@ -64,39 +64,40 @@ document.addEventListener('keydown', function(e) {
 // ==========================================
 // HEADER - COMPORTAMENTO NO SCROLL
 // ==========================================
-// let lastScrollTop = 0;
+let lastScrollTop = 0;
 
-// window.addEventListener('scroll', function() {
-//     const header = document.getElementById('header');
-//     const nav = document.getElementById('nav-menu');
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    const nav = document.getElementById('nav');
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-//     if (header) {
-//         // Esconder ao rolar para baixo / Mostrar ao rolar para cima
-//         if (scrollTop > lastScrollTop && scrollTop > 100) {
-//             header.classList.add('header-hidden');
-//         } else {
-//             header.classList.remove('header-hidden');
-//         }
+    if (header) {
+        // Esconder ao rolar para baixo / Mostrar ao rolar para cima
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('header-hidden');
+        } else {
+            header.classList.remove('header-hidden');
+        }
 
-//         // Estilização/Sombra no scroll
-//         if (scrollTop > 100) {  
+        // Estilização/Sombra no scroll
+        if (scrollTop > 100) {  
             
-//             header.style.padding = '0px 20px';
+            header.style.padding = '0px 20px';
+       
+       
+            header.style.boxShadow = '0 4px 2px rgba(0, 0, 0, 0.12)';
+            if (nav) nav.classList.add('nav-top');
+        } else {
+         
             
-//             header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
-//             if (nav) nav.classList.add('nav-top');
-//         } else {
-        
-            
-//             header.style.padding = '20px';
-//             header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
-//             if (nav) nav.classList.remove('nav-top');
-//         }
-//     }
+            header.style.padding = '20px';
+            header.style.boxShadow = '0 4px 2px rgba(0, 0, 0, 0.08)';
+            if (nav) nav.classList.remove('nav-top');
+        }
+    }
 
-//     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-// });
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
 
 // ==========================================
 // SCROLL SUAVE PARA ÂNCORAS
@@ -329,11 +330,15 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
+    // .servico-card,
+    // .destaque-card,
+
 const animatedElements = document.querySelectorAll(`
-   
+    
     .beneficio-item,
     .faq-item,
     .info-item
+    
 `);
 
 animatedElements.forEach(element => {
