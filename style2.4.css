@@ -1778,8 +1778,8 @@ font-size: 30px;
     .nav-link[href="#home"]::before {
                  content: ""; /* Deixe vazio para usar a imagem de fundo */
     display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
+    width: 2rem;  /* Largura do ícone */
+    height: 2rem; /* Altura do ícone */
     background-image: url('assets/home-white.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
@@ -1795,8 +1795,8 @@ font-size: 30px;
     .nav-link[href="#sobre"]::before {
                    content: ""; /* Deixe vazio para usar a imagem de fundo */
     display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
+      width: 2rem;  /* Largura do ícone */
+    height: 2rem; /* Altura do ícone */
     background-image: url('assets/avatar.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
@@ -1807,8 +1807,8 @@ font-size: 30px;
 
                 content: ""; /* Deixe vazio para usar a imagem de fundo */
     display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
+     width: 2rem;  /* Largura do ícone */
+    height: 2rem; /* Altura do ícone */
     background-image: url('assets/lista.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
@@ -1819,8 +1819,8 @@ font-size: 30px;
     .nav-link[href="#blog"]::before {
         content: ""; /* Deixe vazio para usar a imagem de fundo */
     display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
+      width: 2rem;  /* Largura do ícone */
+    height: 2rem; /* Altura do ícone */
     background-image: url('assets/jornal.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
@@ -1830,8 +1830,8 @@ font-size: 30px;
     .nav-link[href="#contato"]::before {
        content: ""; /* Deixe vazio para usar a imagem de fundo */
     display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
+     width: 2rem;  /* Largura do ícone */
+    height: 2rem; /* Altura do ícone */
     background-image: url('assets/chamada-telefonica.png'); /* Caminho da sua imagem */
     background-size: contain;
     background-repeat: no-repeat;
@@ -1856,6 +1856,7 @@ font-size: 30px;
     
 #btn-agendar-header{
     display: block;
+    
 }
 
         .whatsapp-balloon {
