@@ -1479,6 +1479,8 @@ font-size: 30px;
 }
 
 @media (max-width: 1017px){
+    .header{
+    }
   #duvida{
        font-size: 0;
     }
@@ -1487,6 +1489,8 @@ font-size: 30px;
    font-size:  var(--espacamento-sm)
    
 }
+
+
 
 .logo-text{
  
@@ -1498,7 +1502,7 @@ font-size: 30px;
 }
 
 .header-content .logo-text {
-    margin-left: 10px;
+   
 }
 
  
@@ -1509,6 +1513,9 @@ font-size: 30px;
 
 
 @media (max-width: 992px) {
+    .header{
+        justify-content: start !important;
+    }
     .sobre-image{
         position: absolute;
         z-index: -1;
@@ -1560,11 +1567,11 @@ font-size: 30px;
     }
 
 
-}
 
-@media (max-width: 873px){
    
     /*veio do style do index*/
+
+
     
             .nav-top{
     display: none;
@@ -1836,9 +1843,11 @@ font-size: 30px;
         padding-bottom: 60px !important;
     }
  /* Esconde o header movendo-o para fora da tela (para cima) */
-.header.hide-header {
+/* .header.hide-header {
     transform: translateY(-100%);
-}
+} */
+
+
 
 .nav-bottom{
     display: block;
@@ -2096,21 +2105,39 @@ font-size: 30px;
 
 @media (max-width: 580px) {
 
-    .header {
+    .header {display: flex;
+        justify-content: center;
+        align-self: start;
         padding-top: 0;
     }
 .header-content {
-    flex-direction: column;
+
 
     margin-top: 0;
     padding-top: 0;
 
-    gap: 10px;    
+ 
 }
  
 .hero-content {
-    margin-top: 5rem;
+  
 }
+
+    #btn-agendar-header{
+        display: none!important;
+    }
+
+    .logo-text{
+    margin:0 10px;
+    }
+
+    .logo-icon{
+     
+    }
+
+
+
+
 
 }
 
@@ -2160,6 +2187,15 @@ font-size: 30px;
     }
  
 }
+
+@media (max-width:406px) {
+
+    #social-header{
+        display: none !important;
+    }
+
+}
+
 
 @media (max-width:298px) {
 

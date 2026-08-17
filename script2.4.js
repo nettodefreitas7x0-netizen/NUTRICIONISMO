@@ -69,6 +69,7 @@ let lastScrollTop = 0;
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
     const nav = document.getElementById('nav');
+    
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (header) {
