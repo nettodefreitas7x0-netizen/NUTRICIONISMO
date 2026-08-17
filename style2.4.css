@@ -1177,7 +1177,7 @@ width: 100px;
 }
 
 #insta{
-    background-color: var(--cor-cinza-claro);
+  
     padding: 5px;
     background-color: none;
     border-radius: 30px;
@@ -1190,7 +1190,7 @@ width: 100px;
 }
 
 #insta:hover{
-  
+   background-color: var(--cor-cinza-claro);
         transform:scale(1.2);
     box-shadow: var(--box-shadow);
 }
