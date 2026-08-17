@@ -1177,19 +1177,20 @@ width: 100px;
 }
 
 #insta{
+    background-color: var(--cor-cinza-claro);
     padding: 5px;
     background-color: none;
     border-radius: 30px;
 }
 
 #social:hover{
-     background: linear-gradient(135deg, #00ca1b 0%, #d4d4d4);
-        transform: translateY(-1px);
+        background-color: var(--cor-cinza-claro);
+        transform: scale(1.2);
     box-shadow: var(--box-shadow);
 }
 
 #insta:hover{
-    background: linear-gradient(135deg, #f159d8 0%, #ff7777);
+  
         transform:scale(1.2);
     box-shadow: var(--box-shadow);
 }
@@ -1291,12 +1292,171 @@ width: 100px;
     opacity: 1;
     transform: translateY(0);
 }
-
+/* É PARA TIRAR O HEADER BOTTOM*/
 .nav-bottom{
     display: none;
 }
+/*veio do index*/
+/* Estilos padrão ocultam as setas no desktop */
+        .carousel-btn {
+            display: none;
+        }
+
+       
+
+        .carousel-btn.hidden {
+    display: none !important;
+}
+
+/*veio do index*/
+/* Remove o efeito azul para botões e links especificamente */
+button, 
+a, 
+.carousel-btn, 
+input[type="submit"] {
+    -webkit-tap-highlight-color: transparent;
+}
+        
+        /* ==================== EFEITO DE OCULTAR O HEADER ==================== */
+        
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left:0 ;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+         
+        }
+
+     
+        /* ===================================================================== */
+
+        /* ==================== EFEITO DE BRILHO NOS BOTÕES ==================== */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            border: none;
+          
+        }
+
+       .btn:hover{
+
+        box-shadow: 0 0 30px 8px rgb(21, 2, 43);
+       
+       }
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            animation: shineEffect 4s infinite ease-in-out;
+        }
+
+        #btn-agendar-agora{
+            background-color: white;
+            color: black;
+           
+
+        }
+
+          #btn-agendar-agora:hover{
+              box-shadow: 0 0 20px 8px rgb(252, 252, 252);
+        
+            }
+
+         
+
+        @keyframes shineEffect {
+            0% {
+                left: -150%;
+            }
+            30% {
+                left: 150%;
+            }
+            100% {
+                left: 150%;
+            }
+        }
+
+        .seta{
+            color:#8400f0; 
+            background-color: #fff;
+            box-shadow: #8400f0 0px 0px 20px;
+           width: 100%;
+           height: 100%;
+           border-radius: 30px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+          
+       
+           transition: 2s ease-in-out;
+           border: none;
+    
+          
+  /* Aplicação da Animação */
+  animation-name: oscilar;       /* Nome do keyframe abaixo */
+  animation-duration: 1.5s;     /* Tempo que leva um ciclo completo */
+  animation-iteration-count: infinite; /* Repete para sempre */
+  animation-timing-function: ease-in-out; /* Suaviza o movimento */
+
+           
+        }
+
+     
+
+        @keyframes oscilar {
+  0% {
+    transform: translateX(0); /* Estado inicial (centro) */
+  }
+  25% {
+    transform: translateX(-5px); /* Move 5px para a esquerda */
+  }
+  75% {
+    transform: translateX(5px); /* Move 5px para a direita */
+  }
+  100% {
+    transform: translateX(0); /* Volta ao estado inicial (centro) */
+  }  }
 
 
+
+                .traco-left{    
+    border: none;
+    position: relative;
+    right: 8px;
+    font-size: 30px;
+        }
+
+        .ponta-left{    border: none;
+position: relative;
+left:5px;
+font-size: 30px;
+        }
+
+       
+
+        .traco-right{    border: none;
+position: relative;
+right: 5px;
+font-size: 30px;
+        }
+
+        .ponta-right{    border: none;
+position: relative;
+left: 8px;
+font-size: 30px;
+        }
 
 
 /* ==========================================
@@ -1316,17 +1476,6 @@ width: 100px;
     margin: 0 10px 0 10px;
 }
 
-#btn-agendar-header{
-font-size: 0;
-}
-
-#btn-agendar-header::before{
-content: "Agendar";
-font-size: 1rem;
-}
-
-
-
 }
 
 @media (max-width: 1017px){
@@ -1343,6 +1492,14 @@ font-size: 1rem;
  
 }
 
+.header-content .nav-top{
+    margin: 0 10px;
+
+}
+
+.header-content .logo-text {
+    margin-left: 10px;
+}
 
  
 
@@ -1406,7 +1563,278 @@ font-size: 1rem;
 }
 
 @media (max-width: 873px){
+   
+    /*veio do style do index*/
+    
+            .nav-top{
+    display: none;
+}
+               #btn-right{
+                z-index: 10;
+            }
+            .servicos-container-relative {
+                position: relative;
+              
+            }
 
+            /* Habilita posicionamento relativo na seção de destaques para conter as setas absolutas */
+            .destaques .container {
+                position: relative;
+            }
+
+            /* Carrossel de Serviços */
+            #servicos .servicos-grid {
+                display: flex !important;
+             
+                scroll-behavior: smooth !important;
+         
+        
+            }
+
+            #servicos .servico-card {
+                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
+                margin-bottom: 0 !important;
+            }
+
+            /* Carrossel de Diferenciais (Destaques) */
+            .destaques .destaques-grid {
+                display: flex !important;
+         
+                scroll-behavior: smooth !important;
+           overflow-y: hidden !important;
+             
+            }
+
+            .destaques .destaque-card {
+                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
+           
+             overflow-y: hidden !important;
+            }
+
+                    #servicos .servico-card {
+                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
+                margin-bottom: 0 !important;
+            }
+                
+
+            #carousel-grid{
+                   flex: 0 0 100% !important; /* O card ocupa 85% da tela */
+            
+             overflow-y: hidden !important;
+            }
+
+           
+
+            /* Estilos das setas flutuantes no mobile */
+            .carousel-btn {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+       
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                cursor: pointer;
+                z-index: 10;
+                user-select: none;
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
+                
+            }
+
+        
+            .carousel-btn.prev {
+                left: 5px;
+            }
+
+            .carousel-btn.next {
+          
+                right: 5px;
+            }
+
+       
+
+            /* Configuração específica para as setas criadas dinamicamente na seção destaques */
+            .destaques .carousel-btn {
+                top: 60%; /* Ajuste fino de altura para alinhar com os cards dos diferenciais */
+            }
+
+            /* Esconde a seta quando o JS adiciona a classe .hidden */
+.carousel-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.carousel-btn {
+  
+    
+}
+   
+  .social-links a 
+  {
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    position: relative;
+    bottom: 70px;
+    right: -3px;
+    img{
+    width: 4rem;
+    
+    
+    } 
+  
+           
+        }
+    
+
+        /* ==================== MENU FIXO NO RODAPÉ (MOBILE/TABLET) ==================== */
+
+    /* Oculta elementos que não precisam aparecer na barra inferior */
+    #duvida, 
+
+    #menu-toggle {
+        display: none !important;
+    }
+
+    /* Oculta a tag <li> inteira que contém a opção de Dúvidas Frequentes */
+    .nav-list li:has(#duvida) {
+        display: none !important;
+    }
+
+    /* Fixa o menu de navegação na parte inferior da tela */
+    .nav-bottom {
+        display: flex;
+        position: fixed ;
+        bottom: 0 ;
+        top: auto ;
+        left: 0 ;
+        width: 100% ;
+        background-color: #fff ;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+        z-index: 10000 ;
+        padding: 0.9rem 0 ;
+        display: block;
+        border: 3px solid  #6d288c; ;
+        border-radius: 30px;
+        margin-bottom: 2px;
+        
+    }
+
+    /* Organiza as opções lado a lado */
+    .nav-list {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+   
+   
+    }
+
+    /* Configuração individual de cada link do menu */
+    .nav-link {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+   
+        color: #0a0a0a !important;
+        text-decoration: none !important;
+        gap: 2px !important;
+        z-index: 101;
+       
+
+      
+    }
+
+
+
+  
+
+    /* Criação e posicionamento dos ícones acima do texto */
+    .nav-link::before {
+        font-size: 1.1rem;
+        line-height: 1;
+    }
+
+    /* Ícone específico para cada opção */
+    .nav-link[href="#home"]::before {
+                 content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/home-white.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+        .nav-link[href="#home"]:hover {
+
+    }
+    
+
+  
+
+    .nav-link[href="#sobre"]::before {
+                   content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/avatar.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .nav-link[href="#servicos"]::before {
+
+                content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/lista.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+        
+    }
+
+    .nav-link[href="#blog"]::before {
+        content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/jornal.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    .nav-link[href="#contato"]::before {
+       content: ""; /* Deixe vazio para usar a imagem de fundo */
+    display: inline-block;
+    width: 20px;  /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    background-image: url('assets/chamada-telefonica.png'); /* Caminho da sua imagem */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+    /* Espaçamento extra no fundo da página para o menu não cobrir conteúdos/botões */
+    body {
+        padding-bottom: 60px !important;
+    }
  /* Esconde o header movendo-o para fora da tela (para cima) */
 .header.hide-header {
     transform: translateY(-100%);
@@ -1418,7 +1846,7 @@ font-size: 1rem;
 
     
 #btn-agendar-header{
-    display: none;
+    display: block;
 }
 
         .whatsapp-balloon {
@@ -1663,6 +2091,27 @@ font-size: 1rem;
     #btn-left{
        
     }
+}
+
+
+@media (max-width: 580px) {
+
+    .header {
+        padding-top: 0;
+    }
+.header-content {
+    flex-direction: column;
+
+    margin-top: 0;
+    padding-top: 0;
+
+    gap: 10px;    
+}
+ 
+.hero-content {
+    margin-top: 5rem;
+}
+
 }
 
 @media (max-width: 480px) {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link class="link-css" rel="stylesheet" href="style2.3.css">
+    <link class="link-css" rel="stylesheet" href="style2.4.css">
     <title>Dra. Juliana Cardoso | Nutricionista - Atendimento Presencial e Online</title>
     <!-- Basic Icons -->
 
@@ -25,465 +25,7 @@
 
  
     <style>
-/* Remove o efeito azul para botões e links especificamente */
-button, 
-a, 
-.carousel-btn, 
-input[type="submit"] {
-    -webkit-tap-highlight-color: transparent;
-}
-        
-        /* ==================== EFEITO DE OCULTAR O HEADER ==================== */
-        
-        
-        .header {
-            position: fixed;
-            top: 0;
-            left:0 ;
-            width: 100%;
-            transition: transform 0.3s ease-in-out;
-         
-        }
 
-     
-        /* ===================================================================== */
-
-        /* ==================== EFEITO DE BRILHO NOS BOTÕES ==================== */
-        .btn {
-            position: relative;
-            overflow: hidden;
-            border: none;
-          
-        }
-
-       .btn:hover{
-
-        box-shadow: 0 0 30px 8px rgb(21, 2, 43);
-       
-       }
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -150%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(
-                to right,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.4) 50%,
-                rgba(255, 255, 255, 0) 100%
-            );
-            transform: skewX(-25deg);
-            animation: shineEffect 4s infinite ease-in-out;
-        }
-
-        #btn-agendar-agora{
-            background-color: white;
-            color: black;
-           
-
-        }
-
-          #btn-agendar-agora:hover{
-              box-shadow: 0 0 20px 8px rgb(252, 252, 252);
-        
-            }
-
-         
-
-        @keyframes shineEffect {
-            0% {
-                left: -150%;
-            }
-            30% {
-                left: 150%;
-            }
-            100% {
-                left: 150%;
-            }
-        }
-
-        .seta{
-            color:#8400f0; 
-            background-color: #fff;
-            box-shadow: #8400f0 0px 0px 20px;
-           width: 100%;
-           height: 100%;
-           border-radius: 30px;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-          
-       
-           transition: 2s ease-in-out;
-           border: none;
-    
-          
-  /* Aplicação da Animação */
-  animation-name: oscilar;       /* Nome do keyframe abaixo */
-  animation-duration: 1.5s;     /* Tempo que leva um ciclo completo */
-  animation-iteration-count: infinite; /* Repete para sempre */
-  animation-timing-function: ease-in-out; /* Suaviza o movimento */
-
-           
-        }
-
-     
-
-        @keyframes oscilar {
-  0% {
-    transform: translateX(0); /* Estado inicial (centro) */
-  }
-  25% {
-    transform: translateX(-5px); /* Move 5px para a esquerda */
-  }
-  75% {
-    transform: translateX(5px); /* Move 5px para a direita */
-  }
-  100% {
-    transform: translateX(0); /* Volta ao estado inicial (centro) */
-  }  }
-
-
-
-                .traco-left{    
-    border: none;
-    position: relative;
-    right: 8px;
-    font-size: 30px;
-        }
-
-        .ponta-left{    border: none;
-position: relative;
-left:5px;
-font-size: 30px;
-        }
-
-       
-
-        .traco-right{    border: none;
-position: relative;
-right: 5px;
-font-size: 30px;
-        }
-
-        .ponta-right{    border: none;
-position: relative;
-left: 8px;
-font-size: 30px;
-        }
-
-      
-        /* ===================================================================== */
-
-        /* ==================== CONFIGURAÇÃO DO BOTÃO FLUTUANTE DO WHATSAPP ==================== */
-      
-
- 
-
-       
-
-      
-
-        /* Balão de convite flutuante */
-     
-
-        /* Setinha do balão apontando para o botão */
-      
-
-       
-        /* ===================================================================== */
-
-        /* Estilos padrão ocultam as setas no desktop */
-        .carousel-btn {
-            display: none;
-        }
-
-    
-
-        .carousel-btn.hidden {
-    display: none !important;
-}
-
-
-
-
-        @media (max-width: 873px) {
-            .nav-top{
-    display: none;
-}
-               #btn-right{
-                z-index: 10;
-            }
-      
-
-
-
-            .servicos-container-relative {
-                position: relative;
-              
-            }
-
-            /* Habilita posicionamento relativo na seção de destaques para conter as setas absolutas */
-            .destaques .container {
-                position: relative;
-            }
-
-            /* Carrossel de Serviços */
-            #servicos .servicos-grid {
-                display: flex !important;
-             
-                scroll-behavior: smooth !important;
-         
-        
-            }
-
-            #servicos .servico-card {
-                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
-                margin-bottom: 0 !important;
-            }
-
-            /* Carrossel de Diferenciais (Destaques) */
-            .destaques .destaques-grid {
-                display: flex !important;
-         
-                scroll-behavior: smooth !important;
-           overflow-y: hidden !important;
-             
-            }
-
-            .destaques .destaque-card {
-                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
-           
-             overflow-y: hidden !important;
-            }
-
-                    #servicos .servico-card {
-                flex: 0 0 80% !important; /* O card ocupa 85% da tela */
-                margin-bottom: 0 !important;
-            }
-                
-
-            #carousel-grid{
-                   flex: 0 0 100% !important; /* O card ocupa 85% da tela */
-            
-             overflow-y: hidden !important;
-            }
-
-           
-
-            /* Estilos das setas flutuantes no mobile */
-            .carousel-btn {
-                display: flex;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-       
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.2rem;
-                cursor: pointer;
-                z-index: 10;
-                user-select: none;
-                border: none;
-                box-shadow: none;
-                background-color: transparent;
-                
-            }
-
-        
-            .carousel-btn.prev {
-                left: 5px;
-            }
-
-            .carousel-btn.next {
-          
-                right: 5px;
-            }
-
-       
-
-            /* Configuração específica para as setas criadas dinamicamente na seção destaques */
-            .destaques .carousel-btn {
-                top: 60%; /* Ajuste fino de altura para alinhar com os cards dos diferenciais */
-            }
-
-            /* Esconde a seta quando o JS adiciona a classe .hidden */
-.carousel-btn.hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.carousel-btn {
-  
-    
-}
-   
-  .social-links a 
-  {
-    width: 4rem;
-    height: 4rem;
-    margin: 0;
-    position: relative;
-    bottom: 70px;
-    right: -3px;
-    img{
-    width: 4rem;
-    
-    
-    } 
-  
-           
-        }
-    
-
-        /* ==================== MENU FIXO NO RODAPÉ (MOBILE/TABLET) ==================== */
-
-    /* Oculta elementos que não precisam aparecer na barra inferior */
-    #duvida, 
-    #btn-agendar-header, 
-    #menu-toggle {
-        display: none !important;
-    }
-
-    /* Oculta a tag <li> inteira que contém a opção de Dúvidas Frequentes */
-    .nav-list li:has(#duvida) {
-        display: none !important;
-    }
-
-    /* Fixa o menu de navegação na parte inferior da tela */
-    .nav-bottom {
-        display: flex;
-        position: fixed ;
-        bottom: 0 ;
-        top: auto ;
-        left: 0 ;
-        width: 100% ;
-        background-color: #fff ;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
-        z-index: 10000 ;
-        padding: 0.9rem 0 ;
-        display: block;
-        border: 3px solid  #6d288c; ;
-        border-radius: 30px;
-        margin-bottom: 2px;
-        
-    }
-
-    /* Organiza as opções lado a lado */
-    .nav-list {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-around !important;
-        align-items: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        list-style: none !important;
-   
-   
-    }
-
-    /* Configuração individual de cada link do menu */
-    .nav-link {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-   
-        color: #0a0a0a !important;
-        text-decoration: none !important;
-        gap: 2px !important;
-        z-index: 101;
-       
-
-      
-    }
-
-
-
-  
-
-    /* Criação e posicionamento dos ícones acima do texto */
-    .nav-link::before {
-        font-size: 1.1rem;
-        line-height: 1;
-    }
-
-    /* Ícone específico para cada opção */
-    .nav-link[href="#home"]::before {
-                 content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
-    background-image: url('assets/home-white.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
-        .nav-link[href="#home"]:hover {
-
-    }
-    
-
-  
-
-    .nav-link[href="#sobre"]::before {
-                   content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
-    background-image: url('assets/avatar.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
-
-    .nav-link[href="#servicos"]::before {
-
-                content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
-    background-image: url('assets/lista.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-        
-    }
-
-    .nav-link[href="#blog"]::before {
-        content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
-    background-image: url('assets/jornal.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
-
-    .nav-link[href="#contato"]::before {
-       content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-    width: 20px;  /* Largura do ícone */
-    height: 20px; /* Altura do ícone */
-    background-image: url('assets/chamada-telefonica.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
-
-    /* Espaçamento extra no fundo da página para o menu não cobrir conteúdos/botões */
-    body {
-        padding-bottom: 60px !important;
-    }
-}
     </style>
 </head>
 
@@ -503,9 +45,9 @@ font-size: 30px;
            
     <div class="info-item" style="margin: 0;" >
                        
-                        <div  class="info-text" style="display: flex; flex-direction: row; margin: 0; justify-content: center; align-items: center;">
+                        <div  class="info-text" style=" display: flex; flex-direction: row; margin: 0; justify-content: center; align-items: center;">
                 
-                            <div   onclick="window.open('https://wa.me/5591987416244?text=Olá!', '_blank');" id="social"  style="display: flex; cursor: pointer; margin: 0; ">
+                            <div   onclick="window.open('https://wa.me/5591987416244?text=Olá!', '_blank');" id="social"  style="display: flex;  cursor: pointer; margin: 0; ">
                                 <a 
                              href="https:"
                              target="_blank" 
@@ -516,7 +58,7 @@ font-size: 30px;
                             
                               border-radius: 30px"> 
                               <img style="width: 30px; " 
-                              src="assets/whatsapp-black.png" 
+                              src="assets/whatsapp-cor.png" 
                               alt="whatsapp">
                             </a>
                               <a href="https://wa.me/5591987416244?text=Olá!"
@@ -529,7 +71,7 @@ font-size: 30px;
                                 class="btn-link" 
                                 style="color: #cf54ff; font-weight: 600;
                                  text-decoration: none;"><img style="text-decoration: none;" src="" alt=""><img style="width: 30px;" 
-                                 src="assets/instagram.png"
+                                 src="assets/instagram-cor.png"
                                  alt=""></a>
                                  <a target="_blank"  href="https://www.instagram.com/nutrijulianacardoso/"></a>
                                  
@@ -719,10 +261,10 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
 <section class="servicos" >
     <div class="container">
 
-        <div  class="section-header" >
+        <div   class="section-header" >
             <span  class="section-label" >Meus Serviços</span>
             <h2  class="section-title" >O cuidado que sua saúde precisa</h2>
-            <p  class="section-description">
+            <p  class="section-description"  >
                 Soluções nutricionais focadas no seu bem-estar, com total flexibilidade de atendimento.
             </p>
         </div>
@@ -932,19 +474,19 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
     </section>
 
     <!-- NOVA SEÇÃO: BLOG DE NUTRIÇÃO -->
-    <section class="blog" >
+    <section >
         <div class="container">
 
             <div   class="section-header">
                 <span class="section-label">Dicas da Nutri</span>
-                <h2 id="blog" class="section-title">Nosso Blog de Nutrição</h2>
+                <h2  class="section-title">Nosso Blog de Nutrição</h2>
                 <p class="section-description">
                     Fique por dentro das últimas novidades, receitas e artigos para 
                     te guiar rumo a uma vida muito mais saudável.
                 </p>
             </div>
 
-      <!--ORGANIZAR-->      <div class="servicos-grid"> <!-- Reaproveitando a estrutura de grid para manter harmonia -->
+      <!--ORGANIZAR-->      <div id="blog"  class="blog" class="servicos-grid"> <!-- Reaproveitando a estrutura de grid para manter harmonia -->
 
                 <div class="servico-card" 
                     onclick="window.location.href='artigo-ansiedade.html';" 
@@ -1224,10 +766,10 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                     <h3 class="footer-title">Políticas e Termos</h3>
                     <ul class="footer-links">
                            <a class="termos"  href="termos-de-uso.html" 
-                    ">Termos de Uso
+                    >Termos de Uso
                 </a> <br>
                     <a class="politica" href="politica-de-privacidade.html" 
-                     ">Política de Privacidade
+                     >Política de Privacidade
                 </a>
                     </ul>
                 </div>
@@ -1246,7 +788,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
     <!-- Scripts de controle dos Carrosséis -->
    
 
-    <script src="script2.3.js"></script>
+    <script src="script2.4.js"></script>
 
 </body>
 

@@ -82,7 +82,7 @@ window.addEventListener('scroll', function() {
         // Estilização/Sombra no scroll
         if (scrollTop > 100) {  
             
-            header.style.padding = '0px 20px';
+            // header.style.padding = '0px 20px';
        
        
             header.style.boxShadow = '0 4px 2px rgba(0, 0, 0, 0.12)';
@@ -90,7 +90,7 @@ window.addEventListener('scroll', function() {
         } else {
          
             
-            header.style.padding = '20px';
+            // header.style.padding = '20px';
             header.style.boxShadow = '0 4px 2px rgba(0, 0, 0, 0.08)';
             if (nav) nav.classList.remove('nav-top');
         }
