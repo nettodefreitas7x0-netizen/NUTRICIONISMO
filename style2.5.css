@@ -1939,6 +1939,13 @@ font-size: 30px;
             margin: 0;
         }
 
+        
+    .header-content {
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+
       
 }
 
@@ -2106,10 +2113,14 @@ font-size: 30px;
 
 @media (max-width: 580px) {
 
-    .header {display: flex;
-        justify-content: center;
-        align-self: start;
-        padding-top: 0;
+
+    .header {
+    
+   
+    }
+
+     #btn-agendar-header{
+        display: none;
     }
 .header-content {
 
@@ -2125,7 +2136,7 @@ font-size: 30px;
 }
 
     #btn-agendar-header{
-        display: none!important;
+      width: 110px;
     }
 
     .logo-text{
@@ -2142,7 +2153,7 @@ font-size: 30px;
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 492px) {
     html {
         font-size: 14px;
     }
@@ -2162,6 +2173,8 @@ font-size: 30px;
         
       
     }
+
+
 
     .hero-title {
         font-size: 1.75rem;
@@ -2186,16 +2199,71 @@ font-size: 30px;
     .nav-link {
         padding: 0px;
     }
+
+    .header{
+     padding: 10px;
+     
+      
+
+    }
+
+    
+
+    .logo-icon{
+        width: 60px;
+    }
  
 }
 
-@media (max-width:406px) {
+@media (max-width:372px) {
 
-    #social-header{
-        display: none !important;
+   .header-content{
+    width: 100%;
+    justify-content: start;
+/* display: grid; */
+  
+    /* grid-template-columns: 2fr 1fr; */
+    
+   }
+
+   .header{
+   
+   }
+
+   /* .logo{ display: grid;
+grid-template-columns: 0.5fr 1fr ; */
+
+   
+
+
+ .logo-text{
+
+    /* text-align: center; */
+ 
+ }
+
+    .logo{
+          
+  
+     
+  
     }
 
-}
+    .logo-icon {
+    
+    }
+
+    #social-header{
+     /* display: grid;
+        justify-content: end;
+        align-items: center; */
+        display: none;
+     }
+
+     }
+
+
+
 
 
 @media (max-width:298px) {
