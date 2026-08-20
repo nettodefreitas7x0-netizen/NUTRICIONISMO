@@ -31,7 +31,7 @@
 
 <body>
 
-    <header class="header" id="header">
+    <header class="header" id="header" >
         <div class="container">
 <div class="header-content">
     
@@ -46,7 +46,7 @@
                     </span>
                 </a>
            
-                        <div class="info-item" id="social-header" style="margin: 0;" >
+                        <div id="home"  class="info-item" id="social-header" style="margin: 0;" >
                        
                         <div  class="info-text" style=" display: flex; flex-direction: row; margin: 0; justify-content: center; align-items: center;">
                 
@@ -121,32 +121,33 @@
             </div>
         </div>
     </header>
-    
 
-    <section class="hero" id="home">
-
-       <div class="div-nav">
-        <nav class="nav-bottom" id="nav-menu">
+    <div class="div-nav">
+        <div class="nav-bottom" id="nav-menu">
                     <ul class="nav-list">
-                        <li><a  href="#home" class="nav-link">Início</a></li>
+                        <li><a href="#home" class="nav-link">Início</a></li>   
                         <li><a href="#sobre" class="nav-link">Sobre</a></li>
                         <li><a href="#servicos" class="nav-link">Serviços</a></li>
                         <li><a href="#blog" class="nav-link">Blog</a></li>
                         <li><a id="duvida" href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
                         <li><a href="#contato" class="nav-link">Contato</a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
+    
+<section class="hero" >
+
+       
 
         <div class="hero-background"
             style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&q=80');">
         </div>
         <div class="hero-overlay"></div>
 
-        <div class="container">
-            <div class="hero-content">
+        <div  class="container">
+            <div   class="hero-content">
 
-                <div class="hero-text">
+                <div  class="hero-text">
                     <h1 class="hero-title">
                         Transforme sua saúde através da <span class="highlight">nutrição consciente</span>
                     </h1>
@@ -184,8 +185,8 @@
         </div>
     </section>
 
-    <section class="sobre" >
-        <div class="container">
+<section class="sobre" > 
+        <div id="sobre" class="container">
             <div class="sobre-content">
 
                 <div   class="sobre-image">
@@ -220,7 +221,7 @@ dietas radicais, restrições excessivas ou soluções temporárias. Cada <stron
 Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem culpa, sem extremismos e sem abrir mão do
  prazer de se alimentar. Meu objetivo é ajudar você a desenvolver hábitos que promovam mais saúde, 
  disposição, autoestima e qualidade de vida, conquistando resultados duradouros de forma leve e 
- equilibrada. <br> <div id="sobre"></div>
+ equilibrada. <br>
                     </p>
                     <p class="sobre-description">
                     
@@ -261,7 +262,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
 
             
     </section>
-<section class="servicos" >
+<section class="servicos"   >
     <div class="container">
 
         <div   class="section-header" >
@@ -272,7 +273,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
             </p>
         </div>
 
-        <div id="servicos"  class="servicos-container-relative">
+        <div id="servicos" class="servicos-container-relative">
                 <!-- Botões das setas adicionados aqui -->
                  <button style="left:-8px;"  id="btn-left" class="carousel-btn" 
                 onclick="scrollCarousel(-1)" aria-label="Voltar"><div  class="seta"><div  class="ponta-left"><</div><div  class="traco-left">-</div></div></button>
@@ -357,7 +358,7 @@ onclick="scrollCarousel(1)" aria-label="Avançar"><div class="seta"><div class="
             </div>
         </div>
     </div>
-</section>
+    </section>
 
 <section class="destaques">
     <div class="container">
@@ -426,9 +427,9 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
             </div>
         </div>
     </div>
-</section>
+    </section>
 
-    <section class="beneficios" style="display:flex; justify-content: center; align-items: center;">
+<section class="beneficios" style="display:flex; justify-content: center; align-items: center;">
         <div class="container">
             <div class="beneficios-content">
 
@@ -477,10 +478,10 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
     </section>
 
     <!-- NOVA SEÇÃO: BLOG DE NUTRIÇÃO -->
-    <section >
+<section >
         <div class="container">
 
-            <div   class="section-header">
+            <div   class="section-header"  >
                 <span class="section-label">Dicas da Nutri</span>
                 <h2  class="section-title">Nosso Blog de Nutrição</h2>
                 <p class="section-description">
@@ -489,9 +490,9 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                 </p>
             </div>
 
-      <!--ORGANIZAR-->      <div id="blog"  class="blog" class="servicos-grid"> <!-- Reaproveitando a estrutura de grid para manter harmonia -->
+      <!--ORGANIZAR-->      <div  class="blog" class="servicos-grid"> <!-- Reaproveitando a estrutura de grid para manter harmonia -->
 
-                <div class="servico-card" 
+                <div  id="blog" class="servico-card" 
                     onclick="window.location.href='artigo-ansiedade.html';" 
                     style="cursor: pointer;">
                     <div class="servico-image">
@@ -550,12 +551,12 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
         </div>
     </section>
 
-   <section class="faq" >
+<section class="faq"id="faq" >
         <div class="container">
             <!--PERGUNTAS FREQUENTES -->
             <div class="section-header">
                 <span class="section-label">Perguntas Frequentes</span>
-                <h2 class="section-title" id="faq">Tire suas dúvidas</h2>
+                <h2 class="section-title" >Tire suas dúvidas</h2>
             </div>
 
             <div class="faq-list" >
@@ -624,10 +625,10 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
         </div>
     </section>
 
-   <section class="contato" >
+   <section class="contato"  >
         <div class="container">
 
-            <div class="section-header">
+            <div  class="section-header">
                 <span class="section-label">Contato</span>
                 <h2 class="section-title" >Agende seu atendimento</h2>
                 <p class="section-description">
@@ -635,7 +636,7 @@ onclick="scrollDestaques(1)" aria-label="Avançar"><div class="seta"><div class=
                 </p>
             </div>
 
-            <div id="contato" class="contato-content">
+            <div id="contato"  class="contato-content">
 
                 <div class="contato-info"  >
 

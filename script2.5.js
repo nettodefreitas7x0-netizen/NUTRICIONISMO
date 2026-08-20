@@ -131,15 +131,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ==========================================
 // ACTIVE LINK NO MENU (DESTAQUE SEÇÃO ATUAL)
 // ==========================================
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('div[id]');
 const navLinksForActive = document.querySelectorAll('.nav-link');
 
 function activateMenuLink() {
     const scrollY = window.scrollY;
 
+    // Se estiver no topo da página (Home)
+    if (scrollY <= 100) {
+        navLinksForActive.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === '#home' || href === '#' || href === '#topo') {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        return;
+    }
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 150;
         const sectionId = section.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -154,6 +167,8 @@ function activateMenuLink() {
 }
 
 window.addEventListener('scroll', activateMenuLink);
+// Executa no carregamento inicial da página
+document.addEventListener('DOMContentLoaded', activateMenuLink);
 // ==========================================
 // CARROSSEIS (SERVIÇOS E DESTAQUES CENTRALIZADOS)
 // ==========================================
@@ -376,3 +391,17 @@ window.addEventListener('scroll', () => {
         header.classList.remove('hide-header');
     }
 });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const navBottomLinks = document.querySelectorAll('.nav-bottom .nav-link');
+
+//     navBottomLinks.forEach(link => {
+//         link.addEventListener('click', function() {
+//             // Remove a classe 'active' de todos os links do nav-bottom
+//             navBottomLinks.forEach(item => item.classList.remove('active'));
+            
+//             // Adiciona a classe 'active' apenas no item clicado
+//             this.classList.add('active');
+//         });
+//     });
+// });

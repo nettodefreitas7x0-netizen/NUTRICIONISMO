@@ -257,9 +257,14 @@ left: 0;
     display: flex;
     align-items: center;
     gap: 0.75rem;
+       
     img {
         width: 1000px;
     }
+}
+
+.logo:hover{
+ transform: scale(1.2);
 }
 
 .logo-icon {
@@ -1748,6 +1753,18 @@ font-size: 30px;
    
     }
 
+        .nav-list-bottom {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+   
+   
+    }
+
     /* Configuração individual de cada link do menu */
     .nav-link {
         display: flex !important;
@@ -1775,68 +1792,61 @@ font-size: 30px;
     }
 
     /* Ícone específico para cada opção */
-    .nav-link[href="#home"]::before {
-                 content: ""; /* Deixe vazio para usar a imagem de fundo */
+.nav-bottom .nav-link::before {
+    content: "";
     display: inline-block;
-    width: 2rem;  /* Largura do ícone */
-    height: 2rem; /* Altura do ícone */
-    background-image: url('assets/home-white.png'); /* Caminho da sua imagem */
+    width: 2rem;
+    height: 2rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    }
-        .nav-link[href="#home"]:hover {
+}
 
-    }
-    
-
-  
-
-    .nav-link[href="#sobre"]::before {
-                   content: ""; /* Deixe vazio para usar a imagem de fundo */
+/* Ícone padrão (Home Branco) */
+/* Configuração base de todos os ícones da barra inferior */
+.nav-bottom .nav-link::before {
+    content: "";
     display: inline-block;
-      width: 2rem;  /* Largura do ícone */
-    height: 2rem; /* Altura do ícone */
-    background-image: url('assets/avatar.png'); /* Caminho da sua imagem */
+    width: 2rem;
+    height: 2rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    }
+}
 
-    .nav-link[href="#servicos"]::before {
+/* ÍCONES PADRÃO (ESTADO INATIVO/BRANCO) */
+.nav-bottom .nav-link[href="#home"]::before {
+    background-image: url('assets/home-white.png');
+}
+.nav-bottom .nav-link[href="#sobre"]::before {
+    background-image: url('assets/avatar.png');
+}
+.nav-bottom .nav-link[href="#servicos"]::before {
+    background-image: url('assets/lista.png');
+}
+.nav-bottom .nav-link[href="#blog"]::before {
+    background-image: url('assets/jornal.png');
+}
+.nav-bottom .nav-link[href="#contato"]::before {
+    background-image: url('assets/chamada-telefonica.png');
+}
 
-                content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-     width: 2rem;  /* Largura do ícone */
-    height: 2rem; /* Altura do ícone */
-    background-image: url('assets/lista.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-        
-    }
-
-    .nav-link[href="#blog"]::before {
-        content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-      width: 2rem;  /* Largura do ícone */
-    height: 2rem; /* Altura do ícone */
-    background-image: url('assets/jornal.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
-
-    .nav-link[href="#contato"]::before {
-       content: ""; /* Deixe vazio para usar a imagem de fundo */
-    display: inline-block;
-     width: 2rem;  /* Largura do ícone */
-    height: 2rem; /* Altura do ícone */
-    background-image: url('assets/chamada-telefonica.png'); /* Caminho da sua imagem */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    }
+/* ÍCONES ATIVOS (ESTADO CLICADO/PRETO) */
+.nav-bottom .nav-link[href="#home"].active::before {
+    background-image: url('assets/casa-black.png');
+}
+.nav-bottom .nav-link[href="#sobre"].active::before {
+    background-image: url('assets/sobre-black.png');
+}
+.nav-bottom .nav-link[href="#servicos"].active::before {
+    background-image: url('assets/lista-black.png');
+}
+.nav-bottom .nav-link[href="#blog"].active::before {
+    background-image: url('assets/jornal-black.png');
+}
+.nav-bottom .nav-link[href="#contato"].active::before {
+    background-image: url('assets/chamada-telefonica-black.png');
+}
 
     /* Espaçamento extra no fundo da página para o menu não cobrir conteúdos/botões */
     body {
