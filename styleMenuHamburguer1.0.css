@@ -57,6 +57,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 14px;
+  
 }
 
 body {
@@ -64,6 +65,7 @@ body {
     color: var(--cor-texto);
     line-height: 1.6;
     overflow-x: hidden;
+     
 }
 
 img {
@@ -284,6 +286,7 @@ button {
     display: flex;
     gap: 2rem;
     align-items: center;
+
 }
 
 .nav-link {
@@ -362,6 +365,7 @@ button {
     border: solid 2px var(--cor-primaria) ;
     border-radius: 10px;
       padding: 3px;
+      z-index: 1000;
 }
 
 .menu-toggle span {
@@ -371,11 +375,13 @@ button {
     background: var(--cor-primaria);
     border-radius: 3px;
     transition: var(--transicao);
+    z-index: 1000;
+    
   
 }
 
 .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 5Px);
+    transform: rotate(45deg) translate(6px, 5.5px);
     background-color: #d13030; /* Mantido para manter o feedback do botão de fechar */
 }
 
@@ -384,7 +390,7 @@ button {
 }
 
 .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -5px);
+    transform: rotate(-45deg) translate(6px, -5.5px);
     background-color: #d13030;
 }
 
@@ -1345,37 +1351,57 @@ width: 100px;
     .nav {
         position: fixed;
         top: 0px;
-        left: -100%;
+        left: 100%;
         width: 100%;
-        height: 1%;
-        border-radius: 30px;
-        
-        background: var(--cor-branco);
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background:transparent;
         transition: left 0.3s ease;
         box-shadow: var(--box-shadow);
         transition: all 0.5s ease-in-out;
+
+        
     }
 
     .nav.active {
-        left: 50%;
+        left: 0%;
         height: 100%;
-         border-radius: 30px;
+       
+         background-color: rgba(255, 255, 255, 0.15); /* Fundo branco sutil */
+  backdrop-filter: blur(10px); /* Desfoca os elementos atrás da caixa */
+  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+
+ 
     }
 
     .nav-list {
+                margin-top: 90px;
+        background-color:#FFFFFF;
+         border: var(--cor-primaria) 2px solid;
+        border-radius: 30px;
         flex-direction: column;
         gap: 0;
         padding: var(--espacamento-md) 0;
+        margin: 70px 60px 0 60px;
+        
     }
 
     .nav-list li {
+    
         width: 100%;
-        border-bottom: 1px solid var(--cor-cinza);
+       
+     
+        border-radius: 10px;
+   
     }
 
     .nav-link {
         display: block;
+        
         padding: var(--espacamento-sm) var(--espacamento-md);
+  
     }
 
     .social-links a 
