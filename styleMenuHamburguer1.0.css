@@ -1293,6 +1293,10 @@ width: 100px;
         font-size: 2rem;
     }
 
+            .sobre-image{
+                display: none;
+            }
+
     .hero-content,
     .sobre-content,
     .beneficios-content {
@@ -1339,6 +1343,12 @@ width: 100px;
         --espacamento-xl: 4rem;
     }
 
+    .div-sobre-content{}
+
+    .sobre-image{
+     
+    }
+
     /* Header Mobile */
     .menu-toggle {
         display: flex;
@@ -1375,6 +1385,7 @@ width: 100px;
 
  
     }
+  
 
     .nav-list {
                 margin-top: 90px;
@@ -1386,6 +1397,12 @@ width: 100px;
         padding: var(--espacamento-md) 0;
         margin: 70px 60px 0 60px;
         
+    }
+
+      .nav-list.active{
+
+        height: -50%;
+          
     }
 
     .nav-list li {

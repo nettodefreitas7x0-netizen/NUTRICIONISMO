@@ -131,7 +131,7 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Elementos para animar
 const animatedElements = document.querySelectorAll(`
-    .servico-card,
+   
     .destaque-card,
     .beneficio-item,
     .depoimento-card,
@@ -148,15 +148,31 @@ animatedElements.forEach(element => {
 // ==========================================
 // ACTIVE LINK NO MENU (DESTAQUE SEÇÃO ATUAL)
 // ==========================================
-const sections = document.querySelectorAll('section[id]');
+// ==========================================
+// ACTIVE LINK NO MENU (DESTAQUE SEÇÃO ATUAL)
+// ==========================================
+const sections = document.querySelectorAll('section[id], header[id], div[id]');
 const navLinksForActive = document.querySelectorAll('.nav-link');
 
 function activateMenuLink() {
     const scrollY = window.scrollY;
 
+    // Se estiver no topo da página (Home)
+    if (scrollY <= 100) {
+        navLinksForActive.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === '#home' || href === '#' || href === '#topo') {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        return;
+    }
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 150;
         const sectionId = section.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -171,7 +187,8 @@ function activateMenuLink() {
 }
 
 window.addEventListener('scroll', activateMenuLink);
-
+// Executa no carregamento inicial da página
+document.addEventListener('DOMContentLoaded', activateMenuLink);
 // ==========================================
 // PREVENÇÃO DE LINKS VAZIOS
 // ==========================================
