@@ -1037,7 +1037,8 @@ width: 100px;
 
 .icon-social{
    
-  
+  position: relative;
+left: 8px;
 }
 
 .info-text h3 {
