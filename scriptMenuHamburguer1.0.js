@@ -131,7 +131,7 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Elementos para animar
 const animatedElements = document.querySelectorAll(`
-   
+       .servico-card,
     .destaque-card,
     .beneficio-item,
     .depoimento-card,
@@ -143,11 +143,11 @@ animatedElements.forEach(element => {
     element.classList.add('fade-in');
     observer.observe(element);
 });
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX//
+//  TERMINOU O CODE DE ANIMAÇÃO DE SCROLL //
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX//
 
 
-// ==========================================
-// ACTIVE LINK NO MENU (DESTAQUE SEÇÃO ATUAL)
-// ==========================================
 // ==========================================
 // ACTIVE LINK NO MENU (DESTAQUE SEÇÃO ATUAL)
 // ==========================================

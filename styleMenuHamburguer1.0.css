@@ -635,12 +635,16 @@ button {
 .servicos {
     padding: var(--espacamento-xl) 0;
     background: var(--cor-cinza-claro);
+  
 }
+
+
 
 .servicos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--espacamento-md);
+    
 }
 
 .servico-card {
@@ -1274,6 +1278,7 @@ width: 100px;
 /* ==========================================
    ANIMAÇÕES DE SCROLL
    ========================================== */
+   
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -1288,19 +1293,34 @@ width: 100px;
 /* ==========================================
    RESPONSIVIDADE - TABLET
    ========================================== */
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
+    #duvida {
+        font-size: 0;
+       
+    }
+
+       #duvida::before {
+       
+        font-size:0.9375rem;
+        content: "Dúvidas";
+    }
+
+    #btn-agendar-header{
+        margin-left: 20px;
+    }
+
     .section-title {
         font-size: 2rem;
     }
 
             .sobre-image{
-                display: none;
+                display: flex;
             }
 
     .hero-content,
     .sobre-content,
     .beneficios-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: var(--espacamento-md);
     }
 
@@ -1341,6 +1361,28 @@ width: 100px;
         --espacamento-md: 1.5rem;
         --espacamento-lg: 3rem;
         --espacamento-xl: 4rem;
+    }
+
+     .hero-content,
+    .sobre-content,
+    .beneficios-content {
+        grid-template-columns:1fr;
+        gap: var(--espacamento-md);
+    }
+
+    .sobre-image{
+        display: none;
+    }
+
+     #duvida {
+        font-size: 0;
+       
+    }
+
+       #duvida::before {
+       
+        font-size:0.9375rem;
+        content: "Dúvidas frequentes";
     }
 
     .div-sobre-content{}
