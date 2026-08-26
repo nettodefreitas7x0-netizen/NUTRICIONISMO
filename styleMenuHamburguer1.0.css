@@ -60,6 +60,8 @@ html {
   
 }
 
+
+
 body {
     font-family: var(--fonte-principal);
     color: var(--cor-texto);
@@ -1299,10 +1301,62 @@ left: 8px;
     transform: translateY(0);
 }
 
+.logo-menu{
+    display: none;
+}
+
+.btn-header-menu{
+    display: none;
+}
+
+
+
 /* ==========================================
    RESPONSIVIDADE - TABLET
    ========================================== */
 @media (max-width: 1000px) {
+
+    .header-content{
+        display: grid;
+   
+        justify-content: center;
+        align-items: center;
+
+        
+      
+    }
+
+    .btn-header {
+
+        grid-row: 1/6;
+       padding: 20px;
+       margin: 0;
+       width: 100%;
+       margin: 0 auto;
+     
+    }
+
+    .logo {
+justify-content: center;
+    align-items: center;
+        grid-row: 1/2;
+        margin-bottom: 20px;
+    }
+
+    .nav-link{
+text-align: center;
+padding: 0;
+
+    }
+
+    .logo{
+        position: relative;
+  
+    }
+ 
+
+    
+    
     #duvida {
         font-size: 0;
        
@@ -1314,9 +1368,7 @@ left: 8px;
         content: "Dúvidas";
     }
 
-    #btn-agendar-header{
-        margin-left: 20px;
-    }
+ 
 
     .section-title {
         font-size: 2rem;
@@ -1372,12 +1424,24 @@ left: 8px;
         --espacamento-xl: 4rem;
     }
 
+    .logo {
+        margin: 0;
+     
+    }
+
+    .header-content {
+       display: flex;
+       justify-content: space-between;
+    }
+ 
+
      .hero-content,
     .sobre-content,
     .beneficios-content {
         grid-template-columns:1fr;
         gap: var(--espacamento-md);
     }
+
 
     .sobre-image{
         display: none;
@@ -1405,16 +1469,34 @@ left: 8px;
         display: flex;
     }
 
-    .btn-header {
+    .btn-header{
         display: none;
     }
+
+    
+    .btn-header-menu{
+        display: flex;
+      justify-content: center;
+      align-items: center;
+   max-width: 200px;
+   margin: 0 auto;
+
+
+    }
+
+    .logo-menu{
+        display: flex;
+        text-align: start;
+    }
+
+   
 
     .nav {
         position: fixed;
         top: 0px;
         left: 100%;
         width: 100%;
-        height: 50%;
+        height: 100%;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -1430,7 +1512,10 @@ left: 8px;
         left: 0%;
         height: 100%;
        
-         background-color: rgba(255, 255, 255, 0.15); /* Fundo branco sutil */
+        
+      
+       
+         background-color: rgba(73, 0, 141, 0.15); /* Fundo branco sutil */
   backdrop-filter: blur(10px); /* Desfoca os elementos atrás da caixa */
   -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
 
@@ -1446,7 +1531,7 @@ left: 8px;
         flex-direction: column;
         gap: 0;
         padding: var(--espacamento-md) 0;
-        margin: 70px 60px 0 60px;
+        margin: 90px 60px 0 60px;
         
     }
 
@@ -1563,6 +1648,23 @@ left: 8px;
 @media (max-width: 480px) {
     html {
         font-size: 14px;
+    }
+
+    .logo {
+      
+    }
+
+    .logo-icon{
+   
+        
+    }
+
+    .nav-menu{
+        width: 100%;
+    }
+
+    .nav-list{
+          margin:90px 20px 0 20px;
     }
 
     .contato-info {

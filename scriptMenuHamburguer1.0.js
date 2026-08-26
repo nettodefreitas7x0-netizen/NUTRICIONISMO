@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    const logo = document.querySelectorAll('.logo-menu')
 
     // Abrir/fechar menu mobile
     if (menuToggle) {
@@ -31,13 +32,23 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
+              document.body.style.overflow = '';
+         
+        });
+    });
+// ao clicar na logo tbm fecha o menu-nav
+      logo.forEach(link => {
+        link.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            
             document.body.style.overflow = '';
         });
     });
 
     // Fechar menu ao clicar fora
     document.addEventListener('click', function(event) {
-        const isClickInsideNav = navMenu.contains(event.target);
+       
         const isClickOnToggle = menuToggle.contains(event.target);
 
         if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
