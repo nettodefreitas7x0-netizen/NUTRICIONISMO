@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styleMenuHamburguer1.3.css">
+    <link rel="stylesheet" href="styleMenuHamburguer1.4.css">
      <link rel="icon"
         href="assets/logo-transparente-pequena.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
      
             color: var(--text-main);
             line-height: 1.7;
-            padding: 40px 20px;
+        
         }
 
         .container-artigo {
@@ -177,10 +177,14 @@
             margin-bottom: 8px;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 25px 20px;
+         @media (max-width: 600px) {
+            .container{
+
             }
+         }
+
+        @media (max-width: 1000px) {
+          
 
             h1 {
                 font-size: 1.75rem;
@@ -247,10 +251,11 @@
             </div>
         </div>
     </header>
+    <main class="main-artigos">
 <div class="container-artigo">
-<div class="etiqueta" style="display: flex; width: 16%;justify-content: center; background: rgba(0,0,0,0.05);
+<div class="etiqueta" style="display: flex; width: 150px;justify-content: center; background: rgba(0,0,0,0.05);
             border-radius: 20px;
-             font-weight: 500; margin-bottom: 10px;">
+             font-weight: 500; ">
        <span >Nutrição & Ciência</span>
             </div>
 
@@ -352,6 +357,7 @@
     </main>
     
 </div>
-<script src="scriptMenuHamburguer1.3.js"></script>
+</main>
+<script src="scriptMenuHamburguer1.4.js"></script>
 </body>
 </html>

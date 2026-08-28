@@ -226,8 +226,8 @@ button {
 }
 
 .container-artigo {
-    max-width: 1000px; margin: 100px auto;
-    padding: 20px;
+    max-width: 1000px; margin: 70px auto;
+    padding: 50px 10px;
   
 }
 .text-img{
@@ -1411,7 +1411,7 @@ left: 8px;
     }
 
     .container-artigo {
-        margin-top: 150px;
+       padding: 90px 10px;
     }
 
     .btn-header {
@@ -1519,6 +1519,11 @@ left: 100px;
         --espacamento-xl: 4rem;
     }
 
+      .container-artigos { 
+                  
+                
+            }
+
     .img-artigo img {
         
     }
@@ -1548,9 +1553,11 @@ left: 100px;
         display: none;
     }
 
-    .container-artigo {
-        margin: 100px 0 0 0;
-    }  
+    
+            .container-artigo {
+       padding: 50px 10px;
+    }
+    
 
     
 
