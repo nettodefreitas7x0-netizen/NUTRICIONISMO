@@ -4,72 +4,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como a alimentação influencia na ansiedade? | Juliana Cardoso</title>
-    <link rel="stylesheet" href="styleMenuHamburguer1.4.css">
-     <link rel="icon"
-        href="assets/logo-transparente-pequena.png">
+
+    <title>Como a alimentação influencia na ansiedade? | Dra. Juliana Cardoso Nutricionista</title>
+    <meta name="description"
+        content="Entenda a relação entre a nutrição e o eixo intestino-cérebro no controle da ansiedade com a Dra. Juliana Cardoso.">
+
+    <link rel="icon" href="assets/logo-transparente-pequena.png">
+
+    <link rel="stylesheet" href="styleMenuHamburguer1.9.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
     <style>
+        .article-hero {
+            background: linear-gradient(135deg, rgba(32, 0, 61, 0.95), rgba(109, 40, 140, 0.9)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1920&q=80') center/cover no-repeat;
+            color: #ffffff;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
 
+        .article-hero .section-label {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .article-hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-hero .meta-info {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            background-color: #ffffff;
+            color: #333333;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+        }
+
+        .article-container h2 {
+            color: #4a154b;
+            font-size: 1.6rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 4px solid #6d288c;
+            padding-left: 12px;
+        }
+
+        .article-container h3 {
+            color: #2d103a;
+            font-size: 1.25rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .article-container p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .article-container ul, .article-container ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        .article-container li {
+            margin-bottom: 12px;
+            font-size: 1.02rem;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .intro-grid {
+                grid-template-columns: 1.8fr 1fr;
+            }
+        }
+
+        .intro-img img {
+            width: 40%;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .highlight-box {
+            background-color: #f7f0fa;
+            border-left: 4px solid #6d288c;
+            padding: 22px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #2d103a, #6d288c);
+            color: #ffffff;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-box h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .cta-box p {
+            color: #f0e6f5;
+            margin-bottom: 25px;
+        }
+
+        .cta-box .btn {
+            background-color: #25d366;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-box .btn:hover {
+            background-color: #1eb954;
+            transform: translateY(-2px);
+        }
+
+        .references {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px dashed #ebd0f0;
+            font-size: 0.9rem;
+            color: #6b5c6e;
+        }
+
+        .references h3 {
+            color: #6d288c;
+            font-size: 1.15rem;
+            margin-top: 0;
+        }
+
+        .references ol {
+            padding-left: 20px;
+        }
+
+        .references li {
+            margin-bottom: 12px;
+            word-break: break-word;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            color: #6d288c;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 20px;
+            border: solid #6d288c 2px;
+            border-radius: 30px;
+            padding: 5px;
+        }
+
+        .back-link:hover {
+          background-color: #6d288c;
+          color:white;
+        }
     </style>
-
 </head>
 
 <body>
 
-    <!-- HEADER (Igual ao da página principal para manter o menu) -->
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
 
-                <a href="#home" class="logo">
-                    <span class="logo-icon"><img src="/assets/logo-transparente-pequena.png" alt=""></span>
+                <a href="index.html#home" class="logo">
+                    <span class="logo-icon"><img src="assets/logo-transparente-pequena.png" alt="Logo Dra. Juliana Cardoso"></span>
                     <span class="logo-text">
                         <span class="logo-name">Juliana Cardoso</span>
                         <span class="logo-tagline">Nutricionista</span>
                     </span>
                 </a>
-<!--             NAV-MENU                     -->
+
                 <nav class="nav" id="nav-menu"> 
                     <ul class="nav-list">
-                         <a href="#home" class="logo logo-menu">
-                    <span class="logo-icon"><img src="/assets/logo-transparente-pequena.png" alt=""></span>
-                    <span class="logo-text">
-                        <span class="logo-name">Juliana Cardoso</span>
-                        <span class="logo-tagline">Nutricionista</span>
-                    </span>
+                        <a href="index.html#home" class="logo logo-menu">
+                            <span class="logo-icon"><img src="assets/logo-transparente-pequena.png" alt="Logo"></span>
+                            <span class="logo-text">
+                                <span class="logo-name">Juliana Cardoso</span>
+                                <span class="logo-tagline">Nutricionista</span>
+                            </span>
+                        </a>
                         
                         <li><a href="index.html#home" class="nav-link">Início</a></li>
                         <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
                         <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
                         <li><a href="index.html#blog" class="nav-link">Blog</a></li>
-                        <li><a id="duvida" href="index.html#faq" class="nav-link">Dúvidas Frequentes</a></li>
+                        <li><a href="index.html#faq" class="nav-link">Dúvidas Frequentes</a></li>
                         <li><a href="index.html#contato" class="nav-link">Contato</a></li>
-                        <li><a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
-                target="_blank" 
-                class="btn btn-primary btn-header btn-header-menu"
-               
-                id="">Agendar Consulta
-                </a></li>
+                        <li><a href="https://wa.me/5591987416244?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." 
+                            target="_blank" 
+                            class="btn btn-primary btn-header btn-header-menu">Agendar Consulta</a></li>
                     </ul>
-                        
                 </nav>
 
-    
-                
-
-                <a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
+                <a href="https://wa.me/5591987416244?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." 
                 target="_blank" 
                 class="btn btn-primary btn-header"
-               
-                id="btn-agendar-header">Agendar Consulta
-                </a>
-
-            
+                id="btn-agendar-header">Agendar Consulta</a>
 
                 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -80,131 +250,124 @@
         </div>
     </header>
 
-    <!-- CONTEÚDO DO ARTIGO -->
-    <main class="main-artigos">
-        <div class="container-artigo" style="">
+    <!-- TOPO ROXO -->
+    <section class="article-hero">
+        <div class="container">
+            <span class="section-label">Saúde Mental</span>
+            <h1>Como a alimentação influencia na ansiedade?</h1>
+            <div class="meta-info">Por Dra. Juliana Cardoso | Nutrição Clínica & Esportiva</div>
+        </div>
+    </section>
 
-            <span style="background: rgba(0,0,0,0.05);
-            padding: 0.3rem 0.8rem; border-radius: 20px;
-             font-weight: 500; font-size: 0.9rem;">Saúde Mental</span>
+    <main class="article-container">
+      
+                <p>A relação entre o que comemos e como nos sentimos é muito mais direta do que a maioria 
+                    das pessoas imagina.</p>
+                <p>Sabe aquela sensação de "frio na barriga" quando estamos nervosos? Ela acontece porque o
+                    nosso intestino e o nosso cérebro estão conectados 24 horas por dia por uma rede de 
+                    milhões de neurônios. É o que a ciência chama de <strong>eixo intestino-cérebro</strong>.</p>
 
-            <h1 style="font-family: 'Fredoka', sans-serif; font-size: 2.5rem; margin: 1rem 0; color: #2d1d2c;">
-                Como a alimentação influencia na ansiedade?
-            </h1>
+        <p>Se a alimentação não vai bem, a saúde mental também sente o impacto. Ajustar o prato pode 
+            ser um forte aliado no controle da ansiedade.</p>
 
-            <p style="color: var(--cor-texto-claro); margin-bottom: 2rem;">Postado em 2026</p>
+        <h2>O papel dos neurotransmissores</h2>
+        <p>Para entender essa ligação, precisamos falar sobre a <strong>serotonina</strong>, o neurotransmissor responsável por regular o humor, o sono e o bem-estar. Cerca de 90% da serotonina do corpo é produzida no intestino, e não no cérebro.</p>
+        <p>Para fabricar esse "hormônio da felicidade", o corpo precisa de tijolos de construção chamados <strong>triptofano</strong> (um aminoácido), além de vitaminas e minerais. Se faltam esses nutrientes na dieta, a produção cai, e o corpo fica mais vulnerável a oscilações de humor e picos de ansiedade.</p>
 
+        <h2>Alimentos que ajudam a acalmar a mente</h2>
+        <div class="highlight-box">
+            <ul>
+                <li><strong>Ricos em Triptofano:</strong> Banana, aveia, ovos, oleaginosas (castanhas, nozes) e grão-de-bico ajudam diretamente na produção de serotonina.</li>
+                <li><strong>Magnésio e Vitaminas do Complexo B:</strong> Encontrados em vegetais de folhas escuras (espinafre, couve), sementes (abóbora, girassol) e abacate. Eles atuam no relaxamento muscular e no bom funcionamento do sistema nervoso.</li>
+                <li><strong>Ômega-3:</strong> Presente em peixes gordurosos (salmão, sardinha) e na semente de linhaça, o ômega-3 reduz a inflamação nas células cerebrais, auxiliando no controle da ansiedade.</li>
+                <li><strong>Fibras e Probióticos:</strong> Iogurte natural, kefir e alimentos integrais cuidam da microbiota intestinal, garantindo que o "segundo cérebro" funcione perfeitamente.</li>
+            </ul>
+        </div>
 
+        <h2>Equilíbrio é o segredo</h2>
+        <p>Cuidar da alimentação não significa cortar tudo o que você gosta, o que geraria ainda mais estresse. O objetivo é nutrir o corpo para que ele tenha os recursos necessários para lidar com as pressões do dia a dia. Uma dieta equilibrada funciona como um suporte diário para a mente.</p>
 
+        <!-- CTA Box -->
+        <div class="cta-box">
+            <h3>Quer cuidar da sua saúde mental através da nutrição?</h3>
+            <p>Agende uma consulta individualizada para alinhar sua rotina alimentar ao seu bem-estar físico e emocional.</p>
+            <a href="https://wa.me/5591987416244?text=Olá,%20li%20o%20artigo%20sobre%20alimentação%20e%20ansiedade%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn">Agendar Consulta no WhatsApp</a>
+        </div>
 
-            <div class="div-artigo">
+          <a href="index.html#blog" class="back-link">← Voltar para o Blog</a>
 
-            
-
-                <div class="texto-artigo">
-
-                    <div class="text-img" >
-                        <div class="div-artigo">
-                    <p>A relação entre o que comemos e como nos sentimos é muito mais direta
-                        do que a maioria das pessoas imagina.
-                        Sabe aquela sensação de
-                        "frio na barriga" quando estamos nervosos? Ela acontece porque
-                        o nosso intestino e o nosso cérebro estão conectados 24 horas por
-                        dia por uma rede de milhões de neurônios. É o que a ciência chama
-                        de eixo intestino-cérebro. <br>
-                        Se a alimentação não vai bem, a saúde mental também sente o impacto. Ajustar o prato
-                        pode ser um forte aliado no controle da ansiedade. </p>
-                        </div>
-                        <div  class="div-img">
-                            <img
-                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
-                            alt="Alimentação Saudável" 
-                            style=" border-radius: 12px;
-                             margin-bottom: 2rem
-                             ;width: 300px;"
-                             >
-            </div></div>
-                    <p>
-                    <h2>O papel dos neurotransmissores</h2><br>
-
-                        Para entender essa ligação, precisamos falar sobre a serotonina,
-                        o neurotransmissores responsável por regular o humor, o sono e o
-                        bem-estar. Cerca de 90% da serotonina do corpo é produzida no intestino,
-                        e não no cérebro. <br>
-
-                  <br>
-                        Para fabricar esse "hormônio da felicidade", o
-                        corpo precisa de tijolos de construção chamados triptofano
-                        (um aminoácido), além de vitaminas e minerais. Se faltam esses
-                        nutrientes na dieta, a produção cai, e o corpo fica mais vulnerável
-                        a oscilações de humor e picos de ansiedade.. <br><br>
-
-                            <h2>Alimentos que ajudam a acalmar a mente</h2> 
-                   <br>
-                        <li><strong>Ricos em Triptofano:</strong> Banana, aveia, ovos, oleaginosas (castanhas, nozes) e
-                            grão-de-bico ajudam diretamente na produção de serotonina.
-                        </li><br>
-                        <li><strong> magnésio e Vitaminas do Complexo B:</strong> Encontrados em vegetais de folhas
-                            escuras (espinafre, couve), sementes (abóbora, girassol) e abacate. Eles atuam no
-                            relaxamento muscular e no bom funcionamento do sistema nervoso.
-                        </li><br>
-                        <li><strong> Ômega-3:</strong> Presente em peixes gordurosos (salmão, sardinha) e na semente de
-                            linhaça, o ômega-3 reduz a inflamação nas células cerebrais, auxiliando no controle da
-                            ansiedade.
-                        </li><br>
-                        <li><strong> Fibras e Probióticos: </strong>Iogurte natural, kefir e alimentos integrais cuidam
-                            da microbiota intestinal, garantindo que o "segundo cérebro" funcione perfeitamente.
-                        </li><br>
-                        <li><strong> Equilíbrio é o segredo:</strong> Cuidar da alimentação não significa cortar tudo o
-                            que você gosta, o que geraria ainda mais estresse. O objetivo é nutrir o corpo para que ele
-                            tenha os recursos necessários para lidar com as pressões do dia a dia. Uma dieta equilibrada
-                            funciona como um suporte diário para a mente.
-                    </p>
-                    </li> <br>
-
-                </div>
-
-            </div>
-
-
-            <div class="referecias" style="background-color: #e5e5e5; border-radius: 30px; padding: 2rem ;">
-                <p><strong>Referêcias:</strong></p>
-
-                <p>TALITA NEVES TEIXEIRA; SILVA LIMA, Liana Patrícia; CHRISTIANE KANZLER BARBOSA NUNES.
-                    A influência dos nutrientes na prevenção e tratamento da ansiedade em adultos: uma revisão
-                    bibliográfica. Health Residencies Journal,
-                    [S. l.], v. 6, n. 31, 2025. DOI: 10.51723/hrj.v6i31.1169. Disponível em: <a class="" target="_blank"
-                        style="color: blue;"
-                        href="https://hrj.emnuvens.com.br/hrj/article/view/1169">https://hrj.emnuvens.com.br/hrj/article/view/1169
-                    </a>.
-                    <br> <br>
-
-                    CATARINO, R. C. C.; COSTA, V. P. .; SILVA, S. F. F. N. B. da; MENDES, R. S.; FERREIRA LEMOS, B.
-                    Relação entre alimentação
-                    saudável e prevenção de ansiedade e depressão em adultos: revisão sistemática. Revista Científica
-                    Integrada,
-                    [S. l.], v. 7, n. 1, p. e202417, 2024. DOI: 10.59464/2359-4632.2024.3173. Disponível
-                    em:
-                
-                    <a  style=" color: blue;" target="_blank"
-                        href="https://revistas.unaerp.br/rci/article/view/3173">https://revistas.unaerp.br/rci/article/view/3173
-                    </a>
-                <br> <br>
-
-                Aucoin, M., LaChance, L., Naidoo, U., Remy, D., Shekdar, T., Sayar, N., Cardozo, V., Rawana, T., Chan,
-                I., & Cooley, K.
-                (2021). Diet and Anxiety: A Scoping Review. Nutrients, 13(12), 4418. 
-                <a target="_blank" style="color: blue;"
-                    href="https://doi.org/10.3390/nu13124418">https://doi.org/10.3390/nu13124418</a></p>
-            </div>
-            <div>
-                <a href="index.html" class="back-btn">← Voltar ao Início</a>
-
-            </div>
+        <!-- Referências -->
+        <footer class="references">
+            <h3>Referências Científicas</h3>
+            <ol>
+                <li>TALITA NEVES TEIXEIRA; SILVA LIMA, Liana Patrícia; CHRISTIANE KANZLER BARBOSA NUNES. A influência dos nutrientes na prevenção e tratamento da ansiedade em adultos: uma revisão bibliográfica. <em>Health Residencies Journal</em>, v. 6, n. 31, 2025. DOI: 10.51723/hrj.v6i31.1169. Disponível em: <a target="_blank" style="color: #6d288c;" href="https://hrj.emnuvens.com.br/hrj/article/view/1169">https://hrj.emnuvens.com.br/hrj/article/view/1169</a>.</li>
+                <li>CATARINO, R. C. C.; COSTA, V. P.; SILVA, S. F. F. N. B. da; MENDES, R. S.; FERREIRA LEMOS, B. Relação entre alimentação saudável e prevenção de ansiedade e depressão em adultos: revisão sistemática. <em>Revista Científica Integrada</em>, v. 7, n. 1, p. e202417, 2024. DOI: 10.59464/2359-4632.2024.3173. Disponível em: <a style="color: #6d288c;" target="_blank" href="https://revistas.unaerp.br/rci/article/view/3173">https://revistas.unaerp.br/rci/article/view/3173</a>.</li>
+                <li>Aucoin, M., LaChance, L., Naidoo, U., Remy, D., Shekdar, T., Sayar, N., Cardozo, V., Rawana, T., Chan, I., & Cooley, K. (2021). Diet and Anxiety: A Scoping Review. <em>Nutrients</em>, 13(12), 4418. Disponível em: <a target="_blank" style="color: #6d288c;" href="https://doi.org/10.3390/nu13124418">https://doi.org/10.3390/nu13124418</a>.</li>
+            </ol>
+        </footer>
     </main>
 
-    <!-- FOOTER (Adicione o mesmo footer do seu index.html aqui no final) -->
-    <script src="scriptMenuHamburguer1.4.js"></script>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-col">
+                    <div style="border-radius: 20px;" class="footer-logo">
+                        <span class="logo-icon"><img style="border-radius: 20px;" src="assets/logo-transparente-pequena.png" alt="Logo"></span>
+                        <span class="logo-text">
+                            <span class="logo-name">Juliana Cardoso</span>
+                            <span class="logo-tagline" style="color: black;">Nutricionista</span>
+                        </span>
+                    </div>
+                    <p class="footer-description">
+                        Dra. Juliana Cardoso. Cuidando da sua saúde e bem-estar através de estratégias nutricionais eficientes e personalizadas.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#servicos">Serviços</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Meus Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#servicos">Atendimento Presencial</a></li>
+                        <li><a href="index.html#servicos">Atendimento Online</a></li>
+                        <li><a href="index.html#servicos">Emagrecimento Feminino</a></li>
+                        <li><a href="index.html#servicos">Hipertrofia</a></li>
+                        <li><a href="index.html#servicos">Nutrição Clínica</a></li>
+                        <li><a href="index.html#servicos">Reeducação Alimentar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Políticas e Termos</h3>
+                    <ul class="footer-links">
+                        <a class="termos" href="termos-de-uso.html">Termos de Uso</a> <br>
+                        <a class="politica" href="politica-de-privacidade.html">Política de Privacidade</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dra. Juliana Cardoso. Todos os direitos reservados.</p>
+                <div style="color: rgba(255, 255, 255, 0.7);" class="credits">Desenvolvido por Webnext</div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <script src="scriptMenuHamburguer1.9.js"></script>
+
 </body>
 
 </html>

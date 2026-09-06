@@ -9,16 +9,49 @@
     <meta name="description"
         content="Dra. Juliana Cardoso, Nutricionista. Emagrecimento, reeducação alimentar, nutrição clínica e esportiva. Atendimentos com hora marcada de forma presencial ou online.">
 
-    <link rel="icon"
-        href="assets/logo-transparente-pequena.png">
+    <link rel="icon" href="assets/logo-transparente-pequena.png">
 
-    <link rel="stylesheet" href="styleMenuHamburguer1.4.css">
+    <link rel="stylesheet" href="styleMenuHamburguer1.9.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- ESTILOS DO EFEITO INTERATIVO NO FUNDO ROXO -->
+    <!-- <style>
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Posição inicial no centro */
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+            /* Gradiente radial dinâmico com brilho roxo que segue o mouse */
+            background: radial-gradient(
+                300px circle at var(--mouse-x) var(--mouse-y),
+                rgb(32, 0, 61) 0%,
+                rgba(109, 40, 140, 0.95)60%,
+                rgba(45, 16, 58, 0.95) 100%
+            );
+            pointer-events: none;
+            z-index: 1;
+            transition: background 0.05s ease-out;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style> -->
 </head>
 
 <body>
@@ -43,6 +76,7 @@
                         <span class="logo-name">Juliana Cardoso</span>
                         <span class="logo-tagline">Nutricionista</span>
                     </span>
+                        </a>
                         
                         <li><a href="#home" class="nav-link">Início</a></li>
                         <li><a href="#sobre" class="nav-link">Sobre</a></li>
@@ -52,25 +86,16 @@
                         <li><a href="#contato" class="nav-link">Contato</a></li>
                         <li><a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
                 target="_blank" 
-                class="btn btn-primary btn-header btn-header-menu"
-               
-                id="">Agendar Consulta
+                class="btn btn-primary btn-header btn-header-menu">Agendar Consulta
                 </a></li>
                     </ul>
-                        
                 </nav>
 
-    
-                
-
-                <a href="https://wa.me/5591987416244?text=Olá, %20gostaria de%20agendar%20uma%20consulta." 
+                <a href="https://wa.me/5591987416244?text=Olá,%20Dra.%20Juliana!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta" 
                 target="_blank" 
                 class="btn btn-primary btn-header"
-               
                 id="btn-agendar-header">Agendar Consulta
                 </a>
-
-            
 
                 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -81,11 +106,12 @@
         </div>
     </header>
 
-    <section class="hero" id="home">
+    <!-- SECTION HOME COM EVENTO DE MOVIMENTO DO MOUSE -->
+    <section class="hero" id="home" onmousemove="handleMouseMove(event)">
         <div class="hero-background"
             style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&q=80');">
         </div>
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay" id="hero-overlay"></div>
 
         <div class="container">
             <div class="hero-content">
@@ -102,7 +128,7 @@
 
                     <div class="hero-buttons">
                         <a href="#servicos" style="border: solid 2px white;" class="btn btn-primary btn-large">Ver Serviços</a>
-                        <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." 
+                        <a href="https://wa.me/5591987416244?text=Olá,%20Dra.%20Juliana!%20Gostaria%20de%20saber%20os%20horários%20disponíveis%20para%20agendar%20minha%20consulta" 
                         target="_blank" id="btn-agendar-agora" class="btn btn-secondary btn-large">Agendar Agora</a>
                     </div>
 
@@ -132,7 +158,7 @@
         <div class="container">
             <div class="sobre-content" id="sobre">
 
-                <div   class="sobre-image">
+                <div class="sobre-image">
                     <img src="assets/sobre-mim.jpeg"
                         alt="Atendimento Nutricional">
                 </div>
@@ -140,8 +166,8 @@
                 <div class="sobre-text">
                     <span class="section-label">Sobre Mim</span>
                     <h2 class="section-title">Dra. Juliana Cardoso</h2>
-                    <div >
-                    <p  class="sobre-description">
+                    <div>
+                    <p class="sobre-description">
                         Sou a <strong>Dra. Juliana Cardoso</strong>, nutricionista formada 
                         em <strong>Nutrição</strong> e <strong>Gastronomia</strong>, apaixonada
                          por ajudar pessoas 
@@ -161,22 +187,19 @@ dietas radicais, restrições excessivas ou soluções temporárias. Cada <stron
  saudável mais 
  acessível e possível de ser mantida a longo prazo. <br> <br>
 
-Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem culpa, sem extremismos e sem abrir mão do
+Também acredito que <strong>"Comer bem é comer com saúde"</strong>, sem culpa, sem extremismos e sem abrir mão do
  prazer de se alimentar. Meu objetivo é ajudar você a desenvolver hábitos que promovam mais saúde, 
  disposição, autoestima e qualidade de vida, conquistando resultados duradouros de forma leve e 
  equilibrada. <br>
                     </p>
-                    <p class="sobre-description">
-                    
-                    </p>
 
-                    <ul   class="sobre-list">
-                        <li  >
+                    <ul class="sobre-list">
+                        <li>
                             <span class="list-icon">✓</span>
                             <span>Acompanhamento nutricional personalizado</span>
                         </li>
                         <li>
-                            <span class="list-icon" >✓</span>
+                            <span class="list-icon">✓</span>
                             <span>Emagrecimento feminino sem dietas radicais</span>
                         </li>
                         <li>
@@ -193,12 +216,12 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                         </li>
                     </ul>
 
-                    <p >💜  Resultados reais para pessoas reais.</p>
-<p>✨ Comer bem é comer com saúde.</p> <br>
+                    <p>💜  Resultados reais para pessoas reais.</p>
+                    <p>✨ Comer bem é comer com saúde.</p> <br>
 
             </div>
 
-                    <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." target="_blank" 
+                    <a href="https://wa.me/5591987416244?text=Olá,%20Dra.%20Juliana!%20Li%20sobre%20a%20sua%20metodologia%20no%20site%20e%20me%20identifiquei%20muito.%20Gostaria%20de%20entender%20como%20funciona%20o%20acompanhamento](https://wa.me/5591987416244?text=Olá,%20Dra.%20Juliana!%20Li%20sobre%20a%20sua%20metodologia%20no%20site%20e%20me%20identifiquei%20muito.%20Gostaria%20de%20entender%20como%20funciona%20o%20acompanhamento" target="_blank" 
                     class="btn btn-primary">Fale Comigo no WhatsApp</a>
                 </div>
             </div>
@@ -208,16 +231,16 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
     <section class="servicos" >
         <div class="container">
 
-            <div   class="section-header" >
+            <div class="section-header" >
                 <span class="section-label">Meus Serviços</span>
-                <h2  class="section-title">O cuidado que sua saúde precisa</h2>
-                <p  class="section-description">
+                <h2 class="section-title">O cuidado que sua saúde precisa</h2>
+                <p class="section-description">
                     Soluções nutricionais focadas no seu bem-estar, com total flexibilidade de atendimento.
                 </p>
                 
             </div>
 
-            <div id="servicos"  class="servicos-grid">
+            <div id="servicos" class="servicos-grid">
 
                 <div class="servico-card">
                     <div class="servico-image">
@@ -286,7 +309,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                         <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&q=80" alt="Nutrição Clínica e Longevidade">
                     </div>
                     <div class="servico-icon"><img src="assets/dna.png" alt=""></div>
-                        <h3 class="servico-title" >Nutrição Clínica</h3>
+                    <h3 class="servico-title" >Nutrição Clínica</h3>
                     <p class="servico-description">
                         Controle e prevenção de doenças como diabetes, 
                         hipertensão, colesterol alto e melhora da saúde intestinal.
@@ -384,7 +407,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                             <div class="beneficio-icon"><img src="assets/uva.png" alt=""></div>
                             <div class="beneficio-text">
                                 <h3>Guia de Receitas Exclusivo</h3>
-                                <p>Acesso a um e-book com preparos fáceis, doces saudáveis e lanches rápidos.</p>
+                                <p>Acesso a um e-book com preparos fácil, doces saudáveis e lanches rápidos.</p>
                             </div>
                         </div>
 
@@ -392,26 +415,19 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                             <div class="beneficio-icon"><img src="assets/carteira.png" alt=""></div>
                             <div class="beneficio-text">
                                 <h3>Facilidade de Pagamento</h3>
-                                <p>Formas de pagamento aceitas: dinheiro ou Pix.</p>
+                                <p>Formas de pagamento aceitas: Dinheiro, Pix ou Cartão de Crédito.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="beneficios-image">
-                    <div class="beneficios-image-placeholder">
-                        <span class="beneficios-emoji">🍎✨</span>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO: BLOG DE NUTRIÇÃO -->
     <section class="blog" >
         <div class="container">
 
-            <div  class="section-header">
+            <div class="section-header">
                 <span class="section-label">Dicas da Nutri</span>
                 <h2 class="section-title">Nosso Blog de Nutrição</h2>
                 <p class="section-description">
@@ -419,7 +435,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                 </p>
             </div>
 
-      <!--ORGANIZAR-->      <div id="blog" class="servicos-grid" > <!-- Reaproveitando a estrutura de grid para manter harmonia -->
+            <div id="blog" class="servicos-grid" >
 
                 <div class="servico-card" onclick="window.location.href='artigo-ansiedade.html';" 
                     style="cursor: pointer;">
@@ -439,7 +455,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                     </div>
                 </div>
 
-                <div class="servico-card"  style="cursor: pointer;"
+                <div class="servico-card" style="cursor: pointer;"
                 onclick="window.location.href='artigo-mitos.html';">
                     <div class="servico-image">
                         <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?w=600&q=80" 
@@ -455,11 +471,12 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                     <div style="padding: 0 1.5rem 1.5rem;">
                         <a href="artigo-mitos.html" class="btn-link" style="color:  #1900ff; font-weight: 600;
                          text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
-                         ">Ler Artigo Complete ➜</a>
+                         ">Ler Artigo Completo ➜</a>
                     </div>
                 </div>
 
-                <div class="servico-card">
+                <div class="servico-card" style="cursor: pointer;"
+                onclick="window.location.href='artigo-organizacao-alimentar.html';">
                     <div class="servico-image">
                         <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=600&q=80" alt="Marmitas Saudáveis">
                     </div>
@@ -471,9 +488,10 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                         Aprenda o passo a passo definitivo para planejar, cozinhar e armazenar suas marmitas saudáveis.
                     </p>
                     <div style="padding: 0 1.5rem 1.5rem;">
-                        <a href="#" class="btn-link" 
+                        <a href="artigo-organizacao-alimentar.html" class="btn-link" 
                         style="color:  #1900ff; font-weight: 600; text-decoration: none;
-                         display: inline-flex; align-items: center; gap: 0.5rem;">Ler Artigo Complete ➜</a>
+                         display: inline-flex; align-items: center; gap: 0.5rem;">Ler Artigo Completo ➜</a> 
+                      
                     </div>
                 </div>
 
@@ -483,7 +501,6 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
 
    <section class="faq" id="faq">
         <div class="container">
-            <!--PERGUNTAS FREQUENTES -->
             <div class="section-header">
                 <span class="section-label">Perguntas Frequentes</span>
                 <h2 class="section-title">Tire suas dúvidas</h2>
@@ -535,18 +552,17 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                     <div class="faq-answer">
                         <p>A maior parte do plano é estruturada 
                             junto com você durante a consulta. 
-                            O arquivo final formatado é entregue em até 48 hours úteis após 
+                            O arquivo final formatado é entregue em até 48 horas úteis após 
                             o atendimento.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Formulário para envio de dúvidas personalizadas -->
             <div class="faq-envio">
-                <h3 style="">Não encontrou sua dúvida?</h3>
-                <p style="">Envie sua pergunta direto para o meu WhatsApp:</p>
-                <form id="form-faq" onsubmit="enviarPerguntaFaq(event)" style="">
-                    <input type="text" id="pergunta-cliente" placeholder="Digite sua pergunta aqui..." required >
+                <h3>Não encontrou sua dúvida?</h3>
+                <p>Envie sua pergunta direto para o meu WhatsApp:</p>
+                <form id="form-faq" onsubmit="enviarPerguntaFaq(event)">
+                    <input type="text" id="pergunta-cliente" placeholder="Digite sua pergunta aqui..." required>
                     <button type="submit" class="btn btn-primary">Enviar Pergunta</button>
                 </form>
             </div>
@@ -560,7 +576,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
             <div id="contato" class="section-header">
                 <span class="section-label">Contato</span>
                 <h2 class="section-title">Agende seu atendimento</h2>
-                <p class="section-description ">
+                <p class="section-description">
                     Estou pronta para te ajudar a conquistar sua melhor versão. Fale comigo!
                 </p>
             </div>
@@ -585,64 +601,37 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                         </div>
                     </div>
 
-                    <!-- Área de Redes Sociais adicionada conforme solicitado -->
-
-                    <div class="info-item" >
-                        <div class="info-icon"><img style="width: 20px; " src="assets/estrela2.png" alt="">​</div>
-                        <div class="info-text" >
-                      <h3>Redes Sociais</h3> 
-                        <div class="icon-social"  >
+                    <div class="info-item">
+                        <div class="info-icon"><img style="width: 20px;" src="assets/estrela2.png" alt=""></div>
+                        <div class="info-text">
+                            <h3>Redes Sociais</h3> 
+                            <div class="icon-social">
                          
-                            <div  onclick="window.open('https://wa.me/5591987416244?text=Olá!', '_blank');" 
-                            id="social"  
-                            style="display: flex;
-                             cursor: pointer;
-                              margin-top: 20px;
-                               border: solid 2px gray; background-color: rgb(209, 255, 190); align-items: center;">
-                            
-
-                              <img style="width: 25px; margin: 0 10px 0 0;" 
-                                    src="assets/whatsapp-cor.png" 
-                                    alt="whatsapp">                              
-                              <p>
-                                (91) 98741-6244
-                            </p> 
-                      
+                                <div onclick="window.open('https://wa.me/5591987416244?text=Olá!%20Peguei%20o%20seu%20contato%20no%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20atendimento%20nutricional', '_blank');" 
+                                id="social"  
+                                style="display: flex; cursor: pointer; margin-top: 20px; border: solid 2px gray; background-color: rgb(209, 255, 190); align-items: center;">
+                                
+                                  <img style="width: 25px; margin: 0 10px 0 0;" 
+                                        src="assets/whatsapp-cor.png" 
+                                        alt="whatsapp">                              
+                                  <p>(91) 98741-6244</p> 
+                                </div>
+                                       
+                                <div id="insta" 
+                                onclick="window.open('https://www.instagram.com/nutrijulianacardoso/', '_blank');"  
+                                style="display: flex; cursor: pointer; justify-content: center; align-items: center; margin-top: 20px; border: solid 2px gray; background-color: rgb(255, 190, 255);">
+                                    <img style="width: 25px; margin: 0 10px 0 0;" 
+                                     src="assets/instagram-cor.png"
+                                     alt="instagram">
+                                    <p>@nutrijulianacardoso</p> 
+                                </div>
                             </div>
-                                   
-                            <div id="insta" 
-                            onclick="window.open('https://www.instagram.com/nutrijulianacardoso/', '_blank');"  
-                            style="display: flex;
-                             cursor: pointer;
-                             justify-content: center;
-                              align-items: center;   margin-top: 20px;
-                               border: solid 2px gray;  background-color: rgb(255, 190, 255); align-items: center;">
-
-                                 
-                                <img style="width: 25px; margin: 0 10px 0 0;" 
-                                 src="assets/instagram-cor.png"
-                                 alt="instagram">
-                                <p>
-                                    @nutrijulianacardoso
-                                </p> 
-                                 </div>
-
-                                 </div>
-
-                                  
-                            
                         </div>
                     </div>
 
-                    <!-- BALÃO FLUTUANTE ADICIONADO AQUI -->
                     <div class="social-links">
-            <button class="balloon-close"  aria-label="Fechar">✕</button>
-                        <a target="_blank" href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta."  
-                        class="whatsapp-balloon" id="whatsapp-balloon">
-                            
-                            Agende sua consulta!
-                        </a>
-                        <a href="https://wa.me/5591987416244?text=Olá,%20gostaria de%20agendar%20uma%20consulta." 
+                   
+                        <a href="https://wa.me/5591987416244?text=Olá,%20Dra.%20Juliana!%20Estava%20navegando%20no%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas%20sobre%20a%20consulta" 
                            target="_blank" 
                            class="social-link" 
                            aria-label="WhatsApp Direct">
@@ -650,16 +639,13 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                         </a>
                     </div>
 
-                   
                 </div>
 
             </div>
         </div>
     </section>
 
-    
-
-  <footer class="footer" id="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
 
@@ -683,10 +669,9 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#servicos">Serviços</a></li>
                         <li><a href="#blog">Blog</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                       <li><a href="#faq">Dúvidas Frequentes</a></li>
                         <li><a href="#contato">Contato</a></li>
-                        <li><a href="#faq">Dúvidas Frequentes</a></li>
-                     
+                        
                     </ul>
                 </div>
 
@@ -697,7 +682,7 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                         <li><a href="#servicos">Atendimento Online</a></li>
                         <li><a href="#servicos">Emagrecimento Feminino</a></li>
                         <li><a href="#servicos">Hipertrofia</a></li>
-                          <li><a href="#servicos">Nutrição Clínica</a></li>
+                        <li><a href="#servicos">Nutrição Clínica</a></li>
                         <li><a href="#servicos">Reeducação Alimentar</a></li>
                     </ul>
                 </div>
@@ -705,29 +690,38 @@ Também acredito que <strong  >"Comer bem é comer com saúde"</strong>, sem cul
                 <div class="footer-col">
                     <h3 class="footer-title">Políticas e Termos</h3>
                     <ul class="footer-links">
-                           <a class="termos"  href="termos-de-uso.html" 
-                    >Termos de Uso
-                </a> <br>
-                    <a class="politica" href="politica-de-privacidade.html" 
-                     >Política de Privacidade
-                </a>
+                        <a class="termos" href="termos-de-uso.html">Termos de Uso</a> <br>
+                        <a class="politica" href="politica-de-privacidade.html">Política de Privacidade</a>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Dra. Juliana Cardoso. Todos os direitos reservados. | 
-              
-                </p>
-                <div style="color: rgba(255, 255, 255, 0.7);" class="credits">  Desenvolvido por Webnext  </div>
+                <p>&copy; 2026 Dra. Juliana Cardoso. Todos os direitos reservados.</p>
+                <div style="color: rgba(255, 255, 255, 0.7);" class="credits">Desenvolvido por Webnext</div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts de controle dos Carrosséis -->
-   
+    <script src="scriptMenuHamburguer1.9.js"></script>
 
-    <script src="scriptMenuHamburguer1.4.js"></script>
+    <!-- SCRIPT DE INTERAÇÃO DO MOUSE NA SECTION HERO
+    <script>
+        function handleMouseMove(event) {
+            const heroOverlay = document.getElementById('hero-overlay');
+            if (!heroOverlay) return;
+
+            const rect = event.currentTarget.getBoundingClientRect();
+            
+            // Posição percentual do mouse na section hero
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+            // Atualiza o CSS com as novas coordenadas
+            heroOverlay.style.setProperty('--mouse-x', `${x}%`);
+            heroOverlay.style.setProperty('--mouse-y', `${y}%`);
+        }
+    </script> -->
 
 </body>
 

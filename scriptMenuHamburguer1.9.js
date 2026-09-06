@@ -41,22 +41,23 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
-            
             document.body.style.overflow = '';
         });
     });
+    
 
     // Fechar menu ao clicar fora
     document.addEventListener('click', function(event) {
-       
-        const isClickOnToggle = menuToggle.contains(event.target);
+            const isClickInsideNav = navMenu.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
 
-        if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
+            if ( !isClickOnToggle && navMenu.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
 });
 
 // ==========================================
@@ -91,16 +92,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ==========================================
 // HEADER - MUDANÇA DE ESTILO NO SCROLL
 // ==========================================
+
+// ==========================================
+// HEADER - COMPORTAMENTO NO SCROLL
+// ==========================================
+let lastScrollTop = 0;
+
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
+    const headerContent = document.querySelector('.header-content')
+  
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (window.scrollY > 100) {
-        // header.style.padding = '0.5rem 0';
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
-    } else {
-        // header.style.padding = '1rem 0';
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+    if (header) {
+        // Esconder ao rolar para baixo / Mostrar ao rolar para cima
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('header-hidden');
+        } else {
+            header.classList.remove('header-hidden');
+        }
+
+        // Estilização/Sombra no scroll    
+        //  //// quando sai do topo da pagina
+
+        if (scrollTop > 100) {
+            header.style.padding = '3px 0px';
+            headerContent.style.padding = '5px  5px 5px 10px';
+           
+             headerContent.style.magin = '0px';
+            // if (nav) nav.classList.add('nav-top');
+               /// quando estar no topo da pagina
+        } else {
+            header.style.padding = '1rem 0px';
+              headerContent.style.padding = '5px  5px 5px 10px';
+               headerContent.style.magin = '0px 0';
+              
+
+         
+            // if (nav) nav.classList.remove('nav-top');
+        }
     }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
 // ==========================================
@@ -284,19 +317,8 @@ if ('IntersectionObserver' in window) {
 // ==========================================
 // CONSOLE LOG - INFORMAÇÕES DO SITE
 // ==========================================
-console.log('%c🐾 Patinhas Pet Shop & Vet ', 'background: #4A90E2; color: white; font-size: 20px; padding: 10px;');
-console.log('%cSite desenvolvido com amor para pets e tutores!', 'color: #FF8C42; font-size: 14px;');
-console.log('%c💙 Cuidando do seu melhor amigo 💙', 'color: #66BB6A; font-size: 12px;');
 
-// ==========================================
-// PERFORMANCE - MARCA QUANDO A PÁGINA TERMINA DE CARREGAR
-// ==========================================
-window.addEventListener('load', function() {
-    console.log('%c✓ Página totalmente carregada!', 'color: #66BB6A; font-weight: bold;');
 
-    // Remove qualquer classe de loading se houver
-    document.body.classList.remove('loading');
-});
 
 // ==========================================
 // ACESSIBILIDADE - ESC PARA FECHAR MENU MOBILE
@@ -328,18 +350,11 @@ function scrollToTop() {
 // Exemplo: <button onclick="scrollToTop()" class="scroll-top-btn">↑</button>
 
 /// FUNCTION DA FAQ
+
 function enviarPerguntaFaq(event) {
     event.preventDefault();
-    
-    const numeroWhatsApp = "91999689379"; // Número extraído do seu HTML
-    const pergunta = document.getElementById("pergunta-cliente").value;
-    
-    // Codifica o texto para o formato de URL do WhatsApp
-    const textoCodificado = encodeURIComponent(`Olá, Dra. Juliana! Tenho uma dúvida: ${pergunta}`);
-    
-    // Abre o link em uma nova aba
-    window.open(`https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`, '_blank');
-    
-    // Limpa o input após o envio
-    document.getElementById("form-faq").reset();
+    const pergunta = document.getElementById('pergunta-cliente').value;
+    const mensagem = `Olá, Dra. Juliana! Estava no seu site e fiquei com uma dúvida: ${pergunta}`;
+    const url = `https://wa.me/5591987416244?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
 }
