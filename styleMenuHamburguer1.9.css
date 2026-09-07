@@ -67,9 +67,14 @@ body {
     color: var(--cor-texto);
     line-height: 1.6;
     overflow-x: hidden;
+   
+
+
+   
     
      
 }
+
 
 img {
     max-width: 100%;
@@ -277,9 +282,15 @@ width: 100%;
     z-index: 99;
     transition: var(--transicao);
 
-   background-color: transparent;
+   background-color: white;
 
-   padding: 20px 0;
+  
+   margin-top: 10px;
+
+   
+  
+   border-radius: 20px;
+   border: 2px solid #6d288c;
    
   
 
@@ -304,14 +315,14 @@ width: 100%;
 
 .header-content {
     display: flex;
+    width: 100%;
     align-items: center;
     
     justify-content: space-between;
-      border: 2px solid var(--cor-primaria);
-    border-radius: 20px;
-    background-color: white;
-    margin: 0;
-    padding:5px  30px 5px 30px;
+
+    
+
+    padding:5px  10px 5px 10px;
 
 
     
@@ -594,7 +605,15 @@ width: 100%;
    ========================================== */
 .sobre {
     padding: var(--espacamento-xl) 0;
+      background: url('assets/imagem-roxa.jfif') no-repeat center center / cover;
+      background-position-x: left;
+    background-color: rgba(255, 255, 255, 0.89); /* Cor branca com 70% de opacidade */
+  background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
+   
+ 
 }
+
+
 
 .sobre-content {
     display: grid;
@@ -708,7 +727,8 @@ width: 100%;
    ========================================== */
 .servicos {
     padding: var(--espacamento-xl) 0;
-    background: var(--cor-cinza-claro);
+      
+
   
 }
 
@@ -1001,6 +1021,18 @@ width: 100%;
 .author-pet {
     font-size: 0.875rem;
     color: var(--cor-texto-claro);
+}
+
+.blog {
+
+    padding: var(--espacamento-xl) 0;
+
+   
+}
+
+.blog-fundo{
+
+  
 }
 
 /* ==========================================

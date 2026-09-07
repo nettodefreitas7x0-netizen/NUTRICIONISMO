@@ -116,15 +116,15 @@ window.addEventListener('scroll', function() {
         //  //// quando sai do topo da pagina
 
         if (scrollTop > 100) {
-            header.style.padding = '3px 0px';
-            headerContent.style.padding = '5px  5px 5px 10px';
+        
+           
            
              headerContent.style.magin = '0px';
             // if (nav) nav.classList.add('nav-top');
                /// quando estar no topo da pagina
         } else {
-            header.style.padding = '1rem 0px';
-              headerContent.style.padding = '5px  5px 5px 10px';
+          
+             
                headerContent.style.magin = '0px 0';
               
 
