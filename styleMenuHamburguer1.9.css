@@ -1838,7 +1838,7 @@ left: 0px;
         grid-row: span 1;
     }
         .sobre {
-        background: url('assets/img-sobre-mobile4k.jpeg') no-repeat center center / cover;
+        background: url('assets/img-sobre-mobile.jpeg') no-repeat center center / cover;
          background-color: rgba(255, 255, 255, 0.89); /* Cor branca com 70% de opacidade */
   background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
     }
@@ -1866,8 +1866,8 @@ left: 0px;
     }
 
     .sobre {
-        background: url('assets/img-sobre-mobile.jpeg') no-repeat center center / cover;
-         background-color: rgba(255, 255, 255, 0.767); /* Cor branca com 70% de opacidade */
+        background: url('assets/img-sobre-mobile4k.jpeg') no-repeat center center / cover;
+         background-color: rgba(255, 255, 255, 0.89); /* Cor branca com 70% de opacidade */
   background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
     }
 
@@ -1939,10 +1939,10 @@ left: 0px;
     }
 
      .sobre {
-        background: url('assets/img-sobre-mobile.jpeg') no-repeat center center / cover;
-         background-color: rgba(255, 255, 255, 0.884); /* Cor branca com 70% de opacidade */
+        background: url('assets/img-sobre-mobile4k.jpeg') no-repeat center center / cover;
+         background-color: rgba(255, 255, 255, 0.767); /* Cor branca com 70% de opacidade */
   background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
-  background-position-x: right;
+  background-position-x: left;
     }
 }
 
