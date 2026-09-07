@@ -358,3 +358,4 @@ function enviarPerguntaFaq(event) {
     const url = `https://wa.me/5591987416244?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
 }
+

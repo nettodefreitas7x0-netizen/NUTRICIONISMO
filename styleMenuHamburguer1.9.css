@@ -4,6 +4,7 @@
 
    :root {
     /* ========== CORES PRINCIPAIS (ATUALIZADO COM OS TONS DE ROXO E ROSA DA LOGO) ========== */
+    --cor-fundo:#ffffffc0;
     --cor-primaria: #6d288c;          /* Roxo vibrante e mais saturado */
     --cor-primaria-escura: #491461;   /* Roxo profundo saturado para hovers e títulos fortes */
     --cor-primaria-clara: #f7f0fa;    /* Rosa/Lilás ultra suave para fundos de blocos */
@@ -57,7 +58,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 14px;
-  
+ 
+ 
 }
 
 
@@ -67,6 +69,7 @@ body {
     color: var(--cor-texto);
     line-height: 1.6;
     overflow-x: hidden;
+    
    
 
 
@@ -100,7 +103,26 @@ button {
 
 
 
+.img-fundo{
+  
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+ 
+   
 
+}
+
+.img-fundo img{
+ width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Impede que a imagem estique ou distorça */
+    object-position: center;  /* Mantém o foco no centro da imagem */
+
+}
 /* ==========================================
    CONTAINER E UTILITÁRIOS
    ========================================== */
@@ -605,10 +627,8 @@ width: 100%;
    ========================================== */
 .sobre {
     padding: var(--espacamento-xl) 0;
-      background: url('assets/imagem-roxa.jfif') no-repeat center center / cover;
-      background-position-x: left;
-    background-color: rgba(255, 255, 255, 0.733); /* Cor branca com 70% de opacidade */
-  background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
+ background-color: var(--cor-fundo);
+     
    
  
 }
@@ -624,7 +644,10 @@ width: 100%;
     gap: var(--espacamento-lg);
     align-items: center;
     margin-bottom: var(--espacamento-lg);
+    
+   
 }
+
 
 /* ========== SOBRE IMAGE (EDITÁVEL) ========== */
 .sobre-image {
@@ -727,6 +750,7 @@ width: 100%;
    ========================================== */
 .servicos {
     padding: var(--espacamento-xl) 0;
+      background-color: #ffffffe8;
       
 
   
@@ -739,6 +763,7 @@ width: 100%;
         flex-flow: wrap ;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--espacamento-md);
+  
     
 }
 
@@ -748,16 +773,19 @@ width: 100%;
     border-radius: var(--border-radius);
     text-align: center;
     transition: var(--transicao);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.425);
 
     overflow: hidden;
     transition: all 0.5s ease;;
+     
+   
+    
 }
 
 .servico-card:hover {
     transform: translateY(-10px);
   
-    box-shadow: 0px 0px 10px 0px #491461d3;
+    box-shadow: 0px 0px 6px 2px var(--cor-primaria-escura);
      
  transition: all 0.5s ease;;
 }
@@ -818,6 +846,7 @@ width: 100%;
    ========================================== */
 .destaques {
     padding: var(--espacamento-xl) 0;
+     background-color: var(--cor-fundo);
 }
 
 .destaques-grid {
@@ -1026,6 +1055,7 @@ width: 100%;
 .blog {
 
     padding: var(--espacamento-xl) 0;
+     background-color: var(--cor-fundo);
 
    
 }
@@ -1137,6 +1167,7 @@ width: 100px;
    ========================================== */
 .contato {
     padding: var(--espacamento-xl) 0;
+     background-color: var(--cor-fundo);
 }
 
 .contato-content {
@@ -1344,7 +1375,7 @@ left: 8px;
    FOOTER
    ========================================== */
 .footer {
-    background: #c7c7c7; /* Roxo extremamente escuro e saturado para o fechamento */
+    background: #e1d6ff; /* Roxo extremamente escuro e saturado para o fechamento */
     color: black;
     padding: var(--espacamento-lg) 0 var(--espacamento-md);
 }
@@ -1837,11 +1868,8 @@ left: 0px;
         grid-column: span 1;
         grid-row: span 1;
     }
-        .sobre {
-        background: url('assets/img-sobre-mobile.jpeg') no-repeat center center / cover;
-         background-color: rgba(255, 255, 255, 0.89); /* Cor branca com 70% de opacidade */
-  background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
-    }
+      
+   
 }
 
 @media (max-width:741px) {
@@ -1865,11 +1893,7 @@ left: 0px;
           margin:16px 20px 0 20px;
     }
 
-    .sobre {
-        background: url('assets/img-sobre-mobile4k.jpeg') no-repeat center center / cover;
-         background-color: rgba(255, 255, 255, 0.89); /* Cor branca com 70% de opacidade */
-  background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
-    }
+   
 
 
 
@@ -1938,12 +1962,7 @@ left: 0px;
         font-size: 4rem;
     }
 
-     .sobre {
-        background: url('assets/img-sobre-mobile4k.jpeg') no-repeat center center / cover;
-         background-color: rgba(255, 255, 255, 0.767); /* Cor branca com 70% de opacidade */
-  background-blend-mode: overlay; /* Ou 'lighten', 'soft-light' */
-  background-position-x: left;
-    }
+  
 }
 
 @media (max-width:425px) {
