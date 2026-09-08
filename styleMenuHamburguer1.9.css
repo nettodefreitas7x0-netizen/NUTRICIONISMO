@@ -1,10 +1,9 @@
 /* ==========================================
    VARIÁVEIS CSS - PERSONALIZE AS CORES AQUI
    ========================================== */
-
    :root {
     /* ========== CORES PRINCIPAIS (ATUALIZADO COM OS TONS DE ROXO E ROSA DA LOGO) ========== */
-    --cor-fundo:#ffffffc0;
+    --cor-fundo:#f8f8f8;
     --cor-primaria: #6d288c;          /* Roxo vibrante e mais saturado */
     --cor-primaria-escura: #491461;   /* Roxo profundo saturado para hovers e títulos fortes */
     --cor-primaria-clara: #f7f0fa;    /* Rosa/Lilás ultra suave para fundos de blocos */
@@ -632,9 +631,7 @@ width: 100%;
    ========================================== */
 .sobre {
     padding: var(--espacamento-xl) 0;
- background-color: var(--cor-fundo);
- width: 100vw;
-
+ background-color: #FFFFFF;
      
    
  
@@ -647,13 +644,10 @@ width: 100%;
      position: relative;
   top: 0;
      
-
+    grid-template-columns: 1fr 1fr;
     gap: var(--espacamento-lg);
     align-items: center;
     margin-bottom: var(--espacamento-lg);
-     display: flex;
-     flex-direction: row
-    
     
    
 }
@@ -668,38 +662,41 @@ width: 100%;
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: var(--box-shadow-lg);
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.288);
-    transition: 0.2s ease-in-out;
-    position: relative;
-   
-
 }
-
-
 
 .sobre-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: bottom ;
     transition: var(--transicao);
 }
 
 .sobre-image:hover img {
     transform: scale(1.05);
-   
 }
 
-.sobre-text  {
-    display: block;
-    width: 100%;
+.sobre-text .section-label {
+    
+
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: var(--espacamento-xs);
+    background: var(--cor-primaria-clara);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
 }
 
 .sobre-description {
     font-size: 1.0625rem;
     color: var(--cor-texto-claro);
     margin-bottom: var(--espacamento-sm);
-    
 }
 
 .sobre-list {
@@ -771,7 +768,7 @@ width: 100%;
    ========================================== */
 .servicos {
     padding: var(--espacamento-xl) 0;
-      background-color: #ffffffe8;
+      background-color: var(--cor-fundo);
       
 
   
@@ -867,7 +864,7 @@ width: 100%;
    ========================================== */
 .destaques {
     padding: var(--espacamento-xl) 0;
-     background-color: var(--cor-fundo);
+     background-color: #FFFFFF;
 }
 
 .destaques-grid {
@@ -937,7 +934,7 @@ width: 100%;
    ========================================== */
 .beneficios {
     padding: var(--espacamento-xl) 0;
-    background: var(--cor-cinza-claro);
+    background-color: var(--cor-fundo);
 }
 
 .beneficios-content {
@@ -948,7 +945,7 @@ width: 100%;
 }
 
 .beneficios-text .section-label {
-    display: block;
+
 }
 
 .beneficios-list {
@@ -1076,7 +1073,7 @@ width: 100%;
 .blog {
 
     padding: var(--espacamento-xl) 0;
-     background-color: var(--cor-fundo);
+     background-color: #FFFFFF;
 
    
 }
@@ -1091,7 +1088,7 @@ width: 100%;
    ========================================== */
 .faq {
     padding: var(--espacamento-xl) 0;
-    background: var(--cor-cinza-claro);
+    background-color: var(--cor-fundo);
 }
 
 .faq-list {
@@ -1189,7 +1186,7 @@ width: 100px;
 .contato {
     display: flex;
     padding: var(--espacamento-xl) 0;
-     background-color: var(--cor-fundo);
+     background-color:#FFFFFF;
     
 }
 
