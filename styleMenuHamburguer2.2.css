@@ -1802,6 +1802,7 @@ left: 0px;
 
     .nav {display: none;
         position: fixed;
+        
        
 
      top: 66px;
@@ -1810,9 +1811,10 @@ left: 0px;
         justify-content: center;
         align-items: center;
         text-align: center;
-          background-color:transparent; 
+      
         transition: left 0.3s ease;
-        box-shadow: var(--box-shadow);
+  
+       
    
            opacity: 0;
    transition: opacity 0.3s ease, display 0.3s ease allow-discrete;
@@ -1850,6 +1852,7 @@ left: 0px;
     .nav-list {
                 
         background-color:#FFFFFF;
+        
          border-bottom: var(--cor-primaria) 2px solid;
           border-left: var(--cor-primaria) 2px solid;
           border-right: var(--cor-primaria) 2px solid;
