@@ -340,10 +340,11 @@ width: 100%;
     align-items: center;
     
     justify-content: space-between;
+    transition: var(--transicao);
 
     
 
-    padding:5px  10px 5px 10px;
+    padding:10px  10px;
 
 
     
@@ -541,6 +542,7 @@ width: 100%;
 .hero .container {
     position: relative;
     z-index: 3;
+
     
 }
 
@@ -795,6 +797,7 @@ width: 100%;
 
     overflow: hidden;
     transition: all 0.5s ease;;
+
      
    
     
@@ -803,9 +806,21 @@ width: 100%;
 .servico-card:hover {
     transform: translateY(-10px);
   
-    box-shadow: 0px 0px 6px 2px var(--cor-primaria-escura);
+    box-shadow: 0px 0px 6px 1px var(--cor-primaria-escura);
      
  transition: all 0.5s ease;;
+     /* background-color: #48005a8e;
+     color: white;
+     p{
+        color: #dfdfdf;;
+     }
+     h3 {
+        color: #f8f8f8;
+     }
+
+     span{
+        color: white;
+     } */
 }
 
 /* ========== SERVICO IMAGE (EDITÁVEL) ========== */
@@ -814,7 +829,11 @@ width: 100%;
     height: 200px;
     overflow: hidden;
     position: relative;
+    transition: var(--transicao);
+   
 }
+
+
 
 .servico-image img {
 
@@ -822,10 +841,13 @@ width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transicao);
+    
 }
 
 .servico-card:hover .servico-image img {
     transform: scale(1.1);
+   
+   
 }
 
 .servico-icon {
@@ -1742,6 +1764,7 @@ margin: 20px 0 0 0;
   
     .menu-toggle {
         display: flex;
+        
     }
 
     .btn-header{
@@ -1757,10 +1780,11 @@ margin: 20px 0 0 0;
    margin: 0 auto;
 
 
+
     }
 
     .logo-menu{
-        display: flex;
+        display:none;
         text-align: start;
         position: relative;
         right: 20%;
@@ -1776,19 +1800,22 @@ left: 0px;
 
    
 
-    .nav {
+    .nav {display: none;
         position: fixed;
-        top: 0px;
-        left: 100%;
+       
+
+     top: 66px;
         width: 100%;
-        height: 100%;
+        
         justify-content: center;
         align-items: center;
         text-align: center;
           background-color:transparent; 
         transition: left 0.3s ease;
         box-shadow: var(--box-shadow);
-        transition: all 0.5s ease-in-out;
+   
+           opacity: 0;
+   transition: opacity 0.3s ease, display 0.3s ease allow-discrete;
   
           
 
@@ -1796,36 +1823,49 @@ left: 0px;
     }
 
     .nav.active {
-        left: 0%;
-        height: 100%;
+        display: block;
+      
+        top: 66px;
+        
+            opacity: 1.0;
+       
   
  
-       
+       @starting-style {
+    opacity: 0;
+  }
+  
         
       
        
-         background-color: rgba(247, 247, 247, 0.616); 
+       
 
 
  
     }
+
+    
   
 
     .nav-list {
                 
         background-color:#FFFFFF;
-         border: var(--cor-primaria) 2px solid;
+         border-bottom: var(--cor-primaria) 2px solid;
+          border-left: var(--cor-primaria) 2px solid;
+          border-right: var(--cor-primaria) 2px solid;
         border-radius: 10px;
         flex-direction: column;
         gap: 0;
         padding: var(--espacamento-xs) 0 var(--espacamento-md) 0;
         margin: 16px 100px 0 100px;
         
+        
     }
 
       .nav-list.active{
 
         height: -50%;
+        
           
     }
 
@@ -1840,8 +1880,13 @@ left: 0px;
 
     .nav-link {
         display: block;
-        
+       
         padding: var(--espacamento-sm) var(--espacamento-md);
+  
+    }
+      .nav-link {
+
+  
   
     }
 
