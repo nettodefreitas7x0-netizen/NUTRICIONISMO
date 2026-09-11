@@ -18,40 +18,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- ESTILOS DO EFEITO INTERATIVO NO FUNDO ROXO -->
-    <!-- <style>
-        .hero {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* Posição inicial no centro */
-            --mouse-x: 50%;
-            --mouse-y: 50%;
-            /* Gradiente radial dinâmico com brilho roxo que segue o mouse */
-            background: radial-gradient(
-                300px circle at var(--mouse-x) var(--mouse-y),
-                rgb(32, 0, 61) 0%,
-                rgba(109, 40, 140, 0.95)60%,
-                rgba(45, 16, 58, 0.95) 100%
-            );
-            pointer-events: none;
-            z-index: 1;
-            transition: background 0.05s ease-out;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-    </style> -->
 </head>
 
 <body>
@@ -109,7 +75,7 @@
     </header>
 
     <!-- SECTION HOME COM EVENTO DE MOVIMENTO DO MOUSE -->
-    <section class="hero" id="home" onmousemove="handleMouseMove(event)">
+    <section class="hero" id="home">
         <div class="hero-background"
             style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&q=80');">
         </div>
