@@ -189,44 +189,50 @@ button {
 }
 
 .back-btn:hover{
-    background-color: var(--cor-primaria-escura);
+    background-color: var(--cor-primaria);
 }
 
 
 
 .btn-primary {
-    background: #6d288ccc; /* Novo roxo com opacidade */
+    background: var(--cor-primaria); /* Novo roxo com opacidade */
     color: var(--cor-secundaria-clara);
-    border: none;
+    
+   
 }
 
 .btn-primary:hover {
-     background: var(--cor-primaria);
+    border: solid 1px white;
+   
        color: var(--cor-acento-clara);
 }
 
 .btn-primary:hover {
-    background: #491461; /* Tom mais profundo de roxo escuro novo */
+    background: var(--cor-primaria-escura); /* Tom mais profundo de roxo escuro novo */
     transform: translateY(-2px);
-    box-shadow: 0px 0px 30px 0px #491461d3;
+    box-shadow: 0px 0px 10px 5px var(--cor-primaria-escura);
+
   
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--cor-primaria);
-    border-color: var(--cor-primaria);
+   
+    
+   
 }
 
 .btn-secondary:hover {
-    background: var(--cor-primaria);
+  
     color: var(--cor-branco);
+     box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.712);
+
+ 
 }
 
 /* ========== BOTÃO SECUNDÁRIO NO HERO (EDITÁVEL) ========== */
 .hero .btn-secondary {
     color: var(--cor-branco);
-    border-color: var(--cor-branco);
+  border: solid 2px white;
 }
 
 .hero .btn-secondary:hover {
@@ -1201,6 +1207,7 @@ width: 100px;
 
 .btn btn-primary {
     padding: 0.8rem 1.5rem;
+    
 }
 /* ==========================================
    SEÇÃO CONTATO
@@ -1209,24 +1216,28 @@ width: 100px;
     display: flex;
     padding: var(--espacamento-xl) 0;
      background-color:#FFFFFF;
-    
+      
+       
 }
 
 .contato-content {
     display: flex;
     justify-content: center;
    
-    
+
     gap: var(--espacamento-lg);
     margin-top: var(--espacamento-lg);
+    
+   
 }
 
 .contato-info {
-    background: var(--cor-primaria-clara);
+    background: white;
     padding: var(--espacamento-md);
     border-radius: var(--border-radius);
      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.425);
      display: flex; flex-direction:column;
+   
     
 }
 
@@ -1234,7 +1245,7 @@ width: 100px;
 
 .contato-info:hover {
    
-   box-shadow: 0px 0px 20px 0px #491461d3;;
+ 
   
 }
 
@@ -1244,6 +1255,7 @@ width: 100px;
     margin-bottom: var(--espacamento-md);
     flex-direction: column;
     align-items: center;
+   
 }
 
 .info-icon {
@@ -1253,8 +1265,12 @@ width: 100px;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    h3{
-        font-size: 0.9rem;
+    span{
+            font-family: var(--fonte-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+  margin-left: 10px;
       }
 }
 
@@ -1271,12 +1287,8 @@ width: 100px;
 
 }
 
-.info-text h3 {
-    font-family: var(--fonte-display);
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--cor-texto);
-    margin-bottom: 0.5rem;
+.info-text span {
+
 }
 
 .info-text p {
@@ -1415,9 +1427,10 @@ width: 100px;
      cursor: pointer; 
    
      border: solid 1px gray;
-      background-color: rgb(209, 255, 190);
+        background-color: rgb(245, 245, 245);
        align-items: center;
-       justify-content: center;
+       justify-content: start;
+     
 }
 
 #social img{
@@ -1435,7 +1448,7 @@ width: 100px;
      align-items: center;
      
       border: solid 1px gray;
-     background-color: rgb(255, 190, 255);
+     background-color: rgb(245, 245, 245);
      margin-top: 10px;
 }
 
