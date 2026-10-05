@@ -1628,8 +1628,9 @@ text-align: center;
 
     .hero-content,
     .sobre-content{
-        grid-template-columns: 0.5fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: var(--espacamento-md);
+       
   
     }
 
@@ -1870,7 +1871,8 @@ left: 0px;
 
 
     .sobre-image{
-        display: none;
+   max-width: 400px;
+       margin: 0 auto;
     }
 
     
@@ -1901,8 +1903,22 @@ margin: 20px 0 0 0;
     .div-sobre-content{}
 
     .sobre-image{
+
+        display: none;
      
     }
+
+    .img800px {
+        display: block;
+  background-image: url('assets/sobre-mim.jpeg');
+  background-size: cover;
+  background-position: center;
+  max-width: 600px;
+  height: 400px; /* Defina a altura desejada para a imagem */
+  margin: 0 auto;
+  border-radius: 30px;
+  
+}
 
   
     .menu-toggle {
