@@ -1161,13 +1161,25 @@ border-radius: 30px ;
     margin-bottom: 1.5rem; color: var(--cor-texto-claro);
 }
 
-#form-faq{
-    display: flex; gap: 0.5rem; max-width: 500px; margin: 0 auto; flex-wrap: wrap;
+#form-faq {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna (um abaixo do outro) */
+    align-items: stretch;   /* Ocupa a largura disponível */
+    gap: 1rem;              /* Espaçamento entre o campo e o botão */
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-#pergunta-cliente{
-width: 100px;
-    flex: 1; padding: 0.8rem 1rem; border: 1px solid var(--cor-cinza-medio); border-radius: 4px;  font-family: 'Poppins', sans-serif;
+#pergunta-cliente {
+    width: 100%;
+    min-height: 100px;      /* Deixa o campo com uma altura inicial maior */
+    max-height: 250px;      /* Limita a altura máxima de expansão */
+    resize: vertical;       /* Permite que o usuário ajuste o tamanho verticalmente */
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--cor-cinza-medio);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
 .btn btn-primary {
@@ -2174,7 +2186,8 @@ left: 0px;
     .destaques-grid > div,
     .faq-item,
     .beneficio-item,
-     .contato-info.visible {
+     .contato-info.visible
+     {
         opacity: 0;
         transform: translateX(-50px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -2185,7 +2198,7 @@ left: 0px;
     .destaques-grid > div.visible,
     .faq-item.visible,
     .beneficio-item.visible,
-    .contato-info.visible {
+    .contato-info.visible{
         opacity: 1;
         transform: translateX(0);
     }
