@@ -309,8 +309,8 @@ width: 100%;
     z-index: 99;
     transition: var(--transicao);
 
-   background-color: white;
-   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.288);
+   background-color: transparent;
+  
 
   
   
@@ -344,6 +344,12 @@ width: 100%;
     display: flex;
     width: 100%;
     align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 5px;
+    border: solid 2px var(--cor-primaria);
+     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.288);
+    
     
     justify-content: space-between;
     transition: var(--transicao);
