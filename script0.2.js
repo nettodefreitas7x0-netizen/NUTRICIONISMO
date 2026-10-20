@@ -175,12 +175,14 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Elementos para animar
 const animatedElements = document.querySelectorAll(`
-       .servico-card,
+    .servico-card,
     .destaque-card,
     .beneficio-item,
     .depoimento-card,
     .faq-item,
-    .info-item
+    .info-item,
+    .sobre-content,
+    .contato-info
 `);
 
 animatedElements.forEach(element => {
