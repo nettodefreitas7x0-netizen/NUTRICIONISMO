@@ -183,7 +183,8 @@ const animatedElements = document.querySelectorAll(`
     .info-item,
     .sobre-content,
     .contato-info,
-    #form-faq
+    #form-faq,
+    .sobre
 `);
 
 animatedElements.forEach(element => {

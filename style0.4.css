@@ -1597,6 +1597,45 @@ text-align: center;
 
 
 
+/* Estado inicial dos elementos antes de aparecerem na tela */
+    .servicos-grid > div,
+    .destaques-grid > div,
+    .faq-item,
+    .beneficio-item,
+     .contato-info.visible
+     {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    /* Estado final quando a classe .visible for acionada pelo JavaScript */
+    .servicos-grid > div.visible,
+    .destaques-grid > div.visible,
+    .faq-item.visible,
+    .beneficio-item.visible,
+    .contato-info.visible{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Estado inicial: invisíveis e deslocadas para a esquerda */
+    .sobre-content,
+    .contato-info {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    /* Estado final: visíveis e na posição original ao receber a classe .visible */
+    .sobre-content.visible,
+    .contato-info.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+
 
 
 @media (max-width: 1159px) {
@@ -2181,42 +2220,7 @@ left: 0px;
     }
 
    
-/* Estado inicial dos elementos antes de aparecerem na tela */
-    .servicos-grid > div,
-    .destaques-grid > div,
-    .faq-item,
-    .beneficio-item,
-     .contato-info.visible
-     {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
 
-    /* Estado final quando a classe .visible for acionada pelo JavaScript */
-    .servicos-grid > div.visible,
-    .destaques-grid > div.visible,
-    .faq-item.visible,
-    .beneficio-item.visible,
-    .contato-info.visible{
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* Estado inicial: invisíveis e deslocadas para a esquerda */
-    .sobre-content,
-    .contato-info {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    /* Estado final: visíveis e na posição original ao receber a classe .visible */
-    .sobre-content.visible,
-    .contato-info.visible {
-        opacity: 1;
-        transform: translateX(0);
-    }
 
 
     
