@@ -303,6 +303,7 @@ width: 100%;
     top: 0;
     left: 0;
     width: 100%;
+       box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.288);
    
 
     
@@ -314,6 +315,7 @@ width: 100%;
 
   @media (max-width:841px) {
     background-color: transparent;
+      box-shadow: none;
   }
   
 
