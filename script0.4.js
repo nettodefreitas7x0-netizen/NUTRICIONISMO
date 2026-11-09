@@ -363,3 +363,29 @@ function enviarPerguntaFaq(event) {
     window.open(url, '_blank');
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-toggle-icon');
+
+    // Verifica a preferência salva anteriormente
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (themeIcon) themeIcon.textContent = '☀️';
+    }
+
+    // Alternar tema ao clicar
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+
+            // Atualiza o ícone do botão
+            themeIcon.textContent = isDark ? '☀️' : '🌙';
+
+            // Salva no localStorage
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    }
+});
+
