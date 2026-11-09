@@ -1712,6 +1712,10 @@ body.dark-mode .footer-cool {
     color: var(--cor-texto);
 }
 
+body.dark-mode textarea {
+    color: var(--cor-texto);
+}
+
 body.dark-mode .footer-logo .logo-tagline {
     color: var(--cor-texto-claro) !important;
 }
