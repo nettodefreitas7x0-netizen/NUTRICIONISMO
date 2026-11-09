@@ -1708,7 +1708,7 @@ body.dark-mode .nav-list {
 }
 
 body.dark-mode .footer-cool {
-    background-color: var(--cor-branco);
+    background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
 
