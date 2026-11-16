@@ -1670,18 +1670,32 @@ body.dark-mode .destaques,
 body.dark-mode .blog,
 body.dark-mode .contato,
 body.dark-mode .header {
-    background-color: var(--cor-fundo);
+    background-color: #1f1f1f;
 }
 
+body.dark-mode .hero-overlay {
+     background: linear-gradient(135deg, rgba(5, 1, 7, 0.93) 0%, rgb(22, 0, 34) 100%); /* Degradê baseado nos tons de roxo saturados */
+}
+
+
 body.dark-mode .header-content {
-    background-color: var(--cor-branco);
+    background-color: black;
 }
 
 body.dark-mode .header {
-    background-color: var(--cor-branco);
+    background-color: black;
+box-shadow: 0 0 5px 2px rgb(38, 0, 59);
  .logo-name{
     color: var(--cor-primaria)
  }
+}
+
+body.dark-mode .hero-image-container{
+      box-shadow: 0 0px 200px 0 rgb(92, 0, 121);
+}
+
+body.dark-mode .destaque-number {
+    color: rgb(162, 0, 255);
 }
 
 body.dark-mode .hero .badge-text {
@@ -1704,11 +1718,11 @@ body.dark-mode .hero {
 
 
 body.dark-mode .nav-list {
-    background-color: var(--cor-branco);
+    background-color: black;
 }
 
 body.dark-mode .footer-cool {
-    background-color: var(--cor-fundo);
+    background-color: #1f1f1f;;
     color: var(--cor-texto);
 }
 
