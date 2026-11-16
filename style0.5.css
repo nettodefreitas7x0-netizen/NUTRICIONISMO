@@ -1670,7 +1670,7 @@ body.dark-mode .destaques,
 body.dark-mode .blog,
 body.dark-mode .contato,
 body.dark-mode .header {
-    background-color: #1f1f1f;
+    background-color: #161616;
 }
 
 body.dark-mode .hero-overlay {
@@ -1684,7 +1684,7 @@ body.dark-mode .header-content {
 
 body.dark-mode .header {
     background-color: black;
-box-shadow: 0 0 5px 2px rgb(38, 0, 59);
+box-shadow: 0 0 2px 1px rgb(38, 0, 59);
  .logo-name{
     color: var(--cor-primaria)
  }
@@ -1722,8 +1722,11 @@ body.dark-mode .nav-list {
 }
 
 body.dark-mode .footer-cool {
-    background-color: #1f1f1f;;
-    color: var(--cor-texto);
+     background-color: #161616;
+    color: var(--cor-texto); 
+    .logo-name{
+    color: var(--cor-primaria)
+ }
 }
 
 body.dark-mode textarea {
@@ -1736,6 +1739,49 @@ body.dark-mode .footer-logo .logo-tagline {
 
 body.dark-mode .texto-artigo {
     color: var(--cor-texto);
+}
+
+
+
+body.dark-mode .article-container {
+background-color: var(--cor-fundo);
+p{
+    color: white;
+}
+ li{
+        color:#cacaca;
+    }
+
+h2,h3{
+    color: var(--cor-primaria);
+}
+
+.checklist-box{
+    background-color: #1e6b3610 ;
+    h3{
+      color: #1e6b37;
+}
+ border: 1px solid  #1e6b37;
+}
+
+
+
+.highlight-box{
+    background-color: var(--cor-fundo);
+    li{
+        color:#cacaca;
+    }
+    strong{
+        color: #ffffff;
+    }
+}
+
+
+}
+
+.checklist-box li{
+    list-style-type: none;
+
 }
 
  
