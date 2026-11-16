@@ -63,18 +63,13 @@ html {
 
 
 
+
 body {
     font-family: var(--fonte-principal);
     color: var(--cor-texto);
+    background-color: var(--cor-fundo);
     line-height: 1.6;
     overflow-x: hidden;
-    
-   
-
-
-   
-    
-     
 }
 
 
